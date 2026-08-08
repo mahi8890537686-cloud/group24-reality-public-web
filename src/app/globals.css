@@ -1,32 +1,66 @@
 @import "tailwindcss";
 
 @theme {
-  --font-playfair: "Playfair Display", serif;
+  --font-serif: "Instrument Serif", "DM Serif Display", "Cormorant Garamond", serif;
   --font-inter: "Inter", sans-serif;
 
-  /* Navy palette */
-  --color-navy-950: #0B1629;
-  --color-navy-900: #0e1e38;
-  --color-navy-800: #152644;
-  --color-navy-700: #1e3560;
-  --color-navy-200: #b8ceee;
-  --color-navy-100: #dde8f7;
-  --color-navy-50:  #f0f6ff;
+  /* Color system */
+  --color-bg: #F7F5F0;
+  --color-bg-secondary: #EFECE5;
+  --color-surface: #FFFFFF;
+  --color-ink: #171714;
+  --color-charcoal: #20201D;
 
-  /* Gold palette */
-  --color-gold-400: #D4A853;
-  --color-gold-500: #B8903A;
-  --color-gold-600: #9A7520;
+  --color-text: #171714;
+  --color-text-secondary: #66645E;
+  --color-text-muted: #8A8780;
+  --color-text-on-dark: #F7F5F0;
 
-  /* Sand / Beige palette */
-  --color-sand-50:  #FAF7F2;
-  --color-sand-100: #F0EBE0;
-  --color-sand-200: #E2D8C8;
+  --color-border: #DDD9D0;
+  --color-border-subtle: #E8E5DE;
+
+  --color-gold: #A88A5A;
+  --color-gold-dark: #80683F;
+
+  /* Fluid type scale */
+  --text-hero: clamp(3rem, 7vw, 6rem);
+  --text-hero-secondary: clamp(3rem, 5vw, 4rem);
+  --text-section: clamp(2.25rem, 5vw, 3.75rem);
+  --text-property: clamp(2.5rem, 4vw, 3.5rem);
+  --text-subheading: clamp(1.25rem, 1.6vw, 1.5rem);
+  --text-body: clamp(0.9375rem, 1.2vw, 1.125rem);
+  --text-small: 0.9375rem;
+  --text-eyebrow: 0.75rem;
 
   /* Radius */
+  --radius-button: 7px;
+  --radius-input: 8px;
+  --radius-card: 12px;
+  --radius-image-lg: 14px;
+  --radius-none: 0px;
   --radius-xl: 0.75rem;
   --radius-2xl: 1rem;
   --radius-3xl: 1.5rem;
+
+  /* Shadow */
+  --shadow-sm: 0 4px 16px rgba(23,23,20,0.05);
+  --shadow-md: 0 12px 40px rgba(23,23,20,0.08);
+  --shadow-lg: 0 24px 80px rgba(23,23,20,0.10);
+
+  /* Spacing scale (px, additive to Tailwind defaults) */
+  --spacing-4: 4px;
+  --spacing-8: 8px;
+  --spacing-12: 12px;
+  --spacing-16: 16px;
+  --spacing-24: 24px;
+  --spacing-32: 32px;
+  --spacing-40: 40px;
+  --spacing-48: 48px;
+  --spacing-64: 64px;
+  --spacing-80: 80px;
+  --spacing-96: 96px;
+  --spacing-120: 120px;
+  --spacing-160: 160px;
 }
 
 @layer base {
@@ -36,24 +70,24 @@
 
   body {
     font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-    color: #1e293b;
-    background: #ffffff;
+    color: var(--color-text);
+    background: var(--color-bg);
     -webkit-font-smoothing: antialiased;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-playfair), Georgia, serif;
+    font-family: var(--font-serif), Georgia, serif;
   }
 
   ::selection {
-    background: #D4A853;
-    color: #0B1629;
+    background: var(--color-gold);
+    color: var(--color-text-on-dark);
   }
 }
 
 @layer utilities {
-  .font-playfair { font-family: var(--font-playfair), Georgia, serif; }
-  .font-inter    { font-family: var(--font-inter), ui-sans-serif, sans-serif; }
+  .font-serif { font-family: var(--font-serif), Georgia, serif; }
+  .font-inter { font-family: var(--font-inter), ui-sans-serif, sans-serif; }
 
   .animate-kenburns {
     animation: kenburns 7s ease-out forwards;
