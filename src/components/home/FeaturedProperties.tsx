@@ -21,7 +21,7 @@ export default function FeaturedProperties() {
   }, []);
 
   return (
-    <section className="py-16 sm:py-24 bg-sand-50" aria-labelledby="featured-heading">
+    <section className="py-16 sm:py-24 bg-bg" aria-labelledby="featured-heading">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <FadeInUp>
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12">
@@ -33,7 +33,7 @@ export default function FeaturedProperties() {
             />
             <Link
               href="/properties"
-              className="group inline-flex items-center gap-2 text-navy-800 hover:text-gold-500 font-inter font-semibold text-sm transition-colors shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400 rounded-md"
+              className="group inline-flex items-center gap-2 text-text-secondary hover:text-gold-dark font-inter font-semibold text-sm transition-colors shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded-md"
             >
               View All Properties
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -43,7 +43,7 @@ export default function FeaturedProperties() {
 
         {loading ? (
           <div className="flex justify-center py-16">
-            <Loader2 className="w-10 h-10 text-gold-500 animate-spin" />
+            <Loader2 className="w-10 h-10 text-gold-dark animate-spin" />
           </div>
         ) : properties.length === 0 ? (
           <p className="text-center text-slate-500 font-inter py-12">

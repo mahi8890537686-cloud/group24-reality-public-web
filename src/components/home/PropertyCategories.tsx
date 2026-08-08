@@ -13,7 +13,7 @@ const categories = [
       'Freehold residential plots in Behror, Neemrana, and Kotputli. Clear title, measured boundaries, and verified registry.',
     highlights: ['Freehold Title', 'Corner Plots Available', 'As low as ₹12 Lakh'],
     href: '/properties?type=plot',
-    color: 'from-amber-500/10 to-gold-400/5',
+    color: 'from-amber-500/10 to-gold/5',
     iconBg: 'bg-amber-100',
     iconColor: 'text-amber-700',
   },
@@ -26,9 +26,9 @@ const categories = [
       'Spacious villas and independent houses across three locations — from budget-friendly 3BHK to luxury 4BHK with private pool.',
     highlights: ['Ready to Move Options', '3BHK & 4BHK', 'Gated Townships'],
     href: '/properties?type=villa',
-    color: 'from-navy-800/5 to-navy-950/10',
-    iconBg: 'bg-navy-100',
-    iconColor: 'text-navy-800',
+    color: 'from-ink/5 to-ink/10',
+    iconBg: 'bg-bg-secondary',
+    iconColor: 'text-text-secondary',
   },
   {
     icon: Building2,
@@ -47,7 +47,7 @@ const categories = [
 
 export default function PropertyCategories() {
   return (
-    <section className="py-16 sm:py-24 bg-sand-50" aria-labelledby="categories-heading">
+    <section className="py-16 sm:py-24 bg-bg" aria-labelledby="categories-heading">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <FadeInUp className="mb-12">
           <SectionHeader
@@ -60,26 +60,26 @@ export default function PropertyCategories() {
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {categories.map(({ icon: Icon, label, tagline, description, highlights, href, color, iconBg, iconColor }) => (
             <StaggerItem key={label}>
-              <div className={`group bg-gradient-to-br ${color} bg-white border border-sand-200 rounded-2xl p-7 hover:shadow-xl transition-all duration-300 h-full flex flex-col`}>
+              <div className={`group bg-gradient-to-br ${color} bg-white border border-border-subtle rounded-2xl p-7 hover:shadow-xl transition-all duration-300 h-full flex flex-col`}>
                 <div className={`w-12 h-12 ${iconBg} rounded-xl flex items-center justify-center mb-5`}>
                   <Icon className={`w-6 h-6 ${iconColor}`} />
                 </div>
-                <h3 className="font-playfair font-bold text-navy-950 text-xl mb-1">{label}</h3>
-                <p className="text-gold-600 text-sm font-inter font-medium mb-3">{tagline}</p>
+                <h3 className="font-serif font-bold text-ink text-xl mb-1">{label}</h3>
+                <p className="text-gold-dark text-sm font-inter font-medium mb-3">{tagline}</p>
                 <p className="text-slate-600 text-sm font-inter leading-relaxed mb-5 flex-grow">
                   {description}
                 </p>
                 <ul className="space-y-2 mb-6">
                   {highlights.map((h) => (
-                    <li key={h} className="flex items-center gap-2 text-sm font-inter text-navy-800">
-                      <span className="w-1.5 h-1.5 rounded-full bg-gold-400 shrink-0" />
+                    <li key={h} className="flex items-center gap-2 text-sm font-inter text-text-secondary">
+                      <span className="w-1.5 h-1.5 rounded-full bg-gold shrink-0" />
                       {h}
                     </li>
                   ))}
                 </ul>
                 <Link
                   href={href}
-                  className="group/link mt-auto inline-flex items-center gap-2 text-navy-800 hover:text-gold-600 font-inter font-semibold text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400 rounded-md"
+                  className="group/link mt-auto inline-flex items-center gap-2 text-text-secondary hover:text-gold-dark font-inter font-semibold text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded-md"
                 >
                   Browse {label}
                   <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />

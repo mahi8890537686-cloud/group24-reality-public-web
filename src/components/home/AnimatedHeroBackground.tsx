@@ -61,7 +61,7 @@ export function AnimatedHeroBackground() {
   }, [reducedMotion]);
 
   return (
-    <div className="absolute inset-0 z-0 overflow-hidden bg-navy-950">
+    <div className="absolute inset-0 z-0 overflow-hidden bg-ink">
       {HERO_IMAGES.slice(0, loadedCount).map((src, i) => (
         <div
           key={src}
@@ -93,8 +93,8 @@ export function AnimatedHeroBackground() {
       )}
 
       {/* Gradient overlays for text legibility — unchanged from the static hero */}
-      <div className="absolute inset-0 bg-gradient-to-r from-navy-950/90 via-navy-950/70 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-transparent to-navy-950/30" />
+      <div className="absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/70 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-ink/30" />
     </div>
   );
 }

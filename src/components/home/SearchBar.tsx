@@ -45,19 +45,19 @@ function SelectField({
 }) {
   return (
     <div className="flex flex-col gap-1.5 flex-1 min-w-0">
-      <label className="flex items-center gap-1.5 text-[11px] font-inter font-semibold text-gold-400/80 uppercase tracking-widest">
-        <Icon className="w-3.5 h-3.5 text-gold-400" />
+      <label className="flex items-center gap-1.5 text-[11px] font-inter font-semibold text-gold/80 uppercase tracking-widest">
+        <Icon className="w-3.5 h-3.5 text-gold" />
         {label}
       </label>
       <div className="relative">
         <select
           value={value}
           onChange={(e) => onChange(e.target.value)}
-          className="w-full appearance-none bg-white/8 hover:bg-white/12 border border-white/15 hover:border-gold-400/50 rounded-xl px-4 py-3 pr-10 text-white font-inter text-sm focus:outline-none focus:ring-2 focus:ring-gold-400/60 focus:border-gold-400/60 cursor-pointer transition-all duration-200"
+          className="w-full appearance-none bg-white/8 hover:bg-white/12 border border-white/15 hover:border-gold/50 rounded-xl px-4 py-3 pr-10 text-white font-inter text-sm focus:outline-none focus:ring-2 focus:ring-gold/60 focus:border-gold/60 cursor-pointer transition-all duration-200"
           aria-label={ariaLabel}
         >
           {options.map((o) => (
-            <option key={o.value} value={o.value} className="bg-navy-950 text-white">
+            <option key={o.value} value={o.value} className="bg-ink text-white">
               {o.label}
             </option>
           ))}
@@ -87,9 +87,9 @@ export default function SearchBar() {
   };
 
   return (
-    /* Bridge div: full-width bg-navy-950 pulls up over the hero bottom edge so
+    /* Bridge div: full-width bg-ink pulls up over the hero bottom edge so
        the rounded card corners never expose the white body background */
-    <div className="relative bg-navy-950 -mt-16 sm:-mt-20 pt-4 sm:pt-6 pb-10 sm:pb-14">
+    <div className="relative bg-ink -mt-16 sm:-mt-20 pt-4 sm:pt-6 pb-10 sm:pb-14">
       <motion.section
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
@@ -97,9 +97,9 @@ export default function SearchBar() {
         className="relative z-20 container mx-auto px-4 sm:px-6 lg:px-8"
         aria-label="Property search"
       >
-      <div className="relative bg-navy-900/95 backdrop-blur-xl rounded-2xl shadow-2xl shadow-black/40 border border-white/10 overflow-hidden p-5 sm:p-6">
+      <div className="relative bg-charcoal/95 backdrop-blur-xl rounded-2xl shadow-2xl shadow-black/40 border border-white/10 overflow-hidden p-5 sm:p-6">
         {/* Subtle top gold border accent */}
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-400/60 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/60 to-transparent" />
 
         <h2 className="sr-only">Search Properties</h2>
 
@@ -115,8 +115,8 @@ export default function SearchBar() {
               className={cn(
                 'px-3.5 py-1.5 rounded-full text-xs font-inter font-semibold transition-all duration-200 border',
                 type === t.value
-                  ? 'bg-gold-400 text-navy-950 border-gold-400 shadow-md shadow-gold-400/25'
-                  : 'bg-white/5 text-white/60 border-white/10 hover:border-gold-400/40 hover:text-white'
+                  ? 'bg-gold text-ink border-gold shadow-md shadow-gold/25'
+                  : 'bg-white/5 text-white/60 border-white/10 hover:border-gold/40 hover:text-white'
               )}
             >
               {t.label}
@@ -150,7 +150,7 @@ export default function SearchBar() {
           <div className="flex flex-col justify-end w-full sm:w-auto shrink-0">
             <button
               onClick={handleSearch}
-              className="flex items-center justify-center gap-2 bg-gold-400 hover:bg-gold-500 text-navy-950 font-inter font-bold py-3 px-7 rounded-xl transition-all duration-200 hover:shadow-xl hover:shadow-gold-400/35 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400 whitespace-nowrap text-sm"
+              className="flex items-center justify-center gap-2 bg-gold hover:bg-gold-dark text-ink font-inter font-bold py-3 px-7 rounded-xl transition-all duration-200 hover:shadow-xl hover:shadow-gold/35 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold whitespace-nowrap text-sm"
               aria-label="Search properties"
             >
               <Search className="w-4 h-4" />

@@ -11,7 +11,7 @@ import { StaggerContainer, StaggerItem, FadeInUp } from '@/components/ui/MotionW
 
 function LocationSkeleton() {
   return (
-    <div className="rounded-2xl overflow-hidden bg-navy-950 animate-pulse aspect-[4/3] relative">
+    <div className="rounded-2xl overflow-hidden bg-ink animate-pulse aspect-[4/3] relative">
       <div className="absolute inset-0 bg-white/5" />
     </div>
   );
@@ -49,7 +49,7 @@ export default function LocationHighlights() {
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {locations.map((loc) => (
               <StaggerItem key={loc.id ?? loc.slug}>
-                <article className="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 bg-navy-950">
+                <article className="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 bg-ink">
                   {/* Background Image */}
                   <div className="relative aspect-[4/3]">
                     <Image
@@ -59,18 +59,18 @@ export default function LocationHighlights() {
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                       sizes="(max-width: 768px) 100vw, 33vw"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/50 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/50 to-transparent" />
                   </div>
 
                   {/* Content */}
                   <div className="absolute inset-0 p-6 flex flex-col justify-end">
                     <div className="flex items-center gap-2 mb-2">
-                      <TrendingUp className="w-4 h-4 text-gold-400" />
-                      <span className="text-gold-400 text-xs font-inter font-semibold uppercase tracking-wide">
+                      <TrendingUp className="w-4 h-4 text-gold" />
+                      <span className="text-gold text-xs font-inter font-semibold uppercase tracking-wide">
                         High Growth
                       </span>
                     </div>
-                    <h3 className="font-playfair font-bold text-white text-2xl mb-1">
+                    <h3 className="font-serif font-bold text-white text-2xl mb-1">
                       {loc.name}
                     </h3>
                     <p className="text-white/70 text-sm font-inter mb-4 line-clamp-2">
@@ -84,7 +84,7 @@ export default function LocationHighlights() {
                           key={point}
                           className="text-white/60 text-xs font-inter flex items-start gap-1.5"
                         >
-                          <span className="text-gold-400 mt-0.5 shrink-0">•</span>
+                          <span className="text-gold mt-0.5 shrink-0">•</span>
                           {point}
                         </li>
                       ))}
@@ -93,7 +93,7 @@ export default function LocationHighlights() {
                     <div className="flex gap-3">
                       <Link
                         href={`/properties?location=${loc.slug}`}
-                        className="flex items-center gap-1.5 bg-gold-400 hover:bg-gold-500 text-navy-950 font-inter font-semibold text-xs px-4 py-2 rounded-lg transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400"
+                        className="flex items-center gap-1.5 bg-gold hover:bg-gold-dark text-ink font-inter font-semibold text-xs px-4 py-2 rounded-lg transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
                       >
                         View Properties
                         <ArrowRight className="w-3.5 h-3.5" />

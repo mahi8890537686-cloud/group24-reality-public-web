@@ -15,7 +15,7 @@ export default function HeroSection() {
       <AnimatedHeroBackground />
 
       {/* Decorative gold line */}
-      <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-transparent via-gold-400 to-transparent z-10" />
+      <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-transparent via-gold to-transparent z-10" />
 
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16">
         <div className="max-w-2xl xl:max-w-3xl">
@@ -26,7 +26,7 @@ export default function HeroSection() {
             transition={{ duration: 0.5 }}
             className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6"
           >
-            <Shield className="w-4 h-4 text-gold-400" />
+            <Shield className="w-4 h-4 text-gold" />
             <span className="text-white text-xs sm:text-sm font-inter font-medium">
               Verified Properties · Transparent Pricing · Local Expertise
             </span>
@@ -37,12 +37,12 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-            className="font-playfair font-bold text-white leading-tight text-4xl sm:text-5xl lg:text-6xl xl:text-7xl mb-6"
+            className="font-serif font-bold text-white leading-tight text-4xl sm:text-5xl lg:text-6xl xl:text-7xl mb-6"
           >
             Find Your Perfect{' '}
-            <span className="text-gold-400">Plot, Villa</span>
+            <span className="text-gold">Plot, Villa</span>
             {' '}or Flat in{' '}
-            <span className="text-gold-400">Behror, Neemrana</span>
+            <span className="text-gold">Behror, Neemrana</span>
             {' '}&amp; Kotputli
           </motion.h1>
 
@@ -69,7 +69,7 @@ export default function HeroSection() {
                 key={loc}
                 className="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-3 py-1 text-white text-xs font-inter"
               >
-                <MapPin className="w-3 h-3 text-gold-400" />
+                <MapPin className="w-3 h-3 text-gold" />
                 {loc}, Rajasthan
               </span>
             ))}
@@ -84,7 +84,7 @@ export default function HeroSection() {
           >
             <Link
               href="/properties"
-              className="group inline-flex items-center gap-2 bg-gold-400 hover:bg-gold-500 text-navy-950 font-inter font-bold px-7 py-4 rounded-xl transition-all duration-200 hover:shadow-xl hover:shadow-gold-400/30 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400 focus-visible:ring-offset-2 focus-visible:ring-offset-navy-950 text-sm sm:text-base"
+              className="group inline-flex items-center gap-2 bg-gold hover:bg-gold-dark text-ink font-inter font-bold px-7 py-4 rounded-xl transition-all duration-200 hover:shadow-xl hover:shadow-gold/30 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-ink text-sm sm:text-base"
             >
               Explore Properties
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
@@ -125,7 +125,7 @@ export default function HeroSection() {
               { label: 'Locations Served', value: '3' },
             ].map((stat) => (
               <div key={stat.label}>
-                <div className="text-2xl sm:text-3xl font-playfair font-bold text-gold-400">
+                <div className="text-2xl sm:text-3xl font-serif font-bold text-gold">
                   {stat.value}
                 </div>
                 <div className="text-white/60 text-xs sm:text-sm font-inter mt-1">
