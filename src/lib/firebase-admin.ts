@@ -1,9 +1,7 @@
 // Firebase Admin SDK — server-only. Never import this from a 'use client' component.
-// Used by API routes / server actions that must bypass firestore.rules (e.g. creating
-// team member accounts, writing financial ledger records in later phases).
+// Used by API routes / server actions that must bypass firestore.rules.
 import { getApps, initializeApp, cert, App } from 'firebase-admin/app';
 import { getFirestore, Firestore } from 'firebase-admin/firestore';
-import { getAuth, Auth } from 'firebase-admin/auth';
 
 function loadCredential() {
   const projectId = process.env.FIREBASE_ADMIN_PROJECT_ID;
@@ -42,6 +40,5 @@ if (getApps().length === 0) {
 }
 
 const adminDb: Firestore = getFirestore(app, 'group24reality');
-const adminAuth: Auth = getAuth(app);
 
-export { app as adminApp, adminDb, adminAuth };
+export { app as adminApp, adminDb };
