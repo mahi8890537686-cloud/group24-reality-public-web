@@ -4,6 +4,7 @@ import './globals.css';
 import SiteShell from '@/components/layout/SiteShell';
 import { localBusinessSchema, JsonLd } from '@/lib/schema';
 import { defaultMetadata } from '@/lib/seo';
+import { Analytics } from '@vercel/analytics/next';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -27,6 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="font-inter antialiased">
         <SiteShell>{children}</SiteShell>
+        <Analytics />
       </body>
     </html>
   );
