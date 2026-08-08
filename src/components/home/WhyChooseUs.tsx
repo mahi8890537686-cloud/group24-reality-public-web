@@ -47,7 +47,7 @@ export default function WhyChooseUs() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <FadeInUp className="mb-12">
           <SectionHeader
-            eyebrow="Why Group24 Realty"
+            eyebrow="Why Group24 Reality"
             heading="The Difference Local Expertise Makes"
             subheading="We are not a property portal. We are your local property partner in Rajasthan — with on-the-ground knowledge, honest advice, and genuine after-care."
             light

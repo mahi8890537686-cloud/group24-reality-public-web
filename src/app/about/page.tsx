@@ -6,7 +6,7 @@ import { buildMetadata } from '@/lib/seo';
 import { breadcrumbSchema, JsonLd } from '@/lib/schema';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'About Group 24 Reality — Trusted Real Estate Consultant in Rajasthan',
+  title: 'About Us — Trusted Real Estate Consultant in Rajasthan',
   description:
     'Learn about Group 24 Reality — a trusted real estate consulting firm serving Behror, Neemrana, and Kotputli. Founded by Sunil Sangwan with a mission of transparency, local expertise, and honest property dealing.',
   alternates: { canonical: 'https://www.group24reality.com/about' },
@@ -195,10 +195,10 @@ export default function AboutPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
-                href="tel:+919560199247"
+                href="tel:+919266982400"
                 className="bg-gold-400 hover:bg-gold-500 text-navy-950 font-inter font-bold px-8 py-4 rounded-xl transition-all hover:shadow-lg hover:shadow-gold-400/30"
               >
-                Call +91-9560199247
+                Call +91-9266982400
               </a>
               <a
                 href="/contact"

@@ -4,14 +4,13 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { Send, Phone, MessageCircle, CheckCircle } from 'lucide-react';
+import { Send, Phone, MessageCircle, CheckCircle, AlertCircle } from 'lucide-react';
 import { whatsappLink } from '@/lib/utils';
 
 const schema = z.object({
   name: z.string().min(2, 'Please enter your name'),
   phone: z.string().regex(/^[6-9]\d{9}$/, 'Enter a valid 10-digit Indian mobile number'),
   message: z.string().optional(),
-  preferredTime: z.string().optional(),
 });
 
 type FormData = z.infer<typeof schema>;
@@ -23,6 +22,7 @@ interface LeadFormProps {
 
 export default function LeadForm({ propertyTitle, propertySlug }: LeadFormProps) {
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState('');
   const {
     register,
     handleSubmit,
@@ -30,10 +30,25 @@ export default function LeadForm({ propertyTitle, propertySlug }: LeadFormProps)
   } = useForm<FormData>({ resolver: zodResolver(schema) });
 
   const onSubmit = async (data: FormData) => {
-    // [DEMO] — In production, replace with API call to your backend or form service
-    await new Promise((r) => setTimeout(r, 800));
-    console.log('Lead form submitted:', { ...data, property: propertySlug });
-    setSubmitted(true);
+    setSubmitError('');
+    try {
+      const res = await fetch('/api/public/submit-lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          kind: 'lead',
+          name: data.name,
+          phone: data.phone,
+          message: data.message,
+          propertyTitle,
+          propertySlug,
+        }),
+      });
+      if (!res.ok) throw new Error();
+      setSubmitted(true);
+    } catch {
+      setSubmitError('Something went wrong. Please call or WhatsApp us directly.');
+    }
   };
 
   const waMessage = `Hello Sunil ji, I am interested in: ${propertyTitle}. Please share more details.`;
@@ -58,7 +73,12 @@ export default function LeadForm({ propertyTitle, propertySlug }: LeadFormProps)
       </p>
 
       <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-4">
-        {/* Name */}
+        {submitError && (
+          <div className="flex items-center gap-2 bg-red-500/10 border border-red-500/20 rounded-xl px-4 py-3">
+            <AlertCircle className="w-4 h-4 text-red-400 shrink-0" />
+            <p className="text-red-300 text-xs font-inter">{submitError}</p>
+          </div>
+        )}
         <div>
           <label htmlFor="lead-name" className="sr-only">Your Name</label>
           <input
@@ -68,12 +88,9 @@ export default function LeadForm({ propertyTitle, propertySlug }: LeadFormProps)
             {...register('name')}
             className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/40 font-inter text-sm focus:outline-none focus:ring-2 focus:ring-gold-400 focus:border-transparent"
           />
-          {errors.name && (
-            <p className="mt-1 text-red-400 text-xs font-inter">{errors.name.message}</p>
-          )}
+          {errors.name && <p className="mt-1 text-red-400 text-xs font-inter">{errors.name.message}</p>}
         </div>
 
-        {/* Phone */}
         <div>
           <label htmlFor="lead-phone" className="sr-only">Mobile Number</label>
           <input
@@ -84,12 +101,9 @@ export default function LeadForm({ propertyTitle, propertySlug }: LeadFormProps)
             className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/40 font-inter text-sm focus:outline-none focus:ring-2 focus:ring-gold-400 focus:border-transparent"
             maxLength={10}
           />
-          {errors.phone && (
-            <p className="mt-1 text-red-400 text-xs font-inter">{errors.phone.message}</p>
-          )}
+          {errors.phone && <p className="mt-1 text-red-400 text-xs font-inter">{errors.phone.message}</p>}
         </div>
 
-        {/* Message */}
         <div>
           <label htmlFor="lead-message" className="sr-only">Message</label>
           <textarea
@@ -101,32 +115,27 @@ export default function LeadForm({ propertyTitle, propertySlug }: LeadFormProps)
           />
         </div>
 
-        {/* Submit */}
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full flex items-center justify-center gap-2 bg-gold-400 hover:bg-gold-500 text-navy-950 font-inter font-bold py-3.5 px-6 rounded-xl transition-all duration-200 active:scale-[0.97] disabled:opacity-60 disabled:cursor-not-allowed focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400"
+          className="w-full flex items-center justify-center gap-2 bg-gold-400 hover:bg-gold-500 text-navy-950 font-inter font-bold py-3.5 px-6 rounded-xl transition-all duration-200 active:scale-[0.97] disabled:opacity-60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400"
         >
           {isSubmitting ? (
             <span className="w-4 h-4 border-2 border-navy-950/30 border-t-navy-950 rounded-full animate-spin" />
-          ) : (
-            <Send className="w-4 h-4" />
-          )}
-          {isSubmitting ? 'Sending...' : 'Send Enquiry'}
+          ) : <Send className="w-4 h-4" />}
+          {isSubmitting ? 'Sending…' : 'Send Enquiry'}
         </button>
       </form>
 
-      {/* Divider */}
       <div className="flex items-center gap-3 my-5">
         <div className="flex-1 h-px bg-white/10" />
         <span className="text-white/30 text-xs font-inter">or contact directly</span>
         <div className="flex-1 h-px bg-white/10" />
       </div>
 
-      {/* Direct contact options */}
       <div className="grid grid-cols-2 gap-3">
         <a
-          href="tel:+919560199247"
+          href="tel:+919266982400"
           className="flex items-center justify-center gap-2 border border-white/20 hover:border-white/40 text-white hover:bg-white/5 font-inter font-semibold text-sm py-3 px-4 rounded-xl transition-all"
         >
           <Phone className="w-4 h-4" />

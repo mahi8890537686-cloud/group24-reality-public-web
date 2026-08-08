@@ -8,6 +8,9 @@ import type { Property } from '@/types';
 import { Badge } from '@/components/ui/Badge';
 import { cn, formatArea } from '@/lib/utils';
 
+// Shown when a property has no image or images[0] is an empty string
+const FALLBACK_IMAGE = '/images/fallback/default-property.jpg';
+
 const typeLabels: Record<string, string> = {
   plot: 'Plot',
   villa: 'Villa',
@@ -40,8 +43,8 @@ export default function PropertyCard({ property, className }: PropertyCardProps)
       {/* Image */}
       <div className="relative aspect-[4/3] overflow-hidden bg-sand-100">
         <Image
-          src={property.images[0]}
-          alt={`${property.title} — ${property.location}, Rajasthan`}
+          src={property.images?.[0] || FALLBACK_IMAGE}
+          alt={`${property.title} — ${property.locationName || property.locationSlug}, Rajasthan`}
           fill
           className="object-cover group-hover:scale-105 transition-transform duration-500"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -98,7 +101,7 @@ export default function PropertyCard({ property, className }: PropertyCardProps)
 
         {/* Highlights */}
         <div className="flex flex-wrap gap-1.5 mb-5">
-          {property.highlights.slice(0, 3).map((h) => (
+          {(property.highlights ?? []).slice(0, 3).map((h) => (
             <span
               key={h}
               className="text-xs font-inter bg-sand-50 text-navy-800 border border-sand-200 px-2.5 py-1 rounded-full"

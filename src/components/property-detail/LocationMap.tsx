@@ -17,14 +17,17 @@ const locationCoords: Record<LocationKey, { q: string; center: string }> = {
 };
 
 interface LocationMapProps {
-  location: LocationKey;
+  location: string;
   address: string;
 }
 
 export default function LocationMap({ location, address }: LocationMapProps) {
-  const coords = locationCoords[location];
+  const locKey = (location || '').toLowerCase();
+  const coords = locationCoords[locKey as LocationKey] || {
+    q: location || address || 'Behror,Rajasthan',
+  };
 
-  // Google Maps Embed — replace with your actual Maps Embed API key in production
+  // Google Maps Embed
   const embedSrc = `https://maps.google.com/maps?q=${encodeURIComponent(coords.q)}&output=embed&z=14`;
 
   return (

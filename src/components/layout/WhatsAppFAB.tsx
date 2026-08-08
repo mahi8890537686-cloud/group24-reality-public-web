@@ -1,24 +1,38 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { whatsappLink } from '@/lib/utils';
+import { getSiteConfig, buildWhatsAppLink, DEFAULT_SITE_CONFIG } from '@/lib/firestore/siteConfig';
 
 export default function WhatsAppFAB() {
-  const message =
-    'Hello Group24 Realty, I am interested in properties in Behror/Neemrana/Kotputli. Please share details.';
+  const [waHref, setWaHref] = useState(() => {
+    const msg =
+      'Hello Group24 Reality, I am interested in properties in Behror/Neemrana/Kotputli. Please share details.';
+    return buildWhatsAppLink(DEFAULT_SITE_CONFIG, msg);
+  });
+
+  useEffect(() => {
+    getSiteConfig()
+      .then((config) => {
+        const msg =
+          'Hello Group24 Reality, I am interested in properties in Behror/Neemrana/Kotputli. Please share details.';
+        setWaHref(buildWhatsAppLink(config, msg));
+      })
+      .catch(() => { /* keep default */ });
+  }, []);
 
   return (
     <motion.a
-      href={whatsappLink(message)}
+      href={waHref}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Chat with Group24 Realty on WhatsApp"
+      aria-label="Chat with Group24 Reality on WhatsApp"
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ delay: 1.5, type: 'spring', stiffness: 200 }}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
-      className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-[#25D366] shadow-lg shadow-[#25D366]/40 flex items-center justify-center focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#25D366]/50"
+      className="fixed bottom-[calc(4.5rem+env(safe-area-inset-bottom))] right-4 lg:bottom-6 lg:right-6 z-40 w-14 h-14 rounded-full bg-[#25D366] shadow-lg shadow-[#25D366]/40 flex items-center justify-center focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#25D366]/50"
     >
       {/* WhatsApp SVG Icon */}
       <svg

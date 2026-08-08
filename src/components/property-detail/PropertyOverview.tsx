@@ -26,7 +26,7 @@ export default function PropertyOverview({ property }: PropertyOverviewProps) {
     ...(property.bathrooms ? [{ icon: Bath, label: 'Bathrooms', value: `${property.bathrooms}` }] : []),
     ...(property.facing ? [{ icon: Compass, label: 'Facing', value: property.facing }] : []),
     ...(property.floor ? [{ icon: Layers, label: 'Floor', value: property.floor }] : []),
-    { icon: MapPin, label: 'Location', value: capitalise(property.location) + ', Rajasthan' },
+    { icon: MapPin, label: 'Location', value: (property.locationName || property.locationSlug) + ', Rajasthan' },
   ];
 
   return (

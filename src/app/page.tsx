@@ -11,11 +11,12 @@ import ProcessSteps from '@/components/home/ProcessSteps';
 import FAQSection from '@/components/home/FAQSection';
 import ContactStrip from '@/components/home/ContactStrip';
 import { buildMetadata } from '@/lib/seo';
+import { getVisibleTestimonials } from '@/lib/firestore/testimonials';
 
 export const metadata: Metadata = buildMetadata({
   title: 'Group 24 Reality — Plots, Villas & Flats in Behror, Neemrana & Kotputli',
   description:
-    'Find verified residential plots, villas, and flats in Behror, Neemrana, and Kotputli, Rajasthan. Group 24 Reality offers transparent pricing, site visits, and local expertise. Call Sunil Sangwan: +91-9560199247.',
+    'Find verified residential plots, villas, and flats in Behror, Neemrana, and Kotputli, Rajasthan. Group 24 Reality offers transparent pricing, site visits, and local expertise. Call Sunil Sangwan: +91-9266982400.',
   openGraph: {
     title: 'Group 24 Reality — Real Estate Consultant in Rajasthan',
     description:
@@ -27,7 +28,12 @@ export const metadata: Metadata = buildMetadata({
   },
 });
 
-export default function HomePage() {
+export default async function HomePage() {
+  // Fetched server-side (rather than in Testimonials.tsx) so the
+  // AggregateRating/Review JSON-LD it emits is present in the initial
+  // server-rendered HTML for crawlers, not only after client hydration.
+  const testimonials = await getVisibleTestimonials().catch(() => []);
+
   return (
     <>
       <HeroSection />
@@ -37,7 +43,7 @@ export default function HomePage() {
       <LocationHighlights />
       <PropertyCategories />
       <WhyChooseUs />
-      <Testimonials />
+      <Testimonials testimonials={testimonials} />
       <ProcessSteps />
       <FAQSection />
       <ContactStrip />

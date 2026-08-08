@@ -1,31 +1,18 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import Link from 'next/link';
 import { Phone, ArrowRight, MapPin, Shield } from 'lucide-react';
-import { PHONE_HREF, PHONE_NUMBER, whatsappLink } from '@/lib/utils';
+import { PHONE_HREF, whatsappLink } from '@/lib/utils';
+import { AnimatedHeroBackground } from './AnimatedHeroBackground';
 
 export default function HeroSection() {
   return (
     <section
       className="relative min-h-screen flex items-center overflow-hidden"
-      aria-label="Hero — Group24 Realty"
+      aria-label="Hero — Group24 Reality"
     >
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=85"
-          alt="Modern residential property in Rajasthan — Group24 Realty"
-          fill
-          className="object-cover object-center"
-          priority
-          sizes="100vw"
-        />
-        {/* Gradient overlays */}
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-950/90 via-navy-950/70 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-transparent to-navy-950/30" />
-      </div>
+      <AnimatedHeroBackground />
 
       {/* Decorative gold line */}
       <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-transparent via-gold-400 to-transparent z-10" />

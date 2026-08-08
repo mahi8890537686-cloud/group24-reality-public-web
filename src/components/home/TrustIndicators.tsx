@@ -41,7 +41,7 @@ export default function TrustIndicators() {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 id="trust-heading" className="sr-only">
-          Why trust Group24 Realty
+          Why trust Group24 Reality
         </h2>
         <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {trustItems.map(({ icon: Icon, stat, suffix, label, description }) => (

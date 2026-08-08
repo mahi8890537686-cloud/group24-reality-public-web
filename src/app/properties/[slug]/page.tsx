@@ -1,35 +1,51 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { properties, getPropertyBySlug } from '@/data/properties';
+import {
+  getPropertyBySlug,
+  getAllPropertySlugs,
+  getRelatedByLocation,
+} from '@/lib/firestore/properties';
 import ImageGallery from '@/components/property-detail/ImageGallery';
 import PropertyOverview from '@/components/property-detail/PropertyOverview';
 import AmenitiesList from '@/components/property-detail/AmenitiesList';
 import LocationMap from '@/components/property-detail/LocationMap';
 import EMICalculator from '@/components/property-detail/EMICalculator';
 import LeadForm from '@/components/property-detail/LeadForm';
-import RelatedProperties from '@/components/property-detail/RelatedProperties';
 import { buildMetadata } from '@/lib/seo';
 import { propertySchema, breadcrumbSchema, JsonLd } from '@/lib/schema';
+import type { Property } from '@/types';
+import PropertyCard from '@/components/properties/PropertyCard';
+import { StaggerContainer, StaggerItem } from '@/components/ui/MotionWrapper';
+
+// Re-generate slug list from Firestore so new properties get their pages
+export async function generateStaticParams() {
+  try {
+    const slugs = await getAllPropertySlugs();
+    return slugs.map((slug) => ({ slug }));
+  } catch {
+    return [];
+  }
+}
+
+// Allow ISR — revalidate every 60 seconds so new Firestore properties appear
+export const revalidate = 60;
 
 interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
-export async function generateStaticParams() {
-  return properties.map((p) => ({ slug: p.slug }));
-}
-
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  const property = getPropertyBySlug(slug);
+  const property = await getPropertyBySlug(slug);
   if (!property) return {};
 
   return buildMetadata({
-    title: `${property.title} | Group 24 Reality`,
+    title: property.title,
     description: `${property.priceLabel} — ${property.description.slice(0, 155)}...`,
     openGraph: {
       title: property.title,
-      description: `${property.type.charAt(0).toUpperCase() + property.type.slice(1)} for sale in ${property.location}, Rajasthan. ${property.priceLabel}. Contact Group 24 Reality.`,
+      description: `${property.type.charAt(0).toUpperCase() + property.type.slice(1)} for sale in ${property.locationName}, Rajasthan. ${property.priceLabel}. Contact Group 24 Reality.`,
       images: [
         {
           url: property.images[0],
@@ -48,9 +64,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function PropertyDetailPage({ params }: PageProps) {
   const { slug } = await params;
-  const property = getPropertyBySlug(slug);
+  const property = await getPropertyBySlug(slug);
 
   if (!property) notFound();
+
+  // Fetch related properties from the same location
+  const related = await getRelatedByLocation(property.locationSlug, property.id!, 3).catch(() => [] as Property[]);
 
   return (
     <>
@@ -71,9 +90,9 @@ export default async function PropertyDetailPage({ params }: PageProps) {
           {/* Breadcrumb */}
           <nav aria-label="Breadcrumb" className="mb-6">
             <ol className="flex items-center gap-2 text-sm font-inter text-slate-400">
-              <li><a href="/" className="hover:text-gold-500 transition-colors">Home</a></li>
+              <li><Link href="/" className="hover:text-gold-500 transition-colors">Home</Link></li>
               <li aria-hidden="true">/</li>
-              <li><a href="/properties" className="hover:text-gold-500 transition-colors">Properties</a></li>
+              <li><Link href="/properties" className="hover:text-gold-500 transition-colors">Properties</Link></li>
               <li aria-hidden="true">/</li>
               <li className="text-navy-950 font-medium truncate max-w-xs">{property.title}</li>
             </ol>
@@ -82,14 +101,19 @@ export default async function PropertyDetailPage({ params }: PageProps) {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
             {/* Main Content */}
             <div className="lg:col-span-2 space-y-10">
-              <ImageGallery images={property.images} alt={property.title} />
+              <ImageGallery
+                images={property.images}
+                alt={property.title}
+                tour360Url={property.tour360Url}
+                propertyType={property.type}
+              />
               <PropertyOverview property={property} />
               <AmenitiesList
                 amenities={property.amenities}
                 highlights={property.highlights}
                 nearbyLandmarks={property.nearbyLandmarks}
               />
-              <LocationMap location={property.location} address={property.address} />
+              <LocationMap location={property.locationName} address={property.address} />
             </div>
 
             {/* Sidebar */}
@@ -103,7 +127,20 @@ export default async function PropertyDetailPage({ params }: PageProps) {
           </div>
 
           {/* Related Properties */}
-          <RelatedProperties property={property} />
+          {related.length > 0 && (
+            <section className="mt-16 pt-10 border-t border-sand-100" aria-labelledby="related-heading">
+              <h2 id="related-heading" className="font-playfair font-bold text-navy-950 text-2xl mb-8">
+                More in {property.locationName}
+              </h2>
+              <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                {related.map((p) => (
+                  <StaggerItem key={p.id}>
+                    <PropertyCard property={p} />
+                  </StaggerItem>
+                ))}
+              </StaggerContainer>
+            </section>
+          )}
         </div>
       </div>
     </>

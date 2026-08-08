@@ -48,7 +48,7 @@ const faqs: FAQItem[] = [
   {
     question: 'How do I contact Group 24 Reality to enquire about a property?',
     answer:
-      'You can contact us by calling or WhatsApp at +91-9560199247 (Sunil Sangwan), filling our online enquiry form, or visiting our office at Plot No. 6, Basai Enclave, Part 2, Sector 37C, Gurugram. We respond to all enquiries within 2 business hours.',
+      'You can contact us by calling or WhatsApp at +91-9266982400 (Sunil Sangwan), filling our online enquiry form, or visiting our Behror office at AA-111, Somnath City, Near Goonti Flyover, Delhi-Jaipur Highway, Behror (RJ) 301701, or our Gurugram head office at Plot No. 6 & 7, Sector 37C, Adjacent Corona Optus Society, Gurugram (HR) 122001. We respond to all enquiries within 2 business hours.',
   },
 ];
 

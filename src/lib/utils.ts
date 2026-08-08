@@ -46,14 +46,14 @@ export function calculateEMI(
 
 export const BUSINESS_NAME = 'Group 24 Reality';
 export const CONTACT_PERSON = 'Sunil Sangwan';
-export const WHATSAPP_NUMBER = '+919560199247';
-export const PHONE_NUMBER = '+91-95601-99247';
-export const PHONE_HREF = 'tel:+919560199247';
-export const WHATSAPP_HREF = `https://wa.me/919560199247`;
+export const WHATSAPP_NUMBER = '+919266982400';
+export const PHONE_NUMBER = '+91-92669-82400';
+export const PHONE_HREF = 'tel:+919266982400';
+export const WHATSAPP_HREF = `https://wa.me/919266982400`;
 export const OFFICE_ADDRESS = 'Plot No. 6, Basai Enclave, Part 2, Sector 37C, Near Corona Optus, Gurugram, Haryana';
 export const WEBSITE = 'www.group24reality.com';
 export const INSTAGRAM = '@group24reality';
 
 export function whatsappLink(message: string): string {
-  return `https://wa.me/919560199247?text=${encodeURIComponent(message)}`;
+  return `https://wa.me/919266982400?text=${encodeURIComponent(message)}`;
 }

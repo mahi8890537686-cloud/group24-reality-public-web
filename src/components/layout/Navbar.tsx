@@ -11,6 +11,7 @@ const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/properties', label: 'Properties' },
   { href: '/locations', label: 'Locations' },
+  { href: '/blogs', label: 'Blogs' },
   { href: '/about', label: 'About Us' },
   { href: '/contact', label: 'Contact' },
 ];
@@ -18,7 +19,11 @@ const navLinks = [
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const [prevPathname, setPrevPathname] = useState<string | null>(null);
   const pathname = usePathname();
+
+  // Only the homepage has a dark hero — all other pages need a solid navbar immediately
+  const isHeroPage = pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -26,17 +31,18 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
+  if (pathname !== prevPathname) {
+    setPrevPathname(pathname);
     setIsMobileOpen(false);
-  }, [pathname]);
+  }
 
   return (
     <>
       <header
         className={cn(
           'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-          isScrolled
-            ? 'bg-navy-950/95 backdrop-blur-md shadow-lg shadow-black/20'
+          isScrolled || !isHeroPage
+            ? 'bg-navy-950/98 backdrop-blur-md shadow-lg shadow-black/25 border-b border-white/5'
             : 'bg-transparent'
         )}
       >
@@ -46,7 +52,7 @@ export default function Navbar() {
             <Link
               href="/"
               className="flex items-center gap-2 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400 rounded-md"
-              aria-label="Group24 Realty — Home"
+              aria-label="Group24 Reality — Home"
             >
               {/* Logo placeholder — replace with your logo image */}
               <div className="flex items-center gap-2">
@@ -89,7 +95,7 @@ export default function Navbar() {
               <a
                 href={PHONE_HREF}
                 className="flex items-center gap-2 text-white/80 hover:text-gold-400 transition-colors text-sm font-inter focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400 rounded-md px-2 py-1"
-                aria-label={`Call Group24 Realty at ${PHONE_NUMBER}`}
+                aria-label={`Call Group24 Reality at ${PHONE_NUMBER}`}
               >
                 <Phone className="w-4 h-4" />
                 <span>{PHONE_NUMBER}</span>
@@ -123,7 +129,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-40 bg-navy-950/98 backdrop-blur-md pt-16 lg:hidden"
+            className="fixed inset-0 z-[55] bg-navy-950/98 backdrop-blur-md pt-16 pb-20 overflow-y-auto lg:hidden"
           >
             <nav
               className="flex flex-col p-6 gap-2"
