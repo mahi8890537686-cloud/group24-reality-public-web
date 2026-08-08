@@ -29,22 +29,22 @@ type ButtonProps = ButtonAsButton | ButtonAsLink;
 
 const variants: Record<ButtonVariant, string> = {
   primary:
-    'bg-gold-400 hover:bg-gold-500 text-navy-950 shadow-md hover:shadow-gold-400/30 hover:shadow-lg',
+    'bg-ink hover:bg-charcoal text-surface shadow-sm hover:shadow-md',
   secondary:
-    'bg-white text-navy-950 hover:bg-sand-50 shadow-md hover:shadow-lg',
+    'bg-transparent border border-border text-text hover:bg-bg-secondary',
   outline:
     'border-2 border-white/30 text-white hover:border-white hover:bg-white/10',
   ghost: 'text-white/80 hover:text-white hover:bg-white/10',
 };
 
 const sizes: Record<ButtonSize, string> = {
-  sm: 'px-4 py-2 text-sm',
-  md: 'px-6 py-3 text-base',
-  lg: 'px-8 py-4 text-lg',
+  sm: 'px-4 py-2 text-sm h-12',
+  md: 'px-6 py-3 text-base h-12 sm:h-13',
+  lg: 'px-8 py-4 text-lg h-14',
 };
 
 const base =
-  'inline-flex items-center justify-center gap-2 font-inter font-semibold rounded-xl transition-all duration-200 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400 focus-visible:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed';
+  'inline-flex items-center justify-center gap-2 font-inter font-semibold rounded-button transition-all duration-200 active:scale-[0.97] hover:-translate-y-px focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed';
 
 export const Button = forwardRef<
   HTMLButtonElement | HTMLAnchorElement,
