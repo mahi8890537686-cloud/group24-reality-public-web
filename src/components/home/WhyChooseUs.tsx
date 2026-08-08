@@ -43,7 +43,7 @@ const reasons = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-16 sm:py-24 bg-navy-950" aria-labelledby="why-heading">
+    <section className="py-16 sm:py-24 bg-ink" aria-labelledby="why-heading">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <FadeInUp className="mb-12">
           <SectionHeader
@@ -57,11 +57,11 @@ export default function WhyChooseUs() {
         <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {reasons.map(({ icon: Icon, title, description }) => (
             <StaggerItem key={title}>
-              <div className="group bg-white/5 hover:bg-white/8 border border-white/10 hover:border-gold-400/30 rounded-2xl p-6 transition-all duration-300">
-                <div className="w-10 h-10 rounded-xl bg-gold-400/10 group-hover:bg-gold-400/20 flex items-center justify-center mb-4 transition-colors">
-                  <Icon className="w-5 h-5 text-gold-400" />
+              <div className="group bg-white/5 hover:bg-white/8 border border-white/10 hover:border-gold/30 rounded-2xl p-6 transition-all duration-300">
+                <div className="w-10 h-10 rounded-xl bg-gold/10 group-hover:bg-gold/20 flex items-center justify-center mb-4 transition-colors">
+                  <Icon className="w-5 h-5 text-gold" />
                 </div>
-                <h3 className="font-playfair font-semibold text-white text-lg mb-2">{title}</h3>
+                <h3 className="font-serif font-semibold text-white text-lg mb-2">{title}</h3>
                 <p className="text-white/60 text-sm font-inter leading-relaxed">{description}</p>
               </div>
             </StaggerItem>

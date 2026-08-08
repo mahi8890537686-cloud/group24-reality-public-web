@@ -12,7 +12,7 @@ function StarRating({ rating }: { rating: number }) {
       {Array.from({ length: 5 }).map((_, i) => (
         <Star
           key={i}
-          className={`w-4 h-4 ${i < rating ? 'text-gold-400 fill-gold-400' : 'text-slate-200'}`}
+          className={`w-4 h-4 ${i < rating ? 'text-gold fill-gold' : 'text-slate-200'}`}
           aria-hidden="true"
         />
       ))}
@@ -46,7 +46,7 @@ export default function Testimonials({ testimonials }: TestimonialsProps) {
       : null;
 
   return (
-    <section className="py-16 sm:py-24 bg-sand-50" aria-labelledby="testimonials-heading">
+    <section className="py-16 sm:py-24 bg-bg" aria-labelledby="testimonials-heading">
       {schema && <JsonLd data={schema} />}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <FadeInUp className="mb-12">
@@ -61,9 +61,9 @@ export default function Testimonials({ testimonials }: TestimonialsProps) {
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
             {testimonials.map((t) => (
               <StaggerItem key={t.id}>
-                <figure className="bg-white border border-sand-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 h-full flex flex-col">
+                <figure className="bg-white border border-bg-secondary rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 h-full flex flex-col">
                   {/* Quote Icon */}
-                  <Quote className="w-8 h-8 text-gold-400/30 mb-4" aria-hidden="true" />
+                  <Quote className="w-8 h-8 text-gold/30 mb-4" aria-hidden="true" />
 
                   {/* Review */}
                   <blockquote className="flex-grow">
@@ -75,8 +75,8 @@ export default function Testimonials({ testimonials }: TestimonialsProps) {
                   {/* Rating + Author */}
                   <figcaption>
                     <StarRating rating={t.rating} />
-                    <div className="mt-3 pt-3 border-t border-sand-100">
-                      <div className="font-inter font-semibold text-navy-950 text-sm">{t.name}</div>
+                    <div className="mt-3 pt-3 border-t border-bg-secondary">
+                      <div className="font-inter font-semibold text-ink text-sm">{t.name}</div>
                       <div className="text-slate-400 text-xs font-inter mt-0.5">{t.location}</div>
                     </div>
                   </figcaption>

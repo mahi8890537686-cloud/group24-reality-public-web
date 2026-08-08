@@ -56,17 +56,17 @@ function FAQItem({ question, answer }: FAQItem) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border border-sand-200 rounded-xl overflow-hidden">
+    <div className="border border-border-subtle rounded-xl overflow-hidden">
       <button
-        className="w-full flex items-start justify-between gap-4 px-6 py-5 text-left bg-white hover:bg-sand-50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-gold-400"
+        className="w-full flex items-start justify-between gap-4 px-6 py-5 text-left bg-white hover:bg-bg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-gold"
         onClick={() => setIsOpen(!isOpen)}
         aria-expanded={isOpen}
       >
-        <span className="font-playfair font-semibold text-navy-950 text-base leading-snug">
+        <span className="font-serif font-semibold text-ink text-base leading-snug">
           {question}
         </span>
         <ChevronDown
-          className={`w-5 h-5 text-gold-500 shrink-0 mt-0.5 transition-transform duration-300 ${
+          className={`w-5 h-5 text-gold-dark shrink-0 mt-0.5 transition-transform duration-300 ${
             isOpen ? 'rotate-180' : ''
           }`}
           aria-hidden="true"
@@ -83,7 +83,7 @@ function FAQItem({ question, answer }: FAQItem) {
             className="overflow-hidden"
           >
             <div className="px-6 pb-5 bg-white">
-              <p className="text-slate-600 text-sm font-inter leading-relaxed border-t border-sand-100 pt-4">
+              <p className="text-slate-600 text-sm font-inter leading-relaxed border-t border-bg-secondary pt-4">
                 {answer}
               </p>
             </div>
@@ -96,7 +96,7 @@ function FAQItem({ question, answer }: FAQItem) {
 
 export default function FAQSection() {
   return (
-    <section className="py-16 sm:py-24 bg-sand-50" aria-labelledby="faq-heading">
+    <section className="py-16 sm:py-24 bg-bg" aria-labelledby="faq-heading">
       <JsonLd data={faqPageSchema(faqs)} />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <FadeInUp className="mb-12">

@@ -48,7 +48,7 @@ export default function ProcessSteps() {
         <StaggerContainer className="relative">
           {/* Connector Line — desktop only */}
           <div
-            className="absolute top-10 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-400/40 to-transparent hidden lg:block"
+            className="absolute top-10 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent hidden lg:block"
             aria-hidden="true"
           />
 
@@ -57,15 +57,15 @@ export default function ProcessSteps() {
               <StaggerItem key={step}>
                 <div className="relative flex flex-col items-center text-center">
                   {/* Step circle */}
-                  <div className="relative w-20 h-20 rounded-full bg-sand-50 border-2 border-gold-400/30 flex items-center justify-center mb-6 z-10">
-                    <div className="w-12 h-12 rounded-full bg-gold-400/10 flex items-center justify-center">
-                      <Icon className="w-6 h-6 text-gold-500" />
+                  <div className="relative w-20 h-20 rounded-full bg-bg border-2 border-gold/30 flex items-center justify-center mb-6 z-10">
+                    <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center">
+                      <Icon className="w-6 h-6 text-gold-dark" />
                     </div>
-                    <span className="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-gold-400 text-navy-950 font-playfair font-bold text-xs flex items-center justify-center">
+                    <span className="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-gold text-ink font-serif font-bold text-xs flex items-center justify-center">
                       {step}
                     </span>
                   </div>
-                  <h3 className="font-playfair font-bold text-navy-950 text-xl mb-3">{title}</h3>
+                  <h3 className="font-serif font-bold text-ink text-xl mb-3">{title}</h3>
                   <p className="text-slate-500 text-sm font-inter leading-relaxed">{description}</p>
                 </div>
               </StaggerItem>

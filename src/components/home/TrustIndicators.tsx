@@ -36,7 +36,7 @@ const trustItems = [
 export default function TrustIndicators() {
   return (
     <section
-      className="py-16 sm:py-20 bg-navy-950"
+      className="py-16 sm:py-20 bg-ink"
       aria-labelledby="trust-heading"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -46,14 +46,14 @@ export default function TrustIndicators() {
         <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {trustItems.map(({ icon: Icon, stat, suffix, label, description }) => (
             <StaggerItem key={label}>
-              <div className="group bg-white/5 hover:bg-white/8 border border-white/10 hover:border-gold-400/30 rounded-2xl p-6 text-center transition-all duration-300">
-                <div className="w-12 h-12 rounded-xl bg-gold-400/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-gold-400/20 transition-colors">
-                  <Icon className="w-6 h-6 text-gold-400" />
+              <div className="group bg-white/5 hover:bg-white/8 border border-white/10 hover:border-gold/30 rounded-2xl p-6 text-center transition-all duration-300">
+                <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-gold/20 transition-colors">
+                  <Icon className="w-6 h-6 text-gold" />
                 </div>
-                <div className="text-3xl sm:text-4xl font-playfair font-bold text-white mb-2">
+                <div className="text-3xl sm:text-4xl font-serif font-bold text-white mb-2">
                   <AnimatedCounter target={stat} suffix={suffix} />
                 </div>
-                <div className="text-gold-400 font-inter font-semibold text-sm mb-2">{label}</div>
+                <div className="text-gold font-inter font-semibold text-sm mb-2">{label}</div>
                 <p className="text-white/50 text-xs font-inter leading-relaxed">{description}</p>
               </div>
             </StaggerItem>
