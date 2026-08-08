@@ -9,10 +9,10 @@ interface BadgeProps {
 }
 
 const variants: Record<BadgeVariant, string> = {
-  gold: 'bg-gold-400/15 text-gold-500 border border-gold-400/30',
-  navy: 'bg-navy-950 text-white',
+  gold: 'bg-gold/15 text-gold-dark border border-gold/30',
+  navy: 'bg-ink text-surface',
   green: 'bg-emerald-50 text-emerald-700 border border-emerald-200',
-  sand: 'bg-sand-100 text-navy-800 border border-sand-200',
+  sand: 'bg-bg-secondary text-text-secondary border border-border-subtle',
   red: 'bg-red-50 text-red-700 border border-red-200',
 };
 
