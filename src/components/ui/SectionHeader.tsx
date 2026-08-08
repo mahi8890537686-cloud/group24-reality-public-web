@@ -34,7 +34,7 @@ export function SectionHeader({
         <p
           className={cn(
             'text-xs font-inter font-semibold tracking-widest uppercase mb-3',
-            light ? 'text-gold-400' : 'text-gold-500'
+            light ? 'text-gold' : 'text-gold-dark'
           )}
         >
           {eyebrow}
@@ -43,9 +43,8 @@ export function SectionHeader({
       <HeadingTag
         id={id}
         className={cn(
-          'font-playfair font-bold leading-tight',
-          light ? 'text-white' : 'text-navy-950',
-          'text-3xl sm:text-4xl lg:text-5xl'
+          'font-serif font-bold leading-tight text-section',
+          light ? 'text-text-on-dark' : 'text-text'
         )}
       >
         {heading}
@@ -54,7 +53,7 @@ export function SectionHeader({
         <p
           className={cn(
             'mt-4 text-base sm:text-lg font-inter leading-relaxed',
-            light ? 'text-white/70' : 'text-slate-600'
+            light ? 'text-text-on-dark/70' : 'text-text-secondary'
           )}
         >
           {subheading}
