@@ -42,7 +42,7 @@ export default function Footer() {
 
   return (
     <footer
-      className="bg-navy-950 text-white pb-[calc(3.5rem+env(safe-area-inset-bottom))] lg:pb-0"
+      className="bg-ink text-white pb-[calc(3.5rem+env(safe-area-inset-bottom))] lg:pb-0"
       aria-labelledby="footer-heading"
     >
       <h2 id="footer-heading" className="sr-only">Footer</h2>
@@ -54,12 +54,12 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <Link href="/" className="inline-flex items-center gap-2 mb-4 group">
-              <div className="w-10 h-10 rounded-lg bg-gold-400 flex items-center justify-center">
-                <span className="text-navy-950 font-bold font-playfair text-sm">G24R</span>
+              <div className="w-10 h-10 rounded-lg bg-gold flex items-center justify-center">
+                <span className="text-ink font-bold font-serif text-sm">G24R</span>
               </div>
               <div>
-                <span className="text-white font-playfair font-bold text-xl">{config.businessName}</span>
-                <span className="block text-gold-400 text-xs tracking-widest uppercase font-inter">
+                <span className="text-white font-serif font-bold text-xl">{config.businessName}</span>
+                <span className="block text-gold text-xs tracking-widest uppercase font-inter">
                   Reality
                 </span>
               </div>
@@ -81,7 +81,7 @@ export default function Footer() {
                   aria-label={label}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-lg bg-white/5 hover:bg-gold-400/20 hover:text-gold-400 flex items-center justify-center transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400 text-white text-xs font-bold font-inter"
+                  className="w-9 h-9 rounded-lg bg-white/5 hover:bg-gold/20 hover:text-gold flex items-center justify-center transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold text-white text-xs font-bold font-inter"
                 >
                   {emoji}
                 </a>
@@ -91,18 +91,18 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-playfair font-semibold text-white mb-5 text-base">Quick Links</h3>
+            <h3 className="font-serif font-semibold text-white mb-5 text-base">Quick Links</h3>
             <ul className="space-y-3">
               {footerLinks.quickLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-white/60 hover:text-gold-400 text-sm font-inter transition-colors duration-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gold-400 rounded">
+                  <Link href={link.href} className="text-white/60 hover:text-gold text-sm font-inter transition-colors duration-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gold rounded">
                     {link.label}
                   </Link>
                 </li>
               ))}
               {footerLinks.propertyTypes.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-white/60 hover:text-gold-400 text-sm font-inter transition-colors duration-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gold-400 rounded">
+                  <Link href={link.href} className="text-white/60 hover:text-gold text-sm font-inter transition-colors duration-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gold rounded">
                     {link.label}
                   </Link>
                 </li>
@@ -112,11 +112,11 @@ export default function Footer() {
 
           {/* Locations */}
           <div>
-            <h3 className="font-playfair font-semibold text-white mb-5 text-base">Locations</h3>
+            <h3 className="font-serif font-semibold text-white mb-5 text-base">Locations</h3>
             <ul className="space-y-3">
               {footerLinks.locations.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-white/60 hover:text-gold-400 text-sm font-inter transition-colors duration-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gold-400 rounded">
+                  <Link href={link.href} className="text-white/60 hover:text-gold text-sm font-inter transition-colors duration-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gold rounded">
                     {link.label}
                   </Link>
                 </li>
@@ -126,13 +126,13 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="font-playfair font-semibold text-white mb-5 text-base">Contact Us</h3>
+            <h3 className="font-serif font-semibold text-white mb-5 text-base">Contact Us</h3>
             <ul className="space-y-4">
 
               {/* Phone 1 */}
               <li>
-                <a href={config.phoneHref} className="flex items-center gap-3 text-sm text-white/60 hover:text-gold-400 font-inter transition-colors">
-                  <Phone className="w-4 h-4 text-gold-400 shrink-0" />
+                <a href={config.phoneHref} className="flex items-center gap-3 text-sm text-white/60 hover:text-gold font-inter transition-colors">
+                  <Phone className="w-4 h-4 text-gold shrink-0" />
                   <span>{config.phone}</span>
                 </a>
               </li>
@@ -140,8 +140,8 @@ export default function Footer() {
               {/* Phone 2 (if present) */}
               {config.phone2 && config.phone2Href && (
                 <li>
-                  <a href={config.phone2Href} className="flex items-center gap-3 text-sm text-white/60 hover:text-gold-400 font-inter transition-colors">
-                    <Phone className="w-4 h-4 text-gold-400 shrink-0" />
+                  <a href={config.phone2Href} className="flex items-center gap-3 text-sm text-white/60 hover:text-gold font-inter transition-colors">
+                    <Phone className="w-4 h-4 text-gold shrink-0" />
                     <span>{config.phone2}</span>
                   </a>
                 </li>
@@ -149,17 +149,17 @@ export default function Footer() {
 
               {/* Email */}
               <li>
-                <a href={`mailto:${config.email}`} className="flex items-center gap-3 text-sm text-white/60 hover:text-gold-400 font-inter transition-colors">
-                  <Mail className="w-4 h-4 text-gold-400 shrink-0" />
+                <a href={`mailto:${config.email}`} className="flex items-center gap-3 text-sm text-white/60 hover:text-gold font-inter transition-colors">
+                  <Mail className="w-4 h-4 text-gold shrink-0" />
                   <span>{config.email}</span>
                 </a>
               </li>
 
               {/* Main Office */}
               <li className="flex items-start gap-3 text-sm text-white/60 font-inter">
-                <MapPin className="w-4 h-4 text-gold-400 mt-0.5 shrink-0" />
+                <MapPin className="w-4 h-4 text-gold mt-0.5 shrink-0" />
                 <span>
-                  <span className="text-gold-400/80 text-xs font-semibold uppercase tracking-wide block mb-0.5">
+                  <span className="text-gold/80 text-xs font-semibold uppercase tracking-wide block mb-0.5">
                     {config.mainOfficeLabel}
                   </span>
                   {config.mainOfficeAddress.split('\n').map((line, i) => (
@@ -170,9 +170,9 @@ export default function Footer() {
 
               {/* Head Office */}
               <li className="flex items-start gap-3 text-sm text-white/60 font-inter">
-                <MapPin className="w-4 h-4 text-gold-400 mt-0.5 shrink-0" />
+                <MapPin className="w-4 h-4 text-gold mt-0.5 shrink-0" />
                 <span>
-                  <span className="text-gold-400/80 text-xs font-semibold uppercase tracking-wide block mb-0.5">
+                  <span className="text-gold/80 text-xs font-semibold uppercase tracking-wide block mb-0.5">
                     {config.headOfficeLabel}
                   </span>
                   {config.headOfficeAddress.split('\n').map((line, i) => (
@@ -183,7 +183,7 @@ export default function Footer() {
 
               {/* Hours */}
               <li className="flex items-start gap-3 text-sm text-white/60 font-inter">
-                <Clock className="w-4 h-4 text-gold-400 mt-0.5 shrink-0" />
+                <Clock className="w-4 h-4 text-gold mt-0.5 shrink-0" />
                 <span>{config.businessHoursWeekday}<br />{config.businessHoursWeekend}</span>
               </li>
 

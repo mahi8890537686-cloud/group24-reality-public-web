@@ -26,7 +26,7 @@ export default function SiteShell({ children }: { children: React.ReactNode }) {
       {/* Skip to main content — accessibility */}
       <a
         href="#main-content"
-        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[999] focus:bg-gold-400 focus:text-navy-950 focus:px-4 focus:py-2 focus:rounded-lg focus:font-inter focus:font-semibold"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[999] focus:bg-gold focus:text-ink focus:px-4 focus:py-2 focus:rounded-lg focus:font-inter focus:font-semibold"
       >
         Skip to main content
       </a>

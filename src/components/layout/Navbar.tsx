@@ -42,7 +42,7 @@ export default function Navbar() {
         className={cn(
           'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
           isScrolled || !isHeroPage
-            ? 'bg-navy-950/98 backdrop-blur-md shadow-lg shadow-black/25 border-b border-white/5'
+            ? 'bg-ink/98 backdrop-blur-md shadow-lg shadow-black/25 border-b border-white/5'
             : 'bg-transparent'
         )}
       >
@@ -51,21 +51,21 @@ export default function Navbar() {
             {/* Logo */}
             <Link
               href="/"
-              className="flex items-center gap-2 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400 rounded-md"
+              className="flex items-center gap-2 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded-md"
               aria-label="Group24 Reality — Home"
             >
               {/* Logo placeholder — replace with your logo image */}
               <div className="flex items-center gap-2">
-                <div className="w-9 h-9 rounded-lg bg-gold-400 flex items-center justify-center shadow-md group-hover:scale-105 transition-transform duration-200">
-                  <span className="text-navy-950 font-bold text-sm font-playfair tracking-tight">
+                <div className="w-9 h-9 rounded-lg bg-gold flex items-center justify-center shadow-md group-hover:scale-105 transition-transform duration-200">
+                  <span className="text-ink font-bold text-sm font-serif tracking-tight">
                     G24R
                   </span>
                 </div>
                 <div className="hidden sm:block">
-                  <span className="text-white font-playfair font-bold text-lg leading-none tracking-tight">
+                  <span className="text-white font-serif font-bold text-lg leading-none tracking-tight">
                     Group 24
                   </span>
-                  <span className="block text-gold-400 text-xs font-inter tracking-widest uppercase leading-none">
+                  <span className="block text-gold text-xs font-inter tracking-widest uppercase leading-none">
                     Reality
                   </span>
                 </div>
@@ -79,9 +79,9 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   className={cn(
-                    'px-4 py-2 rounded-md text-sm font-inter font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400',
+                    'px-4 py-2 rounded-md text-sm font-inter font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold',
                     pathname === link.href
-                      ? 'text-gold-400 bg-white/5'
+                      ? 'text-gold bg-white/5'
                       : 'text-white/80 hover:text-white hover:bg-white/5'
                   )}
                 >
@@ -94,7 +94,7 @@ export default function Navbar() {
             <div className="hidden lg:flex items-center gap-3">
               <a
                 href={PHONE_HREF}
-                className="flex items-center gap-2 text-white/80 hover:text-gold-400 transition-colors text-sm font-inter focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400 rounded-md px-2 py-1"
+                className="flex items-center gap-2 text-white/80 hover:text-gold transition-colors text-sm font-inter focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded-md px-2 py-1"
                 aria-label={`Call Group24 Reality at ${PHONE_NUMBER}`}
               >
                 <Phone className="w-4 h-4" />
@@ -102,7 +102,7 @@ export default function Navbar() {
               </a>
               <Link
                 href="/contact"
-                className="bg-gold-400 hover:bg-gold-500 text-navy-950 font-inter font-semibold text-sm px-5 py-2.5 rounded-lg transition-all duration-200 hover:shadow-lg hover:shadow-gold-400/25 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400 focus-visible:ring-offset-2 focus-visible:ring-offset-navy-950"
+                className="bg-gold hover:bg-gold-dark text-ink font-inter font-semibold text-sm px-5 py-2.5 rounded-lg transition-all duration-200 hover:shadow-lg hover:shadow-gold/25 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
               >
                 Enquire Now
               </Link>
@@ -110,7 +110,7 @@ export default function Navbar() {
 
             {/* Mobile Menu Button */}
             <button
-              className="lg:hidden text-white p-2 rounded-md hover:bg-white/10 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400"
+              className="lg:hidden text-white p-2 rounded-md hover:bg-white/10 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
               onClick={() => setIsMobileOpen(!isMobileOpen)}
               aria-expanded={isMobileOpen}
               aria-label={isMobileOpen ? 'Close menu' : 'Open menu'}
@@ -129,7 +129,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-[55] bg-navy-950/98 backdrop-blur-md pt-16 pb-20 overflow-y-auto lg:hidden"
+            className="fixed inset-0 z-[55] bg-ink/98 backdrop-blur-md pt-16 pb-20 overflow-y-auto lg:hidden"
           >
             <nav
               className="flex flex-col p-6 gap-2"
@@ -147,8 +147,8 @@ export default function Navbar() {
                     className={cn(
                       'block px-4 py-3 rounded-xl text-lg font-inter font-medium transition-all duration-200',
                       pathname === link.href
-                        ? 'text-gold-400 bg-gold-400/10'
-                        : 'text-white hover:text-gold-400 hover:bg-white/5'
+                        ? 'text-gold bg-gold/10'
+                        : 'text-white hover:text-gold hover:bg-white/5'
                     )}
                   >
                     {link.label}
@@ -158,14 +158,14 @@ export default function Navbar() {
               <div className="mt-6 pt-6 border-t border-white/10 flex flex-col gap-3">
                 <a
                   href={PHONE_HREF}
-                  className="flex items-center gap-3 px-4 py-3 rounded-xl text-white hover:text-gold-400 hover:bg-white/5 transition-all font-inter"
+                  className="flex items-center gap-3 px-4 py-3 rounded-xl text-white hover:text-gold hover:bg-white/5 transition-all font-inter"
                 >
-                  <Phone className="w-5 h-5 text-gold-400" />
+                  <Phone className="w-5 h-5 text-gold" />
                   <span>{PHONE_NUMBER}</span>
                 </a>
                 <Link
                   href="/contact"
-                  className="text-center bg-gold-400 hover:bg-gold-500 text-navy-950 font-semibold py-3 px-6 rounded-xl transition-all"
+                  className="text-center bg-gold hover:bg-gold-dark text-ink font-semibold py-3 px-6 rounded-xl transition-all"
                 >
                   Enquire Now
                 </Link>
