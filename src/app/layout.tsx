@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter, Playfair_Display } from 'next/font/google';
+import { Inter, Instrument_Serif } from 'next/font/google';
 import './globals.css';
 import SiteShell from '@/components/layout/SiteShell';
 import { localBusinessSchema, JsonLd } from '@/lib/schema';
@@ -11,9 +11,10 @@ const inter = Inter({
   display: 'swap',
 });
 
-const playfair = Playfair_Display({
+const instrumentSerif = Instrument_Serif({
   subsets: ['latin'],
-  variable: '--font-playfair',
+  weight: '400',
+  variable: '--font-serif',
   display: 'swap',
 });
 
@@ -21,7 +22,7 @@ export const metadata: Metadata = defaultMetadata;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-IN" className={`${inter.variable} ${playfair.variable}`}>
+    <html lang="en-IN" className={`${inter.variable} ${instrumentSerif.variable}`}>
       <head>
         <JsonLd data={localBusinessSchema()} />
       </head>
