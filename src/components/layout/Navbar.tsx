@@ -42,10 +42,11 @@ export default function Navbar() {
           'fixed top-0 left-0 right-0 z-50 border-b',
           isScrolled || !isHeroPage ? 'backdrop-blur-xl' : ''
         )}
+        initial={false}
         animate={{
           backgroundColor: isScrolled || !isHeroPage ? 'rgba(255,255,255,0.90)' : 'rgba(23,23,20,0)',
-          borderColor: isScrolled || !isHeroPage ? '#DDD9D0' : 'rgba(255,255,255,0.05)',
-          boxShadow: isScrolled || !isHeroPage ? '0 4px 16px rgba(23,23,20,0.05)' : 'none',
+          borderColor: isScrolled || !isHeroPage ? 'var(--color-border)' : 'rgba(255,255,255,0.05)',
+          boxShadow: isScrolled || !isHeroPage ? 'var(--shadow-sm)' : 'none',
         }}
         transition={{ duration: 0.3, ease: 'easeOut' }}
       >
