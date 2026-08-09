@@ -15,7 +15,7 @@ export default function PropertyGrid({ properties }: PropertyGridProps) {
         <div className="w-16 h-16 rounded-2xl bg-bg-secondary flex items-center justify-center">
           <SearchX className="w-8 h-8 text-slate-400" />
         </div>
-        <h3 className="font-serif font-semibold text-ink text-xl">No Properties Found</h3>
+        <h3 className="font-serif text-ink text-xl">No Properties Found</h3>
         <p className="text-slate-500 font-inter text-sm max-w-md">
           No properties match your current filters. Try broadening your search or clearing some
           filters to see more results.

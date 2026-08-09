@@ -62,7 +62,7 @@ function FAQItem({ question, answer }: FAQItem) {
         onClick={() => setIsOpen(!isOpen)}
         aria-expanded={isOpen}
       >
-        <span className="font-serif font-semibold text-ink text-base leading-snug">
+        <span className="font-serif text-ink text-base leading-snug">
           {question}
         </span>
         <ChevronDown

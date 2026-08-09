@@ -50,7 +50,7 @@ export default function TrustIndicators() {
                 <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-gold/20 transition-colors">
                   <Icon className="w-6 h-6 text-gold" />
                 </div>
-                <div className="text-3xl sm:text-4xl font-serif font-bold text-white mb-2">
+                <div className="text-3xl sm:text-4xl font-serif text-white mb-2">
                   <AnimatedCounter target={stat} suffix={suffix} />
                 </div>
                 <div className="text-gold font-inter font-semibold text-sm mb-2">{label}</div>

@@ -58,7 +58,7 @@ export default function PropertyCard({ property, className }: PropertyCardProps)
         </div>
         {/* Price tag */}
         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-ink/80 to-transparent p-4">
-          <span className="text-white font-serif font-bold text-2xl">
+          <span className="text-white font-serif text-2xl">
             {property.priceLabel}
           </span>
           {property.pricePerUnit && (
@@ -69,7 +69,7 @@ export default function PropertyCard({ property, className }: PropertyCardProps)
 
       {/* Content */}
       <div className="p-5">
-        <h3 className="font-serif font-semibold text-ink text-lg leading-snug mb-2 line-clamp-2">
+        <h3 className="font-serif text-ink text-lg leading-snug mb-2 line-clamp-2">
           {property.title}
         </h3>
 

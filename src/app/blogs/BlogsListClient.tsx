@@ -63,7 +63,7 @@ export default function BlogsListClient({ initialBlogs }: BlogsListClientProps) 
               <Sparkles className="w-3.5 h-3.5" />
               Real Estate Insights &amp; Guides
             </div>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold font-serif tracking-tight leading-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-serif tracking-tight leading-tight">
               Group 24 Reality{' '}
               <span className="text-gold">Blog</span>
             </h1>
@@ -132,7 +132,7 @@ export default function BlogsListClient({ initialBlogs }: BlogsListClientProps) 
             <div className="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
               <BookOpen className="w-8 h-8 text-gold-dark" />
             </div>
-            <h3 className="text-xl font-bold font-serif text-gray-900 mb-2">No Articles Found</h3>
+            <h3 className="text-xl font-serif text-gray-900 mb-2">No Articles Found</h3>
             <p className="text-sm text-gray-500 font-inter mb-6">
               We couldn&apos;t find any articles matching your selected search or location filter.
             </p>
@@ -181,7 +181,7 @@ export default function BlogsListClient({ initialBlogs }: BlogsListClientProps) 
                       </span>
                     </div>
 
-                    <h2 className="text-2xl sm:text-3xl font-bold font-serif text-gray-900 group-hover:text-gold-dark transition-colors leading-tight">
+                    <h2 className="text-2xl sm:text-3xl font-serif text-gray-900 group-hover:text-gold-dark transition-colors leading-tight">
                       <Link href={`/blogs/${featured.slug}`}>{featured.title}</Link>
                     </h2>
 
@@ -209,7 +209,7 @@ export default function BlogsListClient({ initialBlogs }: BlogsListClientProps) 
             {/* Articles Grid */}
             {list.length > 0 && (
               <div>
-                <h3 className="text-xl font-bold font-serif text-gray-900 mb-6">
+                <h3 className="text-xl font-serif text-gray-900 mb-6">
                   Latest Insights ({list.length})
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -245,7 +245,7 @@ export default function BlogsListClient({ initialBlogs }: BlogsListClientProps) 
                             </span>
                           </div>
 
-                          <h4 className="text-lg font-bold font-serif text-gray-900 group-hover:text-gold-dark transition-colors line-clamp-2">
+                          <h4 className="text-lg font-serif text-gray-900 group-hover:text-gold-dark transition-colors line-clamp-2">
                             <Link href={`/blogs/${blog.slug}`}>{blog.title}</Link>
                           </h4>
 

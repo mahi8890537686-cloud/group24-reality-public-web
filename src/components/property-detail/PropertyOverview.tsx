@@ -46,7 +46,7 @@ export default function PropertyOverview({ property }: PropertyOverviewProps) {
               </Badge>
             )}
           </div>
-          <h1 className="font-serif font-bold text-ink text-2xl sm:text-3xl lg:text-4xl leading-tight">
+          <h1 className="font-serif text-ink text-2xl sm:text-3xl lg:text-4xl leading-tight">
             {property.title}
           </h1>
           <p className="text-slate-500 font-inter text-sm mt-2 flex items-center gap-1.5">
@@ -55,7 +55,7 @@ export default function PropertyOverview({ property }: PropertyOverviewProps) {
           </p>
         </div>
         <div className="text-right">
-          <div className="font-serif font-bold text-ink text-3xl sm:text-4xl">
+          <div className="font-serif text-ink text-3xl sm:text-4xl">
             {property.priceLabel}
           </div>
           {property.pricePerUnit && (
@@ -84,7 +84,7 @@ export default function PropertyOverview({ property }: PropertyOverviewProps) {
 
       {/* Description */}
       <div>
-        <h2 className="font-serif font-semibold text-ink text-xl mb-3">
+        <h2 className="font-serif text-ink text-xl mb-3">
           About This Property
         </h2>
         <p className="text-slate-600 font-inter text-sm leading-relaxed">{property.description}</p>

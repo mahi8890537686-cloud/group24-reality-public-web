@@ -57,7 +57,7 @@ export default function LeadForm({ propertyTitle, propertySlug }: LeadFormProps)
     return (
       <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-8 text-center">
         <CheckCircle className="w-12 h-12 text-emerald-500 mx-auto mb-4" />
-        <h3 className="font-serif font-bold text-ink text-xl mb-2">Enquiry Sent!</h3>
+        <h3 className="font-serif text-ink text-xl mb-2">Enquiry Sent!</h3>
         <p className="text-slate-600 font-inter text-sm">
           Thank you for your interest. Sunil Sangwan will contact you within 2 hours.
         </p>
@@ -67,7 +67,7 @@ export default function LeadForm({ propertyTitle, propertySlug }: LeadFormProps)
 
   return (
     <div className="bg-ink rounded-2xl p-6 text-white">
-      <h3 className="font-serif font-bold text-xl mb-1">Enquire About This Property</h3>
+      <h3 className="font-serif text-xl mb-1">Enquire About This Property</h3>
       <p className="text-white/60 font-inter text-sm mb-5">
         Get a callback from our property expert within 2 hours.
       </p>

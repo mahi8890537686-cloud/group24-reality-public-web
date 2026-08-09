@@ -50,7 +50,7 @@ export default function LocationSection({ location, properties = [] }: LocationS
 
             {/* Property Options SEO block — sits directly below image in same col */}
             <div className="bg-bg rounded-2xl p-5 border border-border-subtle">
-              <h3 className="font-serif font-semibold text-ink text-lg mb-3">
+              <h3 className="font-serif text-ink text-lg mb-3">
                 Property Options in {location.name}
               </h3>
               <div className="space-y-2 text-sm font-inter text-slate-600">
@@ -77,7 +77,7 @@ export default function LocationSection({ location, properties = [] }: LocationS
             </p>
             <h2
               id={`${location.slug}-heading`}
-              className="font-serif font-bold text-ink text-3xl sm:text-4xl lg:text-5xl leading-tight mb-4"
+              className="font-serif text-ink text-3xl sm:text-4xl lg:text-5xl leading-tight mb-4"
             >
               Properties in {location.name}
             </h2>
@@ -87,7 +87,7 @@ export default function LocationSection({ location, properties = [] }: LocationS
 
             {/* Investment Points */}
             <div className="mb-8">
-              <h3 className="font-serif font-semibold text-ink text-xl mb-4 flex items-center gap-2">
+              <h3 className="font-serif text-ink text-xl mb-4 flex items-center gap-2">
                 <TrendingUp className="w-5 h-5 text-gold" aria-hidden="true" />
                 Why Invest in {location.name}?
               </h3>
@@ -139,7 +139,7 @@ export default function LocationSection({ location, properties = [] }: LocationS
         {properties.length > 0 && (
           <div className="mt-14">
             <div className="flex items-center justify-between mb-6 gap-4 flex-wrap">
-              <h3 className="font-serif font-bold text-ink text-2xl">
+              <h3 className="font-serif text-ink text-2xl">
                 Available Properties in {location.name}
               </h3>
               <Link

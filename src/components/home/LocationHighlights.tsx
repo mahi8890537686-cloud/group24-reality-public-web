@@ -70,7 +70,7 @@ export default function LocationHighlights() {
                         High Growth
                       </span>
                     </div>
-                    <h3 className="font-serif font-bold text-white text-2xl mb-1">
+                    <h3 className="font-serif text-white text-2xl mb-1">
                       {loc.name}
                     </h3>
                     <p className="text-white/70 text-sm font-inter mb-4 line-clamp-2">

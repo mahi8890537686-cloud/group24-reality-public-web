@@ -98,7 +98,7 @@ export default async function SingleBlogPage({ params }: PageProps) {
         </div>
 
         {/* Title */}
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-serif text-gray-900 leading-tight mb-6">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-gray-900 leading-tight mb-6">
           {blog.title}
         </h1>
 
@@ -106,7 +106,7 @@ export default async function SingleBlogPage({ params }: PageProps) {
         <div className="flex flex-wrap items-center justify-between gap-4 py-4 border-y border-gray-200/80 mb-8 text-xs text-gray-500 font-inter">
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-full bg-ink text-white font-bold text-xs flex items-center justify-center font-serif">
+              <div className="w-8 h-8 rounded-full bg-ink text-white text-xs flex items-center justify-center font-serif">
                 {blog.author.charAt(0)}
               </div>
               <span className="font-semibold text-gray-800">{blog.author}</span>
@@ -147,7 +147,7 @@ export default async function SingleBlogPage({ params }: PageProps) {
         {/* Article Content */}
         <div className="bg-white rounded-3xl p-6 sm:p-10 lg:p-12 border border-gray-100 shadow-sm mb-12">
           <div
-            className="prose prose-lg max-w-none text-gray-700 font-inter leading-relaxed space-y-6 [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:font-serif [&_h2]:text-gray-900 [&_h2]:mt-8 [&_h2]:mb-4 [&_h3]:text-xl [&_h3]:font-bold [&_h3]:font-serif [&_h3]:text-gray-900 [&_h3]:mt-6 [&_h3]:mb-3 [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-2 [&_li]:text-gray-700 [&_blockquote]:border-l-4 [&_blockquote]:border-gold [&_blockquote]:pl-4 [&_blockquote]:italic [&_blockquote]:text-gray-800"
+            className="prose prose-lg max-w-none text-gray-700 font-inter leading-relaxed space-y-6 [&_h2]:text-2xl [&_h2]:font-serif [&_h2]:text-gray-900 [&_h2]:mt-8 [&_h2]:mb-4 [&_h3]:text-xl [&_h3]:font-serif [&_h3]:text-gray-900 [&_h3]:mt-6 [&_h3]:mb-3 [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-2 [&_li]:text-gray-700 [&_blockquote]:border-l-4 [&_blockquote]:border-gold [&_blockquote]:pl-4 [&_blockquote]:italic [&_blockquote]:text-gray-800"
             dangerouslySetInnerHTML={{ __html: blog.content }}
           />
 
@@ -177,7 +177,7 @@ export default async function SingleBlogPage({ params }: PageProps) {
                 <MapPin className="w-3.5 h-3.5" />
                 Featured Location
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold font-serif capitalize">
+              <h3 className="text-xl sm:text-2xl font-serif capitalize">
                 Explore Properties in {blog.locationSlug}
               </h3>
               <p className="text-white/70 text-xs sm:text-sm font-inter">
@@ -199,7 +199,7 @@ export default async function SingleBlogPage({ params }: PageProps) {
         {/* Related Articles */}
         {related.length > 0 && (
           <div className="mt-16 pt-12 border-t border-gray-200">
-            <h3 className="text-2xl font-bold font-serif text-gray-900 mb-8">
+            <h3 className="text-2xl font-serif text-gray-900 mb-8">
               Related Articles & Guides
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -213,7 +213,7 @@ export default async function SingleBlogPage({ params }: PageProps) {
                     <span className="text-[10px] font-bold text-gold-dark font-inter uppercase tracking-wider">
                       {rel.category}
                     </span>
-                    <h4 className="text-base font-bold font-serif text-gray-900 group-hover:text-gold-dark transition-colors line-clamp-2">
+                    <h4 className="text-base font-serif text-gray-900 group-hover:text-gold-dark transition-colors line-clamp-2">
                       {rel.title}
                     </h4>
                     <p className="text-xs text-gray-500 font-inter line-clamp-2">

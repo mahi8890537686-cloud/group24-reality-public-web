@@ -32,7 +32,7 @@ export default function LocationMap({ location, address }: LocationMapProps) {
 
   return (
     <div>
-      <h2 className="font-serif font-semibold text-ink text-xl mb-4 flex items-center gap-2">
+      <h2 className="font-serif text-ink text-xl mb-4 flex items-center gap-2">
         <MapPin className="w-5 h-5 text-gold" aria-hidden="true" />
         Location Map
       </h2>

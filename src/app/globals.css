@@ -46,21 +46,8 @@
   --shadow-sm: 0 4px 16px rgba(23,23,20,0.05);
   --shadow-md: 0 12px 40px rgba(23,23,20,0.08);
   --shadow-lg: 0 24px 80px rgba(23,23,20,0.10);
-
-  /* Spacing scale (px, additive to Tailwind defaults) */
-  --spacing-4: 4px;
-  --spacing-8: 8px;
-  --spacing-12: 12px;
-  --spacing-16: 16px;
-  --spacing-24: 24px;
-  --spacing-32: 32px;
-  --spacing-40: 40px;
-  --spacing-48: 48px;
-  --spacing-64: 64px;
-  --spacing-80: 80px;
-  --spacing-96: 96px;
-  --spacing-120: 120px;
-  --spacing-160: 160px;
+  --shadow-xl: 0 32px 100px rgba(23,23,20,0.12);
+  --shadow-2xl: 0 40px 120px rgba(23,23,20,0.14);
 }
 
 @layer base {

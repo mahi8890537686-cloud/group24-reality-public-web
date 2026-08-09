@@ -238,7 +238,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
                 className="group border border-border-subtle rounded-xl overflow-hidden bg-white [&_summary::-webkit-details-marker]:hidden"
               >
                 <summary className="list-none w-full flex items-start justify-between gap-4 px-6 py-5 text-left cursor-pointer hover:bg-bg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-gold">
-                  <span className="font-serif font-semibold text-ink text-base leading-snug">
+                  <span className="font-serif text-ink text-base leading-snug">
                     {faq.question}
                   </span>
                   <ChevronDown

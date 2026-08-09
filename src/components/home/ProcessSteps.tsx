@@ -61,11 +61,11 @@ export default function ProcessSteps() {
                     <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center">
                       <Icon className="w-6 h-6 text-gold-dark" />
                     </div>
-                    <span className="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-gold text-ink font-serif font-bold text-xs flex items-center justify-center">
+                    <span className="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-gold text-ink font-serif text-xs flex items-center justify-center">
                       {step}
                     </span>
                   </div>
-                  <h3 className="font-serif font-bold text-ink text-xl mb-3">{title}</h3>
+                  <h3 className="font-serif text-ink text-xl mb-3">{title}</h3>
                   <p className="text-slate-500 text-sm font-inter leading-relaxed">{description}</p>
                 </div>
               </StaggerItem>

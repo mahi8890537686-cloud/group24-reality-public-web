@@ -43,7 +43,7 @@ export function SectionHeader({
       <HeadingTag
         id={id}
         className={cn(
-          'font-serif font-bold leading-tight text-section',
+          'font-serif leading-tight text-section',
           light ? 'text-text-on-dark' : 'text-text'
         )}
       >

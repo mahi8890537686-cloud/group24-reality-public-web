@@ -69,7 +69,7 @@ export default function AboutPage() {
             <p className="text-gold font-inter font-semibold text-xs tracking-widest uppercase mb-4">
               About Us
             </p>
-            <h1 className="font-serif font-bold text-white text-4xl sm:text-5xl lg:text-6xl leading-tight mb-6">
+            <h1 className="font-serif text-white text-4xl sm:text-5xl lg:text-6xl leading-tight mb-6">
               Group 24 Reality
             </h1>
             <p className="text-white/70 font-inter text-base sm:text-lg leading-relaxed">
@@ -90,7 +90,7 @@ export default function AboutPage() {
                 </p>
                 <h2
                   id="story-heading"
-                  className="font-serif font-bold text-ink text-3xl sm:text-4xl mb-6 leading-tight"
+                  className="font-serif text-ink text-3xl sm:text-4xl mb-6 leading-tight"
                 >
                   Built on Trust, Guided by Local Knowledge
                 </h2>
@@ -134,7 +134,7 @@ export default function AboutPage() {
                     key={stat.label}
                     className="bg-bg border border-border-subtle rounded-2xl p-6 text-center"
                   >
-                    <div className="font-serif font-bold text-ink text-4xl mb-1">
+                    <div className="font-serif text-ink text-4xl mb-1">
                       {stat.value}
                     </div>
                     <div className="text-slate-500 font-inter text-sm">{stat.label}</div>
@@ -174,7 +174,7 @@ export default function AboutPage() {
                   <div className="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center mb-4">
                     <Icon className="w-5 h-5 text-gold" aria-hidden="true" />
                   </div>
-                  <h3 className="font-serif font-semibold text-white text-lg mb-2">{title}</h3>
+                  <h3 className="font-serif text-white text-lg mb-2">{title}</h3>
                   <p className="text-white/60 text-sm font-inter leading-relaxed">{description}</p>
                 </div>
               </StaggerItem>
@@ -187,7 +187,7 @@ export default function AboutPage() {
       <section className="py-16 bg-bg text-center">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-2xl">
           <FadeInUp>
-            <h2 className="font-serif font-bold text-ink text-3xl sm:text-4xl mb-4">
+            <h2 className="font-serif text-ink text-3xl sm:text-4xl mb-4">
               Ready to Work With Us?
             </h2>
             <p className="text-slate-600 font-inter mb-8">

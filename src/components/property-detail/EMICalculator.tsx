@@ -20,7 +20,7 @@ export default function EMICalculator({ propertyPrice }: EMICalculatorProps) {
 
   return (
     <div className="bg-bg border border-border-subtle rounded-2xl p-6">
-      <h3 className="font-serif font-semibold text-ink text-lg mb-5 flex items-center gap-2">
+      <h3 className="font-serif text-ink text-lg mb-5 flex items-center gap-2">
         <Calculator className="w-5 h-5 text-gold" />
         EMI Calculator
       </h3>
@@ -104,7 +104,7 @@ export default function EMICalculator({ propertyPrice }: EMICalculatorProps) {
         <div className="bg-ink rounded-xl p-5 mt-2 space-y-3">
           <div className="flex justify-between items-center">
             <span className="text-white/60 font-inter text-sm">Monthly EMI</span>
-            <span className="text-gold font-serif font-bold text-2xl">
+            <span className="text-gold font-serif text-2xl">
               {formatPrice(emi)}
             </span>
           </div>

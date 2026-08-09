@@ -47,7 +47,7 @@ export default function LeadCaptureForm({ blogTitle, locationSlug }: LeadCapture
           <div className="w-12 h-12 bg-gold/10 text-gold-dark rounded-2xl flex items-center justify-center mx-auto mb-2">
             <Sparkles className="w-6 h-6" />
           </div>
-          <h3 className="text-2xl font-bold font-serif text-gray-900">
+          <h3 className="text-2xl font-serif text-gray-900">
             Interested in Real Estate Opportunities?
           </h3>
           <p className="text-sm text-gray-500 font-inter">

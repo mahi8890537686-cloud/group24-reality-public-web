@@ -56,7 +56,7 @@ function ContactForm() {
     return (
       <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-12 text-center">
         <CheckCircle className="w-14 h-14 text-emerald-500 mx-auto mb-4" />
-        <h3 className="font-serif font-bold text-ink text-2xl mb-2">
+        <h3 className="font-serif text-ink text-2xl mb-2">
           Thank You for Reaching Out!
         </h3>
         <p className="text-slate-600 font-inter">
@@ -166,7 +166,7 @@ export default function ContactPageContent() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeInUp>
             <p className="text-gold font-inter font-semibold text-xs tracking-widest uppercase mb-4">Get in Touch</p>
-            <h1 className="font-serif font-bold text-white text-4xl sm:text-5xl lg:text-6xl mb-5">
+            <h1 className="font-serif text-white text-4xl sm:text-5xl lg:text-6xl mb-5">
               Contact {config.businessName}
             </h1>
             <p className="text-white/70 font-inter text-base sm:text-lg max-w-2xl mx-auto">
@@ -184,7 +184,7 @@ export default function ContactPageContent() {
             {/* Contact Info Sidebar */}
             <aside className="space-y-4">
               <FadeInUp>
-                <h2 className="font-serif font-bold text-ink text-2xl mb-6">How to Reach Us</h2>
+                <h2 className="font-serif text-ink text-2xl mb-6">How to Reach Us</h2>
               </FadeInUp>
 
               <StaggerContainer className="space-y-4">
@@ -279,7 +279,7 @@ export default function ContactPageContent() {
             <div className="lg:col-span-2 space-y-8">
               <FadeInUp>
                 <div>
-                  <h2 className="font-serif font-bold text-ink text-2xl mb-2">Send Us an Enquiry</h2>
+                  <h2 className="font-serif text-ink text-2xl mb-2">Send Us an Enquiry</h2>
                   <p className="text-slate-500 font-inter text-sm mb-8">
                     Fill in your details and property requirement. We will get back to you within 2 hours.
                   </p>
@@ -290,7 +290,7 @@ export default function ContactPageContent() {
               {/* Map */}
               <FadeInUp>
                 <div>
-                  <h3 className="font-serif font-semibold text-ink text-xl mb-4 flex items-center gap-2">
+                  <h3 className="font-serif text-ink text-xl mb-4 flex items-center gap-2">
                     <MapPin className="w-5 h-5 text-gold" />
                     Head Office Location
                   </h3>

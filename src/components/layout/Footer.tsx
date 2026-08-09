@@ -55,10 +55,10 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="inline-flex items-center gap-2 mb-4 group">
               <div className="w-10 h-10 rounded-lg bg-gold flex items-center justify-center">
-                <span className="text-ink font-bold font-serif text-sm">G24R</span>
+                <span className="text-ink font-serif text-sm">G24R</span>
               </div>
               <div>
-                <span className="text-white font-serif font-bold text-xl">{config.businessName}</span>
+                <span className="text-white font-serif text-xl">{config.businessName}</span>
                 <span className="block text-gold text-xs tracking-widest uppercase font-inter">
                   Reality
                 </span>
@@ -91,7 +91,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-serif font-semibold text-white mb-5 text-base">Quick Links</h3>
+            <h3 className="font-serif text-white mb-5 text-base">Quick Links</h3>
             <ul className="space-y-3">
               {footerLinks.quickLinks.map((link) => (
                 <li key={link.href}>
@@ -112,7 +112,7 @@ export default function Footer() {
 
           {/* Locations */}
           <div>
-            <h3 className="font-serif font-semibold text-white mb-5 text-base">Locations</h3>
+            <h3 className="font-serif text-white mb-5 text-base">Locations</h3>
             <ul className="space-y-3">
               {footerLinks.locations.map((link) => (
                 <li key={link.href}>
@@ -126,7 +126,7 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="font-serif font-semibold text-white mb-5 text-base">Contact Us</h3>
+            <h3 className="font-serif text-white mb-5 text-base">Contact Us</h3>
             <ul className="space-y-4">
 
               {/* Phone 1 */}

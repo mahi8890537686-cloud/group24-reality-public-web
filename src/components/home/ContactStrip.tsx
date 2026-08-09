@@ -33,7 +33,7 @@ export default function ContactStrip() {
         <div className="max-w-4xl mx-auto text-center">
           <h2
             id="contact-strip-heading"
-            className="font-serif font-bold text-white text-3xl sm:text-4xl lg:text-5xl mb-4"
+            className="font-serif text-white text-3xl sm:text-4xl lg:text-5xl mb-4"
           >
             Ready to Find Your Dream Property?
           </h2>

@@ -64,7 +64,7 @@ export default function PropertyCategories() {
                 <div className={`w-12 h-12 ${iconBg} rounded-xl flex items-center justify-center mb-5`}>
                   <Icon className={`w-6 h-6 ${iconColor}`} />
                 </div>
-                <h3 className="font-serif font-bold text-ink text-xl mb-1">{label}</h3>
+                <h3 className="font-serif text-ink text-xl mb-1">{label}</h3>
                 <p className="text-gold-dark text-sm font-inter font-medium mb-3">{tagline}</p>
                 <p className="text-slate-600 text-sm font-inter leading-relaxed mb-5 flex-grow">
                   {description}

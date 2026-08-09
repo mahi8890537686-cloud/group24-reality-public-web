@@ -129,7 +129,7 @@ export default async function PropertyDetailPage({ params }: PageProps) {
           {/* Related Properties */}
           {related.length > 0 && (
             <section className="mt-16 pt-10 border-t border-border-subtle" aria-labelledby="related-heading">
-              <h2 id="related-heading" className="font-serif font-bold text-ink text-2xl mb-8">
+              <h2 id="related-heading" className="font-serif text-ink text-2xl mb-8">
                 More in {property.locationName}
               </h2>
               <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">

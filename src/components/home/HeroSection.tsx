@@ -37,7 +37,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-            className="font-serif font-bold text-white leading-tight text-4xl sm:text-5xl lg:text-6xl xl:text-7xl mb-6"
+            className="font-serif text-white leading-tight text-4xl sm:text-5xl lg:text-6xl xl:text-7xl mb-6"
           >
             Find Your Perfect{' '}
             <span className="text-gold">Plot, Villa</span>
@@ -125,7 +125,7 @@ export default function HeroSection() {
               { label: 'Locations Served', value: '3' },
             ].map((stat) => (
               <div key={stat.label}>
-                <div className="text-2xl sm:text-3xl font-serif font-bold text-gold">
+                <div className="text-2xl sm:text-3xl font-serif text-gold">
                   {stat.value}
                 </div>
                 <div className="text-white/60 text-xs sm:text-sm font-inter mt-1">

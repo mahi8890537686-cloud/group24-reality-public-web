@@ -191,7 +191,7 @@ export default function VirtualTour360Modal({
                 <Compass className="w-5 h-5 animate-spin" style={{ animationDuration: '10s' }} />
               </div>
               <div>
-                <h3 className="font-serif font-bold text-base sm:text-lg line-clamp-1">
+                <h3 className="font-serif text-base sm:text-lg line-clamp-1">
                   360° Virtual Site Tour — {title}
                 </h3>
                 <p className="text-white/50 text-xs font-inter">

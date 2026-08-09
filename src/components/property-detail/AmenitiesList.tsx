@@ -17,7 +17,7 @@ export default function AmenitiesList({
       {/* Highlights */}
       {highlights.length > 0 && (
         <div>
-          <h2 className="font-serif font-semibold text-ink text-xl mb-4 flex items-center gap-2">
+          <h2 className="font-serif text-ink text-xl mb-4 flex items-center gap-2">
             <Zap className="w-5 h-5 text-gold" aria-hidden="true" />
             Key Highlights
           </h2>
@@ -38,7 +38,7 @@ export default function AmenitiesList({
       {/* Amenities */}
       {amenities.length > 0 && (
         <div>
-          <h2 className="font-serif font-semibold text-ink text-xl mb-4 flex items-center gap-2">
+          <h2 className="font-serif text-ink text-xl mb-4 flex items-center gap-2">
             <CheckCircle2 className="w-5 h-5 text-gold" aria-hidden="true" />
             Amenities & Features
           </h2>
@@ -59,7 +59,7 @@ export default function AmenitiesList({
       {/* Nearby Landmarks */}
       {nearbyLandmarks.length > 0 && (
         <div>
-          <h2 className="font-serif font-semibold text-ink text-xl mb-4 flex items-center gap-2">
+          <h2 className="font-serif text-ink text-xl mb-4 flex items-center gap-2">
             <MapPin className="w-5 h-5 text-gold" aria-hidden="true" />
             Nearby Landmarks
           </h2>

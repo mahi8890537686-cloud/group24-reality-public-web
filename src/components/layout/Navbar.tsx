@@ -57,12 +57,12 @@ export default function Navbar() {
               {/* Logo placeholder — replace with your logo image */}
               <div className="flex items-center gap-2">
                 <div className="w-9 h-9 rounded-lg bg-gold flex items-center justify-center shadow-md group-hover:scale-105 transition-transform duration-200">
-                  <span className="text-ink font-bold text-sm font-serif tracking-tight">
+                  <span className="text-ink text-sm font-serif tracking-tight">
                     G24R
                   </span>
                 </div>
                 <div className="hidden sm:block">
-                  <span className="text-white font-serif font-bold text-lg leading-none tracking-tight">
+                  <span className="text-white font-serif text-lg leading-none tracking-tight">
                     Group 24
                   </span>
                   <span className="block text-gold text-xs font-inter tracking-widest uppercase leading-none">
