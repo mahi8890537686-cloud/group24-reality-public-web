@@ -67,7 +67,7 @@ export default function SearchBar() {
 
         {/* Property type quick-pills (mobile-first top row) */}
         <div className="flex flex-wrap gap-2 mb-5">
-          <span className="text-[11px] font-inter font-semibold text-text-muted uppercase tracking-widest self-center mr-1">
+          <span className="text-[11px] font-inter font-semibold text-text-secondary uppercase tracking-widest self-center mr-1">
             Type:
           </span>
           {propertyTypes.map((t) => (
@@ -87,7 +87,7 @@ export default function SearchBar() {
         </div>
 
         {/* Divider */}
-        <div className="h-px bg-border-subtle mb-5" />
+        <div className="h-px bg-ink/10 mb-5" />
 
         {/* Selects + Button */}
         <div className="flex flex-col sm:flex-row gap-3 items-end">
