@@ -8,6 +8,7 @@ import { Menu, X, Phone } from 'lucide-react';
 import { cn, PHONE_HREF, PHONE_NUMBER } from '@/lib/utils';
 
 const navLinks = [
+  { href: '/', label: 'Home' },
   { href: '/properties', label: 'Properties' },
   { href: '/locations', label: 'Locations' },
   { href: '/about', label: 'About' },
