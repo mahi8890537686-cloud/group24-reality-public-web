@@ -50,22 +50,22 @@ export default function BlogsListClient({ initialBlogs }: BlogsListClientProps) 
   const list = featured ? filteredBlogs.slice(1) : [];
 
   return (
-    <div className="min-h-screen bg-sand-50 pb-16 font-inter">
+    <div className="min-h-screen bg-bg pb-16 font-inter">
       {/* Hero Section */}
-      <section className="relative bg-navy-950 text-white pt-28 pb-14 lg:pt-32 lg:pb-16 overflow-hidden">
+      <section className="relative bg-ink text-white pt-28 pb-14 lg:pt-32 lg:pb-16 overflow-hidden">
         {/* Dot-grid pattern */}
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#c9a84c_1px,transparent_1px)] [background-size:20px_20px]" />
         {/* Gradient glow */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[200px] bg-gold-400/10 blur-[80px] rounded-full" />
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[200px] bg-gold/10 blur-[80px] rounded-full" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-5">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold-400/10 border border-gold-400/30 text-gold-400 text-xs font-semibold uppercase tracking-widest">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold/10 border border-gold/30 text-gold text-xs font-semibold uppercase tracking-widest">
               <Sparkles className="w-3.5 h-3.5" />
               Real Estate Insights &amp; Guides
             </div>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold font-playfair tracking-tight leading-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold font-serif tracking-tight leading-tight">
               Group 24 Reality{' '}
-              <span className="text-gold-400">Blog</span>
+              <span className="text-gold">Blog</span>
             </h1>
             <p className="text-white/65 text-base sm:text-lg max-w-2xl mx-auto font-inter leading-relaxed">
               Expert advice, market trends, area highlights, and smart property investment strategies along the NH-48 corridor in Rajasthan.
@@ -73,13 +73,13 @@ export default function BlogsListClient({ initialBlogs }: BlogsListClientProps) 
 
             {/* Search Input */}
             <div className="relative max-w-xl mx-auto mt-6">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-navy-700/50" />
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-text-muted/50" />
               <input
                 type="text"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="Search by title, topic or location…"
-                className="w-full pl-12 pr-4 py-4 bg-white/95 text-navy-950 rounded-2xl shadow-2xl shadow-black/30 text-sm font-inter focus:outline-none focus:ring-2 focus:ring-gold-400 placeholder-slate-400 border border-white/20"
+                className="w-full pl-12 pr-4 py-4 bg-white/95 text-ink rounded-2xl shadow-2xl shadow-black/30 text-sm font-inter focus:outline-none focus:ring-2 focus:ring-gold placeholder-slate-400 border border-white/20"
               />
             </div>
           </div>
@@ -97,7 +97,7 @@ export default function BlogsListClient({ initialBlogs }: BlogsListClientProps) 
                 onClick={() => setSelectedCategory(cat.value)}
                 className={`px-3.5 py-2 rounded-xl text-xs font-medium font-inter transition-all ${
                   selectedCategory === cat.value
-                    ? 'bg-navy-950 text-white shadow-sm'
+                    ? 'bg-ink text-white shadow-sm'
                     : 'bg-gray-50 text-gray-600 hover:bg-gray-100 hover:text-gray-900'
                 }`}
               >
@@ -108,12 +108,12 @@ export default function BlogsListClient({ initialBlogs }: BlogsListClientProps) 
 
           {/* Location Filter */}
           <div className="flex items-center gap-2 w-full md:w-auto shrink-0 border-t md:border-t-0 pt-3 md:pt-0">
-            <MapPin className="w-4 h-4 text-gold-500 shrink-0" />
+            <MapPin className="w-4 h-4 text-gold-dark shrink-0" />
             <span className="text-xs font-semibold text-gray-500 font-inter">Location:</span>
             <select
               value={selectedLocation}
               onChange={(e) => setSelectedLocation(e.target.value)}
-              className="bg-gray-50 border border-gray-200 rounded-xl px-3 py-1.5 text-xs font-medium font-inter text-gray-800 focus:outline-none focus:ring-2 focus:ring-gold-400"
+              className="bg-gray-50 border border-gray-200 rounded-xl px-3 py-1.5 text-xs font-medium font-inter text-gray-800 focus:outline-none focus:ring-2 focus:ring-gold"
             >
               {LOCATIONS.map((loc) => (
                 <option key={loc.value} value={loc.value}>
@@ -129,16 +129,16 @@ export default function BlogsListClient({ initialBlogs }: BlogsListClientProps) 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-10">
         {filteredBlogs.length === 0 ? (
           <div className="bg-white rounded-3xl p-12 text-center border border-gray-100 max-w-lg mx-auto my-12">
-            <div className="w-16 h-16 bg-gold-50 rounded-2xl flex items-center justify-center mx-auto mb-4">
-              <BookOpen className="w-8 h-8 text-gold-500" />
+            <div className="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <BookOpen className="w-8 h-8 text-gold-dark" />
             </div>
-            <h3 className="text-xl font-bold font-playfair text-gray-900 mb-2">No Articles Found</h3>
+            <h3 className="text-xl font-bold font-serif text-gray-900 mb-2">No Articles Found</h3>
             <p className="text-sm text-gray-500 font-inter mb-6">
               We couldn&apos;t find any articles matching your selected search or location filter.
             </p>
             <button
               onClick={() => { setSearch(''); setSelectedCategory('all'); setSelectedLocation('all'); }}
-              className="px-5 py-2.5 bg-navy-950 text-white rounded-xl text-xs font-semibold font-inter hover:bg-navy-800 transition-colors"
+              className="px-5 py-2.5 bg-ink text-white rounded-xl text-xs font-semibold font-inter hover:bg-charcoal transition-colors"
             >
               Reset Filters
             </button>
@@ -156,12 +156,12 @@ export default function BlogsListClient({ initialBlogs }: BlogsListClientProps) 
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute top-4 left-4 flex gap-2">
-                    <span className="px-3 py-1 bg-navy-950/80 backdrop-blur-md text-gold-400 rounded-full text-xs font-semibold font-inter">
+                    <span className="px-3 py-1 bg-ink/80 backdrop-blur-md text-gold rounded-full text-xs font-semibold font-inter">
                       {featured.category}
                     </span>
                     {featured.locationSlug && (
-                      <span className="px-3 py-1 bg-white/90 backdrop-blur-md text-navy-950 rounded-full text-xs font-bold capitalize font-inter flex items-center gap-1">
-                        <MapPin className="w-3 h-3 text-gold-600" />
+                      <span className="px-3 py-1 bg-white/90 backdrop-blur-md text-ink rounded-full text-xs font-bold capitalize font-inter flex items-center gap-1">
+                        <MapPin className="w-3 h-3 text-gold-dark" />
                         {featured.locationSlug}
                       </span>
                     )}
@@ -181,7 +181,7 @@ export default function BlogsListClient({ initialBlogs }: BlogsListClientProps) 
                       </span>
                     </div>
 
-                    <h2 className="text-2xl sm:text-3xl font-bold font-playfair text-gray-900 group-hover:text-gold-600 transition-colors leading-tight">
+                    <h2 className="text-2xl sm:text-3xl font-bold font-serif text-gray-900 group-hover:text-gold-dark transition-colors leading-tight">
                       <Link href={`/blogs/${featured.slug}`}>{featured.title}</Link>
                     </h2>
 
@@ -196,7 +196,7 @@ export default function BlogsListClient({ initialBlogs }: BlogsListClientProps) 
                     </span>
                     <Link
                       href={`/blogs/${featured.slug}`}
-                      className="inline-flex items-center gap-2 text-sm font-bold text-navy-950 group-hover:text-gold-600 transition-colors font-inter"
+                      className="inline-flex items-center gap-2 text-sm font-bold text-ink group-hover:text-gold-dark transition-colors font-inter"
                     >
                       Read Full Article
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -209,7 +209,7 @@ export default function BlogsListClient({ initialBlogs }: BlogsListClientProps) 
             {/* Articles Grid */}
             {list.length > 0 && (
               <div>
-                <h3 className="text-xl font-bold font-playfair text-gray-900 mb-6">
+                <h3 className="text-xl font-bold font-serif text-gray-900 mb-6">
                   Latest Insights ({list.length})
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -226,7 +226,7 @@ export default function BlogsListClient({ initialBlogs }: BlogsListClientProps) 
                           className="object-cover group-hover:scale-105 transition-transform duration-300"
                         />
                         <div className="absolute top-3 left-3 flex gap-2">
-                          <span className="px-2.5 py-0.5 bg-navy-950/80 backdrop-blur-sm text-gold-400 rounded-full text-[11px] font-semibold font-inter">
+                          <span className="px-2.5 py-0.5 bg-ink/80 backdrop-blur-sm text-gold rounded-full text-[11px] font-semibold font-inter">
                             {blog.category}
                           </span>
                         </div>
@@ -245,7 +245,7 @@ export default function BlogsListClient({ initialBlogs }: BlogsListClientProps) 
                             </span>
                           </div>
 
-                          <h4 className="text-lg font-bold font-playfair text-gray-900 group-hover:text-gold-600 transition-colors line-clamp-2">
+                          <h4 className="text-lg font-bold font-serif text-gray-900 group-hover:text-gold-dark transition-colors line-clamp-2">
                             <Link href={`/blogs/${blog.slug}`}>{blog.title}</Link>
                           </h4>
 
@@ -256,14 +256,14 @@ export default function BlogsListClient({ initialBlogs }: BlogsListClientProps) 
 
                         <div className="pt-4 border-t border-gray-50 flex items-center justify-between">
                           {blog.locationSlug && (
-                            <span className="text-[11px] font-semibold text-navy-900 font-inter capitalize flex items-center gap-1">
-                              <MapPin className="w-3 h-3 text-gold-500" />
+                            <span className="text-[11px] font-semibold text-charcoal font-inter capitalize flex items-center gap-1">
+                              <MapPin className="w-3 h-3 text-gold-dark" />
                               {blog.locationSlug}
                             </span>
                           )}
                           <Link
                             href={`/blogs/${blog.slug}`}
-                            className="inline-flex items-center gap-1.5 text-xs font-bold text-navy-950 group-hover:text-gold-600 transition-colors font-inter ml-auto"
+                            className="inline-flex items-center gap-1.5 text-xs font-bold text-ink group-hover:text-gold-dark transition-colors font-inter ml-auto"
                           >
                             Read More
                             <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />

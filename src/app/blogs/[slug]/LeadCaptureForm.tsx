@@ -44,10 +44,10 @@ export default function LeadCaptureForm({ blogTitle, locationSlug }: LeadCapture
     <div className="bg-white rounded-3xl p-6 sm:p-8 border border-gray-100 shadow-md mb-16">
       <div className="max-w-xl mx-auto space-y-6">
         <div className="text-center space-y-2">
-          <div className="w-12 h-12 bg-gold-50 text-gold-500 rounded-2xl flex items-center justify-center mx-auto mb-2">
+          <div className="w-12 h-12 bg-gold/10 text-gold-dark rounded-2xl flex items-center justify-center mx-auto mb-2">
             <Sparkles className="w-6 h-6" />
           </div>
-          <h3 className="text-2xl font-bold font-playfair text-gray-900">
+          <h3 className="text-2xl font-bold font-serif text-gray-900">
             Interested in Real Estate Opportunities?
           </h3>
           <p className="text-sm text-gray-500 font-inter">
@@ -81,7 +81,7 @@ export default function LeadCaptureForm({ blogTitle, locationSlug }: LeadCapture
                   value={leadForm.name}
                   onChange={(e) => setLeadForm((f) => ({ ...f, name: e.target.value }))}
                   placeholder="Rajesh Kumar"
-                  className="w-full border border-gray-200 rounded-xl px-3.5 py-2.5 text-xs font-inter focus:outline-none focus:ring-2 focus:ring-gold-400"
+                  className="w-full border border-gray-200 rounded-xl px-3.5 py-2.5 text-xs font-inter focus:outline-none focus:ring-2 focus:ring-gold"
                 />
               </div>
               <div>
@@ -94,7 +94,7 @@ export default function LeadCaptureForm({ blogTitle, locationSlug }: LeadCapture
                   value={leadForm.phone}
                   onChange={(e) => setLeadForm((f) => ({ ...f, phone: e.target.value }))}
                   placeholder="+91 98765 43210"
-                  className="w-full border border-gray-200 rounded-xl px-3.5 py-2.5 text-xs font-inter focus:outline-none focus:ring-2 focus:ring-gold-400"
+                  className="w-full border border-gray-200 rounded-xl px-3.5 py-2.5 text-xs font-inter focus:outline-none focus:ring-2 focus:ring-gold"
                 />
               </div>
             </div>
@@ -108,14 +108,14 @@ export default function LeadCaptureForm({ blogTitle, locationSlug }: LeadCapture
                 value={leadForm.message}
                 onChange={(e) => setLeadForm((f) => ({ ...f, message: e.target.value }))}
                 placeholder={`I would like more information about properties in ${locationSlug || 'this area'}...`}
-                className="w-full border border-gray-200 rounded-xl px-3.5 py-2.5 text-xs font-inter focus:outline-none focus:ring-2 focus:ring-gold-400 resize-none"
+                className="w-full border border-gray-200 rounded-xl px-3.5 py-2.5 text-xs font-inter focus:outline-none focus:ring-2 focus:ring-gold resize-none"
               />
             </div>
 
             <button
               type="submit"
               disabled={leadSubmitting}
-              className="w-full py-3 bg-navy-950 hover:bg-navy-800 text-white font-bold rounded-xl text-xs font-inter transition-all flex items-center justify-center gap-2 disabled:opacity-60"
+              className="w-full py-3 bg-ink hover:bg-charcoal text-white font-bold rounded-xl text-xs font-inter transition-all flex items-center justify-center gap-2 disabled:opacity-60"
             >
               {leadSubmitting ? <Loader2 className="w-4 h-4 animate-spin" /> : <Send className="w-4 h-4" />}
               Submit Inquiry

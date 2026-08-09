@@ -63,7 +63,7 @@ export default async function SingleBlogPage({ params }: PageProps) {
     .catch(() => []);
 
   return (
-    <div className="min-h-screen bg-sand-50 pt-24 pb-20 font-inter">
+    <div className="min-h-screen bg-bg pt-24 pb-20 font-inter">
       <JsonLd data={blogPostingSchema(blog)} />
       <JsonLd
         data={breadcrumbSchema([
@@ -78,27 +78,27 @@ export default async function SingleBlogPage({ params }: PageProps) {
         {/* Back Link */}
         <Link
           href="/blogs"
-          className="inline-flex items-center gap-2 text-xs font-semibold text-gray-500 hover:text-navy-950 font-inter mb-6 transition-colors"
+          className="inline-flex items-center gap-2 text-xs font-semibold text-gray-500 hover:text-ink font-inter mb-6 transition-colors"
         >
-          <ArrowLeft className="w-4 h-4 text-gold-500" />
+          <ArrowLeft className="w-4 h-4 text-gold-dark" />
           Back to Blogs & Articles
         </Link>
 
         {/* Category & Tags */}
         <div className="flex flex-wrap items-center gap-2 mb-4">
-          <span className="px-3.5 py-1 bg-navy-950 text-gold-400 font-semibold rounded-full text-xs font-inter">
+          <span className="px-3.5 py-1 bg-ink text-gold font-semibold rounded-full text-xs font-inter">
             {blog.category}
           </span>
           {blog.locationSlug && (
-            <span className="px-3 py-1 bg-white border border-gray-200 text-navy-950 font-bold rounded-full text-xs font-inter capitalize flex items-center gap-1">
-              <MapPin className="w-3.5 h-3.5 text-gold-500" />
+            <span className="px-3 py-1 bg-white border border-gray-200 text-ink font-bold rounded-full text-xs font-inter capitalize flex items-center gap-1">
+              <MapPin className="w-3.5 h-3.5 text-gold-dark" />
               {blog.locationSlug}
             </span>
           )}
         </div>
 
         {/* Title */}
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-playfair text-gray-900 leading-tight mb-6">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-serif text-gray-900 leading-tight mb-6">
           {blog.title}
         </h1>
 
@@ -106,7 +106,7 @@ export default async function SingleBlogPage({ params }: PageProps) {
         <div className="flex flex-wrap items-center justify-between gap-4 py-4 border-y border-gray-200/80 mb-8 text-xs text-gray-500 font-inter">
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-full bg-navy-950 text-white font-bold text-xs flex items-center justify-center font-playfair">
+              <div className="w-8 h-8 rounded-full bg-ink text-white font-bold text-xs flex items-center justify-center font-serif">
                 {blog.author.charAt(0)}
               </div>
               <span className="font-semibold text-gray-800">{blog.author}</span>
@@ -138,8 +138,8 @@ export default async function SingleBlogPage({ params }: PageProps) {
         </div>
 
         {/* Excerpt Box */}
-        <div className="bg-gold-400/10 border-l-4 border-gold-500 rounded-r-2xl p-5 mb-10">
-          <p className="text-base text-navy-950 font-inter font-medium leading-relaxed italic">
+        <div className="bg-gold/10 border-l-4 border-gold-dark rounded-r-2xl p-5 mb-10">
+          <p className="text-base text-ink font-inter font-medium leading-relaxed italic">
             &ldquo;{blog.excerpt}&rdquo;
           </p>
         </div>
@@ -147,7 +147,7 @@ export default async function SingleBlogPage({ params }: PageProps) {
         {/* Article Content */}
         <div className="bg-white rounded-3xl p-6 sm:p-10 lg:p-12 border border-gray-100 shadow-sm mb-12">
           <div
-            className="prose prose-lg max-w-none text-gray-700 font-inter leading-relaxed space-y-6 [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:font-playfair [&_h2]:text-gray-900 [&_h2]:mt-8 [&_h2]:mb-4 [&_h3]:text-xl [&_h3]:font-bold [&_h3]:font-playfair [&_h3]:text-gray-900 [&_h3]:mt-6 [&_h3]:mb-3 [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-2 [&_li]:text-gray-700 [&_blockquote]:border-l-4 [&_blockquote]:border-gold-400 [&_blockquote]:pl-4 [&_blockquote]:italic [&_blockquote]:text-gray-800"
+            className="prose prose-lg max-w-none text-gray-700 font-inter leading-relaxed space-y-6 [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:font-serif [&_h2]:text-gray-900 [&_h2]:mt-8 [&_h2]:mb-4 [&_h3]:text-xl [&_h3]:font-bold [&_h3]:font-serif [&_h3]:text-gray-900 [&_h3]:mt-6 [&_h3]:mb-3 [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-2 [&_li]:text-gray-700 [&_blockquote]:border-l-4 [&_blockquote]:border-gold [&_blockquote]:pl-4 [&_blockquote]:italic [&_blockquote]:text-gray-800"
             dangerouslySetInnerHTML={{ __html: blog.content }}
           />
 
@@ -160,7 +160,7 @@ export default async function SingleBlogPage({ params }: PageProps) {
               {blog.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="px-3 py-1 bg-sand-50 border border-gray-200 text-gray-600 rounded-full text-xs font-inter"
+                  className="px-3 py-1 bg-bg border border-gray-200 text-gray-600 rounded-full text-xs font-inter"
                 >
                   #{tag}
                 </span>
@@ -171,13 +171,13 @@ export default async function SingleBlogPage({ params }: PageProps) {
 
         {/* Location Callout Widget */}
         {blog.locationSlug && (
-          <div className="bg-gradient-to-r from-navy-950 to-navy-900 rounded-3xl p-6 sm:p-8 text-white mb-12 shadow-lg flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div className="bg-gradient-to-r from-ink to-charcoal rounded-3xl p-6 sm:p-8 text-white mb-12 shadow-lg flex flex-col sm:flex-row items-center justify-between gap-6">
             <div className="space-y-2 text-center sm:text-left">
-              <div className="inline-flex items-center gap-1 text-gold-400 text-xs uppercase tracking-wider font-semibold">
+              <div className="inline-flex items-center gap-1 text-gold text-xs uppercase tracking-wider font-semibold">
                 <MapPin className="w-3.5 h-3.5" />
                 Featured Location
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold font-playfair capitalize">
+              <h3 className="text-xl sm:text-2xl font-bold font-serif capitalize">
                 Explore Properties in {blog.locationSlug}
               </h3>
               <p className="text-white/70 text-xs sm:text-sm font-inter">
@@ -186,7 +186,7 @@ export default async function SingleBlogPage({ params }: PageProps) {
             </div>
             <Link
               href={`/properties?location=${blog.locationSlug}`}
-              className="px-6 py-3 bg-gold-400 hover:bg-gold-500 text-navy-950 font-bold rounded-xl text-xs sm:text-sm font-inter transition-all shrink-0 shadow-md hover:scale-105"
+              className="px-6 py-3 bg-gold hover:bg-gold-dark text-ink font-bold rounded-xl text-xs sm:text-sm font-inter transition-all shrink-0 shadow-md hover:scale-105"
             >
               Browse Properties
             </Link>
@@ -199,7 +199,7 @@ export default async function SingleBlogPage({ params }: PageProps) {
         {/* Related Articles */}
         {related.length > 0 && (
           <div className="mt-16 pt-12 border-t border-gray-200">
-            <h3 className="text-2xl font-bold font-playfair text-gray-900 mb-8">
+            <h3 className="text-2xl font-bold font-serif text-gray-900 mb-8">
               Related Articles & Guides
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -210,10 +210,10 @@ export default async function SingleBlogPage({ params }: PageProps) {
                   className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-md transition-all group flex flex-col justify-between"
                 >
                   <div className="space-y-3">
-                    <span className="text-[10px] font-bold text-gold-600 font-inter uppercase tracking-wider">
+                    <span className="text-[10px] font-bold text-gold-dark font-inter uppercase tracking-wider">
                       {rel.category}
                     </span>
-                    <h4 className="text-base font-bold font-playfair text-gray-900 group-hover:text-gold-600 transition-colors line-clamp-2">
+                    <h4 className="text-base font-bold font-serif text-gray-900 group-hover:text-gold-dark transition-colors line-clamp-2">
                       {rel.title}
                     </h4>
                     <p className="text-xs text-gray-500 font-inter line-clamp-2">
@@ -222,7 +222,7 @@ export default async function SingleBlogPage({ params }: PageProps) {
                   </div>
                   <div className="mt-4 pt-3 border-t border-gray-50 flex items-center justify-between text-[11px] text-gray-400 font-inter">
                     <span>{rel.readTimeMinutes} min read</span>
-                    <span className="text-navy-950 font-bold group-hover:translate-x-1 transition-transform">Read →</span>
+                    <span className="text-ink font-bold group-hover:translate-x-1 transition-transform">Read →</span>
                   </div>
                 </Link>
               ))}
