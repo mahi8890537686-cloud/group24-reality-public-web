@@ -2,9 +2,11 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { Search, MapPin, Home, IndianRupee, ChevronDown } from 'lucide-react';
+import { Search } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
+import { GlassPanel } from '@/components/ui/GlassPanel';
+import { Select } from '@/components/ui/Select';
 
 const locations = [
   { value: 'all', label: 'All Locations' },
@@ -27,46 +29,6 @@ const budgets = [
   { value: '5000000-10000000', label: '₹50L – ₹1 Cr' },
   { value: '10000000-99999999', label: 'Above ₹1 Cr' },
 ];
-
-function SelectField({
-  icon: Icon,
-  label,
-  value,
-  onChange,
-  options,
-  ariaLabel,
-}: {
-  icon: React.ElementType;
-  label: string;
-  value: string;
-  onChange: (v: string) => void;
-  options: { value: string; label: string }[];
-  ariaLabel: string;
-}) {
-  return (
-    <div className="flex flex-col gap-1.5 flex-1 min-w-0">
-      <label className="flex items-center gap-1.5 text-[11px] font-inter font-semibold text-gold/80 uppercase tracking-widest">
-        <Icon className="w-3.5 h-3.5 text-gold" />
-        {label}
-      </label>
-      <div className="relative">
-        <select
-          value={value}
-          onChange={(e) => onChange(e.target.value)}
-          className="w-full appearance-none bg-white/8 hover:bg-white/12 border border-white/15 hover:border-gold/50 rounded-xl px-4 py-3 pr-10 text-white font-inter text-sm focus:outline-none focus:ring-2 focus:ring-gold/60 focus:border-gold/60 cursor-pointer transition-all duration-200"
-          aria-label={ariaLabel}
-        >
-          {options.map((o) => (
-            <option key={o.value} value={o.value} className="bg-ink text-white">
-              {o.label}
-            </option>
-          ))}
-        </select>
-        <ChevronDown className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/40" />
-      </div>
-    </div>
-  );
-}
 
 export default function SearchBar() {
   const [location, setLocation] = useState('all');
@@ -97,7 +59,7 @@ export default function SearchBar() {
         className="relative z-20 container mx-auto px-4 sm:px-6 lg:px-8"
         aria-label="Property search"
       >
-      <div className="relative bg-charcoal/95 backdrop-blur-xl rounded-2xl shadow-2xl shadow-black/40 border border-white/10 overflow-hidden p-5 sm:p-6">
+      <GlassPanel variant="strong" className="relative overflow-hidden p-5 sm:p-6 shadow-2xl">
         {/* Subtle top gold border accent */}
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/60 to-transparent" />
 
@@ -129,22 +91,22 @@ export default function SearchBar() {
 
         {/* Selects + Button */}
         <div className="flex flex-col sm:flex-row gap-3 items-end">
-          <SelectField
-            icon={MapPin}
-            label="Location"
-            value={location}
-            onChange={setLocation}
-            options={locations}
-            ariaLabel="Select location"
-          />
-          <SelectField
-            icon={IndianRupee}
-            label="Budget"
-            value={budget}
-            onChange={setBudget}
-            options={budgets}
-            ariaLabel="Select budget range"
-          />
+          <div className="flex-1 min-w-0">
+            <Select
+              label="Location"
+              value={location}
+              onChange={(e) => setLocation(e.target.value)}
+              options={locations}
+            />
+          </div>
+          <div className="flex-1 min-w-0">
+            <Select
+              label="Budget"
+              value={budget}
+              onChange={(e) => setBudget(e.target.value)}
+              options={budgets}
+            />
+          </div>
 
           {/* Search Button */}
           <div className="flex flex-col justify-end w-full sm:w-auto shrink-0">
@@ -158,7 +120,7 @@ export default function SearchBar() {
             </button>
           </div>
         </div>
-      </div>
+      </GlassPanel>
     </motion.section>
     </div>
   );
