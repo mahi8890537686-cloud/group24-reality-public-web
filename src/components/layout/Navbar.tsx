@@ -147,7 +147,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-[55] bg-ink/98 backdrop-blur-md pt-16 pb-20 overflow-y-auto lg:hidden"
+            className="fixed inset-0 z-[55] bg-ink/95 backdrop-blur-2xl pt-16 pb-20 overflow-y-auto lg:hidden"
           >
             <nav
               className="flex flex-col p-6 gap-2"
