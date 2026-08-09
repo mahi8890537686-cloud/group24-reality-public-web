@@ -37,13 +37,17 @@ export default function Navbar() {
 
   return (
     <>
-      <header
+      <motion.header
         className={cn(
-          'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-          isScrolled || !isHeroPage
-            ? 'bg-ink/98 backdrop-blur-md shadow-lg shadow-black/25 border-b border-white/5'
-            : 'bg-transparent'
+          'fixed top-0 left-0 right-0 z-50 border-b',
+          isScrolled || !isHeroPage ? 'backdrop-blur-xl' : ''
         )}
+        animate={{
+          backgroundColor: isScrolled || !isHeroPage ? 'rgba(255,255,255,0.90)' : 'rgba(23,23,20,0)',
+          borderColor: isScrolled || !isHeroPage ? '#DDD9D0' : 'rgba(255,255,255,0.05)',
+          boxShadow: isScrolled || !isHeroPage ? '0 4px 16px rgba(23,23,20,0.05)' : 'none',
+        }}
+        transition={{ duration: 0.3, ease: 'easeOut' }}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
@@ -61,7 +65,12 @@ export default function Navbar() {
                   </span>
                 </div>
                 <div className="hidden sm:block">
-                  <span className="text-white font-serif text-lg leading-none tracking-tight">
+                  <span
+                    className={cn(
+                      'font-serif text-lg leading-none tracking-tight transition-colors duration-300',
+                      isScrolled || !isHeroPage ? 'text-ink' : 'text-white'
+                    )}
+                  >
                     Group 24
                   </span>
                   <span className="block text-gold text-xs font-inter tracking-widest uppercase leading-none">
@@ -80,8 +89,10 @@ export default function Navbar() {
                   className={cn(
                     'px-4 py-2 rounded-md text-sm font-inter font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold',
                     pathname === link.href
-                      ? 'text-gold bg-white/5'
-                      : 'text-white/80 hover:text-white hover:bg-white/5'
+                      ? 'text-gold'
+                      : isScrolled || !isHeroPage
+                        ? 'text-text-secondary hover:text-ink hover:bg-bg-secondary'
+                        : 'text-white/80 hover:text-white hover:bg-white/5'
                   )}
                 >
                   {link.label}
@@ -93,7 +104,10 @@ export default function Navbar() {
             <div className="hidden lg:flex items-center gap-3">
               <a
                 href={PHONE_HREF}
-                className="flex items-center gap-2 text-white/80 hover:text-gold transition-colors text-sm font-inter focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded-md px-2 py-1"
+                className={cn(
+                  'flex items-center gap-2 hover:text-gold transition-colors text-sm font-inter focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded-md px-2 py-1',
+                  isScrolled || !isHeroPage ? 'text-text-secondary' : 'text-white/80'
+                )}
                 aria-label={`Call Group24 Reality at ${PHONE_NUMBER}`}
               >
                 <Phone className="w-4 h-4" />
@@ -109,7 +123,10 @@ export default function Navbar() {
 
             {/* Mobile Menu Button */}
             <button
-              className="lg:hidden text-white p-2 rounded-md hover:bg-white/10 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+              className={cn(
+                'lg:hidden p-2 rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold',
+                isScrolled || !isHeroPage ? 'text-ink hover:bg-bg-secondary' : 'text-white hover:bg-white/10'
+              )}
               onClick={() => setIsMobileOpen(!isMobileOpen)}
               aria-expanded={isMobileOpen}
               aria-label={isMobileOpen ? 'Close menu' : 'Open menu'}
@@ -118,7 +135,7 @@ export default function Navbar() {
             </button>
           </div>
         </div>
-      </header>
+      </motion.header>
 
       {/* Mobile Menu */}
       <AnimatePresence>
