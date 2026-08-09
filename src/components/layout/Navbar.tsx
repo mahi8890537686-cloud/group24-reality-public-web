@@ -8,11 +8,10 @@ import { Menu, X, Phone } from 'lucide-react';
 import { cn, PHONE_HREF, PHONE_NUMBER } from '@/lib/utils';
 
 const navLinks = [
-  { href: '/', label: 'Home' },
   { href: '/properties', label: 'Properties' },
   { href: '/locations', label: 'Locations' },
-  { href: '/blogs', label: 'Blogs' },
-  { href: '/about', label: 'About Us' },
+  { href: '/about', label: 'About' },
+  { href: '/blogs', label: 'Insights' },
   { href: '/contact', label: 'Contact' },
 ];
 
@@ -104,7 +103,7 @@ export default function Navbar() {
                 href="/contact"
                 className="bg-gold hover:bg-gold-dark text-ink font-inter font-semibold text-sm px-5 py-2.5 rounded-lg transition-all duration-200 hover:shadow-lg hover:shadow-gold/25 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
               >
-                Enquire Now
+                Schedule a Site Visit
               </Link>
             </div>
 
@@ -167,7 +166,7 @@ export default function Navbar() {
                   href="/contact"
                   className="text-center bg-gold hover:bg-gold-dark text-ink font-semibold py-3 px-6 rounded-xl transition-all"
                 >
-                  Enquire Now
+                  Schedule a Site Visit
                 </Link>
               </div>
             </nav>
