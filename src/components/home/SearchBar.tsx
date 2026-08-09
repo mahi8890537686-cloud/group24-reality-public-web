@@ -89,7 +89,7 @@ export default function SearchBar() {
   return (
     /* Bridge div: full-width bg-ink pulls up over the hero bottom edge so
        the rounded card corners never expose the white body background */
-    <div className="relative bg-ink -mt-16 sm:-mt-20 pt-4 sm:pt-6 pb-10 sm:pb-14">
+    <div className="relative bg-ink -mt-16 sm:-mt-20 pt-4 sm:pt-6 pb-4 sm:pb-6">
       <motion.section
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}

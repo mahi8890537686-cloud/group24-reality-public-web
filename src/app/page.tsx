@@ -1,14 +1,12 @@
 import type { Metadata } from 'next';
 import HeroSection from '@/components/home/HeroSection';
 import SearchBar from '@/components/home/SearchBar';
-import TrustIndicators from '@/components/home/TrustIndicators';
 import FeaturedProperties from '@/components/home/FeaturedProperties';
 import LocationHighlights from '@/components/home/LocationHighlights';
 import PropertyCategories from '@/components/home/PropertyCategories';
 import WhyChooseUs from '@/components/home/WhyChooseUs';
 import Testimonials from '@/components/home/Testimonials';
 import ProcessSteps from '@/components/home/ProcessSteps';
-import FAQSection from '@/components/home/FAQSection';
 import ContactStrip from '@/components/home/ContactStrip';
 import { buildMetadata } from '@/lib/seo';
 import { getVisibleTestimonials } from '@/lib/firestore/testimonials';
@@ -38,14 +36,12 @@ export default async function HomePage() {
     <>
       <HeroSection />
       <SearchBar />
-      <TrustIndicators />
       <FeaturedProperties />
       <LocationHighlights />
       <PropertyCategories />
       <WhyChooseUs />
       <Testimonials testimonials={testimonials} />
       <ProcessSteps />
-      <FAQSection />
       <ContactStrip />
     </>
   );
