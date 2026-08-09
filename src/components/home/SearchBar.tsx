@@ -67,7 +67,7 @@ export default function SearchBar() {
 
         {/* Property type quick-pills (mobile-first top row) */}
         <div className="flex flex-wrap gap-2 mb-5">
-          <span className="text-[11px] font-inter font-semibold text-white/40 uppercase tracking-widest self-center mr-1">
+          <span className="text-[11px] font-inter font-semibold text-text-muted uppercase tracking-widest self-center mr-1">
             Type:
           </span>
           {propertyTypes.map((t) => (
@@ -78,7 +78,7 @@ export default function SearchBar() {
                 'px-3.5 py-1.5 rounded-full text-xs font-inter font-semibold transition-all duration-200 border',
                 type === t.value
                   ? 'bg-gold text-ink border-gold shadow-md shadow-gold/25'
-                  : 'bg-white/5 text-white/60 border-white/10 hover:border-gold/40 hover:text-white'
+                  : 'bg-bg-secondary text-text-secondary border-border hover:border-gold/40 hover:text-text'
               )}
             >
               {t.label}
@@ -87,7 +87,7 @@ export default function SearchBar() {
         </div>
 
         {/* Divider */}
-        <div className="h-px bg-white/8 mb-5" />
+        <div className="h-px bg-border-subtle mb-5" />
 
         {/* Selects + Button */}
         <div className="flex flex-col sm:flex-row gap-3 items-end">
@@ -112,7 +112,7 @@ export default function SearchBar() {
           <div className="flex flex-col justify-end w-full sm:w-auto shrink-0">
             <button
               onClick={handleSearch}
-              className="flex items-center justify-center gap-2 bg-gold hover:bg-gold-dark text-ink font-inter font-bold py-3 px-7 rounded-xl transition-all duration-200 hover:shadow-xl hover:shadow-gold/35 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold whitespace-nowrap text-sm"
+              className="flex items-center justify-center gap-2 h-14 bg-gold hover:bg-gold-dark text-ink font-inter font-bold px-7 rounded-xl transition-all duration-200 hover:shadow-xl hover:shadow-gold/35 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold whitespace-nowrap text-sm"
               aria-label="Search properties"
             >
               <Search className="w-4 h-4" />
