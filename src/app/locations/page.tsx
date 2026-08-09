@@ -28,7 +28,7 @@ export default async function LocationsPage() {
       />
 
       {/* Header */}
-      <div className="bg-navy-950 pt-28 pb-16">
+      <div className="bg-ink pt-28 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <FadeInUp>
             <SectionHeader
@@ -46,7 +46,7 @@ export default async function LocationsPage() {
               <Link
                 key={loc.id ?? loc.slug}
                 href={`/locations/${loc.slug}`}
-                className="bg-white/10 hover:bg-gold-400 hover:text-navy-950 border border-white/20 hover:border-gold-400 text-white font-inter font-semibold text-sm px-5 py-2.5 rounded-xl transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400"
+                className="bg-white/10 hover:bg-gold hover:text-ink border border-white/20 hover:border-gold text-white font-inter font-semibold text-sm px-5 py-2.5 rounded-xl transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
               >
                 {loc.name}
               </Link>
@@ -57,7 +57,7 @@ export default async function LocationsPage() {
 
       {/* Location Sections with alternating background */}
       {locations.map((loc, i) => (
-        <div key={loc.id ?? loc.slug} className={i % 2 === 0 ? 'bg-white' : 'bg-sand-50'}>
+        <div key={loc.id ?? loc.slug} className={i % 2 === 0 ? 'bg-white' : 'bg-bg'}>
           <LocationSection location={loc} />
         </div>
       ))}

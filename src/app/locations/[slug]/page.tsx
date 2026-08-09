@@ -191,13 +191,13 @@ export default async function LocationDetailPage({ params }: PageProps) {
       <JsonLd data={faqPageSchema(faqs)} />
 
       {/* Hero header */}
-      <div className="bg-navy-950 pt-28 pb-16">
+      <div className="bg-ink pt-28 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <nav aria-label="Breadcrumb" className="mb-8">
             <ol className="flex items-center gap-2 text-sm font-inter text-white/50">
-              <li><Link href="/" className="hover:text-gold-400 transition-colors">Home</Link></li>
+              <li><Link href="/" className="hover:text-gold transition-colors">Home</Link></li>
               <li aria-hidden="true">/</li>
-              <li><Link href="/locations" className="hover:text-gold-400 transition-colors">Locations</Link></li>
+              <li><Link href="/locations" className="hover:text-gold transition-colors">Locations</Link></li>
               <li aria-hidden="true">/</li>
               <li className="text-white font-medium">{location.name}</li>
             </ol>
@@ -220,7 +220,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
       </div>
 
       {/* FAQ — town-specific questions grounded in this location's real data */}
-      <div className="bg-sand-50 border-t border-sand-100 py-16 sm:py-24" aria-labelledby="location-faq-heading">
+      <div className="bg-bg border-t border-border-subtle py-16 sm:py-24" aria-labelledby="location-faq-heading">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <FadeInUp className="mb-12">
             <SectionHeader
@@ -235,19 +235,19 @@ export default async function LocationDetailPage({ params }: PageProps) {
             {faqs.map((faq) => (
               <details
                 key={faq.question}
-                className="group border border-sand-200 rounded-xl overflow-hidden bg-white [&_summary::-webkit-details-marker]:hidden"
+                className="group border border-border-subtle rounded-xl overflow-hidden bg-white [&_summary::-webkit-details-marker]:hidden"
               >
-                <summary className="list-none w-full flex items-start justify-between gap-4 px-6 py-5 text-left cursor-pointer hover:bg-sand-50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-gold-400">
-                  <span className="font-playfair font-semibold text-navy-950 text-base leading-snug">
+                <summary className="list-none w-full flex items-start justify-between gap-4 px-6 py-5 text-left cursor-pointer hover:bg-bg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-gold">
+                  <span className="font-serif font-semibold text-ink text-base leading-snug">
                     {faq.question}
                   </span>
                   <ChevronDown
-                    className="w-5 h-5 text-gold-500 shrink-0 mt-0.5 transition-transform duration-300 group-open:rotate-180"
+                    className="w-5 h-5 text-gold-dark shrink-0 mt-0.5 transition-transform duration-300 group-open:rotate-180"
                     aria-hidden="true"
                   />
                 </summary>
                 <div className="px-6 pb-5">
-                  <p className="text-slate-600 text-sm font-inter leading-relaxed border-t border-sand-100 pt-4">
+                  <p className="text-slate-600 text-sm font-inter leading-relaxed border-t border-border-subtle pt-4">
                     {faq.answer}
                   </p>
                 </div>
@@ -259,16 +259,16 @@ export default async function LocationDetailPage({ params }: PageProps) {
 
       {/* Single bottom CTA — only shown when there are properties */}
       {totalAvailable > 0 && (
-        <div className="bg-sand-50 border-t border-sand-100 py-12">
+        <div className="bg-bg border-t border-border-subtle py-12">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="font-inter text-slate-600 text-sm">
-              <span className="font-semibold text-navy-950">{totalAvailable}</span> verified{' '}
+              <span className="font-semibold text-ink">{totalAvailable}</span> verified{' '}
               {totalAvailable === 1 ? 'property' : 'properties'} listed in {location.name}.
               {totalAvailable > PREVIEW_COUNT && ` ${PREVIEW_COUNT} shown above.`}
             </p>
             <Link
               href={`/properties?location=${location.slug}`}
-              className="group inline-flex items-center gap-2 bg-navy-950 hover:bg-gold-400 text-white hover:text-navy-950 font-inter font-bold px-8 py-4 rounded-xl transition-all duration-200 hover:shadow-xl hover:shadow-gold-400/25 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400 whitespace-nowrap"
+              className="group inline-flex items-center gap-2 bg-ink hover:bg-gold text-white hover:text-ink font-inter font-bold px-8 py-4 rounded-xl transition-all duration-200 hover:shadow-xl hover:shadow-gold/25 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold whitespace-nowrap"
             >
               View All Properties in {location.name}
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

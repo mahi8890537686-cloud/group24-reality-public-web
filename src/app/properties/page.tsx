@@ -98,7 +98,7 @@ async function PropertyResults({ searchParams }: PageProps) {
       {properties.length > 0 && <JsonLd data={itemListSchema(properties)} />}
 
       {/* Hero Banner */}
-      <div className="bg-navy-950 pt-28 pb-12">
+      <div className="bg-ink pt-28 pb-12">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
             headingAs="h1"
@@ -132,7 +132,7 @@ export default function PropertiesPage({ searchParams }: PageProps) {
     <Suspense
       fallback={
         <div className="min-h-screen flex items-center justify-center">
-          <Loader2 className="w-10 h-10 text-gold-500 animate-spin" />
+          <Loader2 className="w-10 h-10 text-gold-dark animate-spin" />
         </div>
       }
     >
