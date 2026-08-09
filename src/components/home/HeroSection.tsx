@@ -2,8 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { Phone, ArrowRight, MapPin, Shield } from 'lucide-react';
-import { PHONE_HREF, whatsappLink } from '@/lib/utils';
+import { ArrowRight, MapPin, Shield } from 'lucide-react';
 import { AnimatedHeroBackground } from './AnimatedHeroBackground';
 
 export default function HeroSection() {
@@ -99,27 +98,12 @@ export default function HeroSection() {
               Explore Properties
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
             </Link>
-            <a
-              href={PHONE_HREF}
+            <Link
+              href="/contact"
               className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white font-inter font-semibold px-7 py-4 rounded-xl transition-all duration-200 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white text-sm sm:text-base"
             >
-              <Phone className="w-4 h-4" />
-              Call Now
-            </a>
-            <a
-              href={whatsappLink(
-                'Hello, I want to enquire about properties in Behror/Neemrana/Kotputli.'
-              )}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#25D366]/20 hover:bg-[#25D366]/30 border border-[#25D366]/40 text-white font-inter font-semibold px-7 py-4 rounded-xl transition-all duration-200 active:scale-[0.97] text-sm sm:text-base"
-            >
-              {/* WhatsApp icon inline */}
-              <svg viewBox="0 0 24 24" className="w-4 h-4 fill-[#25D366]" aria-hidden="true">
-                <path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.98-1.304A9.956 9.956 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18c-1.63 0-3.155-.46-4.45-1.26l-.318-.19-3.295.864.88-3.22-.207-.332A7.96 7.96 0 014 12c0-4.418 3.582-8 8-8s8 3.582 8 8-3.582 8-8 8zm4.29-5.93c-.233-.116-1.38-.68-1.593-.758-.214-.078-.37-.116-.525.116-.155.232-.601.758-.737.913-.135.155-.27.174-.502.058-.233-.116-.983-.362-1.873-1.154-.692-.617-1.16-1.38-1.296-1.612-.136-.233-.014-.358.102-.474.105-.104.233-.27.349-.407.116-.135.155-.232.233-.387.078-.155.039-.29-.02-.406-.058-.116-.525-1.265-.72-1.732-.19-.455-.383-.393-.525-.4H8.7c-.155 0-.406.058-.618.29-.213.232-.812.794-.812 1.934 0 1.14.831 2.242 1.947 3.358 1.116 1.116 2.242 1.947 3.358 1.947.564 0 1.14-.193 1.586-.58.446-.386.735-.91.75-1.274.015-.36-.019-.66-.136-.776z" />
-              </svg>
-              WhatsApp
-            </a>
+              Schedule a Site Visit
+            </Link>
           </motion.div>
 
           {/* Stats Row */}
