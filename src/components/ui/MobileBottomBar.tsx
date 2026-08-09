@@ -31,14 +31,15 @@ export function MobileBottomBar({
           href={waHref}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex-1 flex items-center justify-center gap-2 bg-[#25D366] text-white font-inter font-bold py-3 rounded-xl text-sm"
+          aria-label="Chat with Group24 Reality on WhatsApp"
+          className="flex-1 flex items-center justify-center gap-2 bg-[#25D366] text-white font-inter font-bold py-3 min-h-[48px] rounded-xl text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-white"
         >
           <MessageCircle className="w-4 h-4" />
           WhatsApp
         </a>
         <a
           href={scheduleHref}
-          className="flex-1 flex items-center justify-center gap-2 bg-gold text-ink font-inter font-bold py-3 rounded-xl text-sm"
+          className="flex-1 flex items-center justify-center gap-2 bg-gold text-ink font-inter font-bold py-3 min-h-[48px] rounded-xl text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-ink"
         >
           <CalendarCheck className="w-4 h-4" />
           {scheduleLabel}
