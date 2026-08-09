@@ -91,7 +91,7 @@ export default function SearchBar() {
 
         {/* Selects + Button */}
         <div className="flex flex-col sm:flex-row gap-3 items-end">
-          <div className="flex-1 min-w-0">
+          <div className="flex-1 min-w-0 w-full sm:w-auto">
             <Select
               label="Location"
               value={location}
@@ -99,7 +99,7 @@ export default function SearchBar() {
               options={locations}
             />
           </div>
-          <div className="flex-1 min-w-0">
+          <div className="flex-1 min-w-0 w-full sm:w-auto">
             <Select
               label="Budget"
               value={budget}
