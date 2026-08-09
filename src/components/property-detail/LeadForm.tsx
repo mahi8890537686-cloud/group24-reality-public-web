@@ -57,7 +57,7 @@ export default function LeadForm({ propertyTitle, propertySlug }: LeadFormProps)
     return (
       <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-8 text-center">
         <CheckCircle className="w-12 h-12 text-emerald-500 mx-auto mb-4" />
-        <h3 className="font-playfair font-bold text-navy-950 text-xl mb-2">Enquiry Sent!</h3>
+        <h3 className="font-serif font-bold text-ink text-xl mb-2">Enquiry Sent!</h3>
         <p className="text-slate-600 font-inter text-sm">
           Thank you for your interest. Sunil Sangwan will contact you within 2 hours.
         </p>
@@ -66,8 +66,8 @@ export default function LeadForm({ propertyTitle, propertySlug }: LeadFormProps)
   }
 
   return (
-    <div className="bg-navy-950 rounded-2xl p-6 text-white">
-      <h3 className="font-playfair font-bold text-xl mb-1">Enquire About This Property</h3>
+    <div className="bg-ink rounded-2xl p-6 text-white">
+      <h3 className="font-serif font-bold text-xl mb-1">Enquire About This Property</h3>
       <p className="text-white/60 font-inter text-sm mb-5">
         Get a callback from our property expert within 2 hours.
       </p>
@@ -86,7 +86,7 @@ export default function LeadForm({ propertyTitle, propertySlug }: LeadFormProps)
             type="text"
             placeholder="Your Name *"
             {...register('name')}
-            className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/40 font-inter text-sm focus:outline-none focus:ring-2 focus:ring-gold-400 focus:border-transparent"
+            className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/40 font-inter text-sm focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent"
           />
           {errors.name && <p className="mt-1 text-red-400 text-xs font-inter">{errors.name.message}</p>}
         </div>
@@ -98,7 +98,7 @@ export default function LeadForm({ propertyTitle, propertySlug }: LeadFormProps)
             type="tel"
             placeholder="Mobile Number (10 digits) *"
             {...register('phone')}
-            className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/40 font-inter text-sm focus:outline-none focus:ring-2 focus:ring-gold-400 focus:border-transparent"
+            className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/40 font-inter text-sm focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent"
             maxLength={10}
           />
           {errors.phone && <p className="mt-1 text-red-400 text-xs font-inter">{errors.phone.message}</p>}
@@ -111,17 +111,17 @@ export default function LeadForm({ propertyTitle, propertySlug }: LeadFormProps)
             placeholder="Any specific requirements? (optional)"
             {...register('message')}
             rows={3}
-            className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/40 font-inter text-sm focus:outline-none focus:ring-2 focus:ring-gold-400 focus:border-transparent resize-none"
+            className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/40 font-inter text-sm focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent resize-none"
           />
         </div>
 
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full flex items-center justify-center gap-2 bg-gold-400 hover:bg-gold-500 text-navy-950 font-inter font-bold py-3.5 px-6 rounded-xl transition-all duration-200 active:scale-[0.97] disabled:opacity-60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400"
+          className="w-full flex items-center justify-center gap-2 bg-gold hover:bg-gold-dark text-ink font-inter font-bold py-3.5 px-6 rounded-xl transition-all duration-200 active:scale-[0.97] disabled:opacity-60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
         >
           {isSubmitting ? (
-            <span className="w-4 h-4 border-2 border-navy-950/30 border-t-navy-950 rounded-full animate-spin" />
+            <span className="w-4 h-4 border-2 border-ink/30 border-t-ink rounded-full animate-spin" />
           ) : <Send className="w-4 h-4" />}
           {isSubmitting ? 'Sending…' : 'Send Enquiry'}
         </button>

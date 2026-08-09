@@ -19,9 +19,9 @@ export default function EMICalculator({ propertyPrice }: EMICalculatorProps) {
   const totalInterest = totalPayment - loanAmount;
 
   return (
-    <div className="bg-sand-50 border border-sand-200 rounded-2xl p-6">
-      <h3 className="font-playfair font-semibold text-navy-950 text-lg mb-5 flex items-center gap-2">
-        <Calculator className="w-5 h-5 text-gold-400" />
+    <div className="bg-bg border border-border-subtle rounded-2xl p-6">
+      <h3 className="font-serif font-semibold text-ink text-lg mb-5 flex items-center gap-2">
+        <Calculator className="w-5 h-5 text-gold" />
         EMI Calculator
       </h3>
 
@@ -32,7 +32,7 @@ export default function EMICalculator({ propertyPrice }: EMICalculatorProps) {
             <label className="text-xs font-inter font-semibold text-slate-500 uppercase tracking-wide">
               Loan Amount
             </label>
-            <span className="text-xs font-inter font-semibold text-navy-950">
+            <span className="text-xs font-inter font-semibold text-ink">
               {formatPrice(loanAmount)}
             </span>
           </div>
@@ -43,7 +43,7 @@ export default function EMICalculator({ propertyPrice }: EMICalculatorProps) {
             step={100000}
             value={loanAmount}
             onChange={(e) => setLoanAmount(Number(e.target.value))}
-            className="w-full accent-gold-400 cursor-pointer"
+            className="w-full accent-gold cursor-pointer"
             aria-label="Loan amount slider"
           />
           <div className="flex justify-between text-xs text-slate-400 font-inter mt-1">
@@ -58,7 +58,7 @@ export default function EMICalculator({ propertyPrice }: EMICalculatorProps) {
             <label className="text-xs font-inter font-semibold text-slate-500 uppercase tracking-wide">
               Interest Rate
             </label>
-            <span className="text-xs font-inter font-semibold text-navy-950">{rate}% p.a.</span>
+            <span className="text-xs font-inter font-semibold text-ink">{rate}% p.a.</span>
           </div>
           <input
             type="range"
@@ -67,7 +67,7 @@ export default function EMICalculator({ propertyPrice }: EMICalculatorProps) {
             step={0.5}
             value={rate}
             onChange={(e) => setRate(Number(e.target.value))}
-            className="w-full accent-gold-400 cursor-pointer"
+            className="w-full accent-gold cursor-pointer"
             aria-label="Interest rate slider"
           />
           <div className="flex justify-between text-xs text-slate-400 font-inter mt-1">
@@ -82,7 +82,7 @@ export default function EMICalculator({ propertyPrice }: EMICalculatorProps) {
             <label className="text-xs font-inter font-semibold text-slate-500 uppercase tracking-wide">
               Loan Tenure
             </label>
-            <span className="text-xs font-inter font-semibold text-navy-950">{tenure} Years</span>
+            <span className="text-xs font-inter font-semibold text-ink">{tenure} Years</span>
           </div>
           <input
             type="range"
@@ -91,7 +91,7 @@ export default function EMICalculator({ propertyPrice }: EMICalculatorProps) {
             step={1}
             value={tenure}
             onChange={(e) => setTenure(Number(e.target.value))}
-            className="w-full accent-gold-400 cursor-pointer"
+            className="w-full accent-gold cursor-pointer"
             aria-label="Loan tenure slider"
           />
           <div className="flex justify-between text-xs text-slate-400 font-inter mt-1">
@@ -101,10 +101,10 @@ export default function EMICalculator({ propertyPrice }: EMICalculatorProps) {
         </div>
 
         {/* Results */}
-        <div className="bg-navy-950 rounded-xl p-5 mt-2 space-y-3">
+        <div className="bg-ink rounded-xl p-5 mt-2 space-y-3">
           <div className="flex justify-between items-center">
             <span className="text-white/60 font-inter text-sm">Monthly EMI</span>
-            <span className="text-gold-400 font-playfair font-bold text-2xl">
+            <span className="text-gold font-serif font-bold text-2xl">
               {formatPrice(emi)}
             </span>
           </div>

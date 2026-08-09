@@ -32,15 +32,15 @@ export default function LocationMap({ location, address }: LocationMapProps) {
 
   return (
     <div>
-      <h2 className="font-playfair font-semibold text-navy-950 text-xl mb-4 flex items-center gap-2">
-        <MapPin className="w-5 h-5 text-gold-400" aria-hidden="true" />
+      <h2 className="font-serif font-semibold text-ink text-xl mb-4 flex items-center gap-2">
+        <MapPin className="w-5 h-5 text-gold" aria-hidden="true" />
         Location Map
       </h2>
 
-      <div className="bg-sand-50 border border-sand-200 rounded-2xl overflow-hidden">
+      <div className="bg-bg border border-border-subtle rounded-2xl overflow-hidden">
         {/* Address pill */}
-        <div className="px-5 py-3 border-b border-sand-200 flex items-center gap-2">
-          <MapPin className="w-4 h-4 text-gold-500 shrink-0" />
+        <div className="px-5 py-3 border-b border-border-subtle flex items-center gap-2">
+          <MapPin className="w-4 h-4 text-gold-dark shrink-0" />
           <span className="text-sm font-inter text-slate-600 line-clamp-1">{address}</span>
         </div>
 
@@ -56,7 +56,7 @@ export default function LocationMap({ location, address }: LocationMapProps) {
           />
         </div>
 
-        <div className="px-5 py-3 bg-sand-50 text-xs font-inter text-slate-400 text-center">
+        <div className="px-5 py-3 bg-bg text-xs font-inter text-slate-400 text-center">
           Map shows approximate area. Exact property coordinates provided on site visit.
         </div>
       </div>
