@@ -16,6 +16,7 @@ import { buildMetadata } from '@/lib/seo';
 import { propertySchema, breadcrumbSchema, JsonLd } from '@/lib/schema';
 import type { Property } from '@/types';
 import PropertyCard from '@/components/properties/PropertyCard';
+import { MobileBottomBar } from '@/components/ui/MobileBottomBar';
 import { StaggerContainer, StaggerItem } from '@/components/ui/MotionWrapper';
 
 // Re-generate slug list from Firestore so new properties get their pages
@@ -117,7 +118,7 @@ export default async function PropertyDetailPage({ params }: PageProps) {
             </div>
 
             {/* Sidebar */}
-            <aside className="space-y-6" aria-label="Property enquiry and EMI">
+            <aside id="enquiry" className="space-y-6" aria-label="Property enquiry and EMI">
               {/* Sticky wrapper */}
               <div className="lg:sticky lg:top-24 space-y-6">
                 <LeadForm propertyTitle={property.title} propertySlug={property.slug} />
@@ -143,6 +144,11 @@ export default async function PropertyDetailPage({ params }: PageProps) {
           )}
         </div>
       </div>
+
+      <MobileBottomBar
+        whatsappMessage={`Hello Group24 Reality, I'm interested in ${property.title} (${property.priceLabel}). Please share more details.`}
+        scheduleHref="#enquiry"
+      />
     </>
   );
 }
