@@ -83,7 +83,7 @@ function FAQItem({ question, answer }: FAQItem) {
             className="overflow-hidden"
           >
             <div className="px-6 pb-5 bg-white">
-              <p className="text-slate-600 text-sm font-inter leading-relaxed border-t border-bg-secondary pt-4">
+              <p className="text-slate-600 text-sm font-inter leading-relaxed border-t border-border-subtle pt-4">
                 {answer}
               </p>
             </div>

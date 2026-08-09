@@ -61,7 +61,7 @@ export default function Testimonials({ testimonials }: TestimonialsProps) {
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
             {testimonials.map((t) => (
               <StaggerItem key={t.id}>
-                <figure className="bg-white border border-bg-secondary rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 h-full flex flex-col">
+                <figure className="bg-white border border-border-subtle rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 h-full flex flex-col">
                   {/* Quote Icon */}
                   <Quote className="w-8 h-8 text-gold/30 mb-4" aria-hidden="true" />
 
@@ -75,7 +75,7 @@ export default function Testimonials({ testimonials }: TestimonialsProps) {
                   {/* Rating + Author */}
                   <figcaption>
                     <StarRating rating={t.rating} />
-                    <div className="mt-3 pt-3 border-t border-bg-secondary">
+                    <div className="mt-3 pt-3 border-t border-border-subtle">
                       <div className="font-inter font-semibold text-ink text-sm">{t.name}</div>
                       <div className="text-slate-400 text-xs font-inter mt-0.5">{t.location}</div>
                     </div>
