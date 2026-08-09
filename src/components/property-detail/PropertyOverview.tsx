@@ -46,16 +46,16 @@ export default function PropertyOverview({ property }: PropertyOverviewProps) {
               </Badge>
             )}
           </div>
-          <h1 className="font-playfair font-bold text-navy-950 text-2xl sm:text-3xl lg:text-4xl leading-tight">
+          <h1 className="font-serif font-bold text-ink text-2xl sm:text-3xl lg:text-4xl leading-tight">
             {property.title}
           </h1>
           <p className="text-slate-500 font-inter text-sm mt-2 flex items-center gap-1.5">
-            <MapPin className="w-3.5 h-3.5 text-gold-500 shrink-0" />
+            <MapPin className="w-3.5 h-3.5 text-gold-dark shrink-0" />
             {property.address}
           </p>
         </div>
         <div className="text-right">
-          <div className="font-playfair font-bold text-navy-950 text-3xl sm:text-4xl">
+          <div className="font-serif font-bold text-ink text-3xl sm:text-4xl">
             {property.priceLabel}
           </div>
           {property.pricePerUnit && (
@@ -69,14 +69,14 @@ export default function PropertyOverview({ property }: PropertyOverviewProps) {
         {specs.map(({ icon: Icon, label, value }) => (
           <div
             key={label}
-            className="bg-sand-50 border border-sand-200 rounded-xl px-4 py-3 flex items-center gap-3"
+            className="bg-bg border border-border-subtle rounded-xl px-4 py-3 flex items-center gap-3"
           >
-            <div className="w-8 h-8 rounded-lg bg-gold-400/10 flex items-center justify-center shrink-0">
-              <Icon className="w-4 h-4 text-gold-500" />
+            <div className="w-8 h-8 rounded-lg bg-gold/10 flex items-center justify-center shrink-0">
+              <Icon className="w-4 h-4 text-gold-dark" />
             </div>
             <div>
               <div className="text-xs text-slate-400 font-inter">{label}</div>
-              <div className="text-sm font-inter font-semibold text-navy-950">{value}</div>
+              <div className="text-sm font-inter font-semibold text-ink">{value}</div>
             </div>
           </div>
         ))}
@@ -84,7 +84,7 @@ export default function PropertyOverview({ property }: PropertyOverviewProps) {
 
       {/* Description */}
       <div>
-        <h2 className="font-playfair font-semibold text-navy-950 text-xl mb-3">
+        <h2 className="font-serif font-semibold text-ink text-xl mb-3">
           About This Property
         </h2>
         <p className="text-slate-600 font-inter text-sm leading-relaxed">{property.description}</p>

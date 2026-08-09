@@ -182,16 +182,16 @@ export default function VirtualTour360Modal({
           exit={{ scale: 0.95, opacity: 0 }}
           ref={containerRef}
           onClick={(e) => e.stopPropagation()}
-          className="relative w-full max-w-5xl h-[80vh] bg-navy-950 rounded-2xl overflow-hidden shadow-2xl border border-white/10 flex flex-col"
+          className="relative w-full max-w-5xl h-[80vh] bg-ink rounded-2xl overflow-hidden shadow-2xl border border-white/10 flex flex-col"
         >
           {/* Header Bar */}
-          <div className="flex items-center justify-between px-5 py-4 bg-navy-950 border-b border-white/10 text-white z-10 shrink-0">
+          <div className="flex items-center justify-between px-5 py-4 bg-ink border-b border-white/10 text-white z-10 shrink-0">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-full bg-gold-400/20 text-gold-400 flex items-center justify-center">
+              <div className="w-8 h-8 rounded-full bg-gold/20 text-gold flex items-center justify-center">
                 <Compass className="w-5 h-5 animate-spin" style={{ animationDuration: '10s' }} />
               </div>
               <div>
-                <h3 className="font-playfair font-bold text-base sm:text-lg line-clamp-1">
+                <h3 className="font-serif font-bold text-base sm:text-lg line-clamp-1">
                   360° Virtual Site Tour — {title}
                 </h3>
                 <p className="text-white/50 text-xs font-inter">
@@ -210,7 +210,7 @@ export default function VirtualTour360Modal({
           </div>
 
           {/* Main 360 Viewer Canvas or Embed */}
-          <div className="relative flex-1 bg-navy-950 overflow-hidden select-none">
+          <div className="relative flex-1 bg-ink overflow-hidden select-none">
             {isEmbed ? (
               <iframe
                 src={tour360Url}
@@ -236,17 +236,17 @@ export default function VirtualTour360Modal({
             {/* Instruction Overlay */}
             {!isEmbed && (
               <div className="absolute top-4 left-4 pointer-events-none bg-black/50 backdrop-blur-md px-3 py-1.5 rounded-full text-white text-xs font-inter flex items-center gap-2 border border-white/10">
-                <Compass className="w-3.5 h-3.5 text-gold-400" />
+                <Compass className="w-3.5 h-3.5 text-gold" />
                 <span>Drag to rotate 360°</span>
               </div>
             )}
 
             {/* Floating 360° Viewer Control Bar */}
             {!isEmbed && (
-              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-navy-950/90 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 flex items-center gap-3 text-white shadow-xl z-10">
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-ink/90 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 flex items-center gap-3 text-white shadow-xl z-10">
                 <button
                   onClick={() => setAutoRotate(!autoRotate)}
-                  className={`p-2 rounded-full transition-colors ${autoRotate ? 'bg-gold-400 text-navy-950' : 'hover:bg-white/10 text-white'}`}
+                  className={`p-2 rounded-full transition-colors ${autoRotate ? 'bg-gold text-ink' : 'hover:bg-white/10 text-white'}`}
                   title={autoRotate ? 'Pause 360° Rotation' : 'Auto Rotate 360°'}
                 >
                   {autoRotate ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}

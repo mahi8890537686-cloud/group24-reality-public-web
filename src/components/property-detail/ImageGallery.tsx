@@ -37,7 +37,7 @@ export default function ImageGallery({ images, alt, tour360Url, propertyType = '
       <div className="space-y-3">
         {/* Main image */}
         <div
-          className="relative aspect-[16/9] rounded-2xl overflow-hidden bg-sand-100 cursor-zoom-in group"
+          className="relative aspect-[16/9] rounded-2xl overflow-hidden bg-bg-secondary cursor-zoom-in group"
           onClick={() => setLightboxOpen(true)}
         >
           <Image
@@ -56,13 +56,13 @@ export default function ImageGallery({ images, alt, tour360Url, propertyType = '
               e.stopPropagation();
               setTour360Open(true);
             }}
-            className="absolute top-4 left-4 z-10 flex items-center gap-2 bg-navy-950/80 hover:bg-navy-950 text-white border border-gold-400/40 hover:border-gold-400 px-3.5 py-2 rounded-full shadow-lg backdrop-blur-md transition-all transform hover:scale-105 active:scale-95 group/btn"
+            className="absolute top-4 left-4 z-10 flex items-center gap-2 bg-ink/80 hover:bg-ink text-white border border-gold/40 hover:border-gold px-3.5 py-2 rounded-full shadow-lg backdrop-blur-md transition-all transform hover:scale-105 active:scale-95 group/btn"
           >
             <span className="relative flex h-2.5 w-2.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold-400 opacity-75" />
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-gold-400" />
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-75" />
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-gold" />
             </span>
-            <Compass className="w-4 h-4 text-gold-400 group-hover/btn:rotate-45 transition-transform duration-300" />
+            <Compass className="w-4 h-4 text-gold group-hover/btn:rotate-45 transition-transform duration-300" />
             <span className="font-inter font-bold text-xs tracking-wide">360° Virtual Tour</span>
           </button>
 
@@ -100,8 +100,8 @@ export default function ImageGallery({ images, alt, tour360Url, propertyType = '
               <button
                 key={i}
                 onClick={() => setSelected(i)}
-                className={`relative w-20 h-16 shrink-0 rounded-xl overflow-hidden border-2 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400 ${
-                  i === selected ? 'border-gold-400' : 'border-transparent opacity-60 hover:opacity-100'
+                className={`relative w-20 h-16 shrink-0 rounded-xl overflow-hidden border-2 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold ${
+                  i === selected ? 'border-gold' : 'border-transparent opacity-60 hover:opacity-100'
                 }`}
                 aria-label={`View image ${i + 1}`}
                 aria-pressed={i === selected}
