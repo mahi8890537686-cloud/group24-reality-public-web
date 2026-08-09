@@ -3,7 +3,6 @@
 import { usePathname } from 'next/navigation';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
-import WhatsAppFAB from '@/components/layout/WhatsAppFAB';
 import BottomNav from '@/components/layout/BottomNav';
 
 export default function SiteShell({ children }: { children: React.ReactNode }) {
@@ -20,7 +19,6 @@ export default function SiteShell({ children }: { children: React.ReactNode }) {
       <Navbar />
       <main id="main-content">{children}</main>
       <Footer />
-      <WhatsAppFAB />
       <BottomNav />
 
       {/* Skip to main content — accessibility */}
