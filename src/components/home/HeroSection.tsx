@@ -9,7 +9,7 @@ import { AnimatedHeroBackground } from './AnimatedHeroBackground';
 export default function HeroSection() {
   return (
     <section
-      className="relative min-h-screen flex items-center overflow-hidden"
+      className="relative min-h-[85vh] lg:min-h-[90vh] flex items-center overflow-hidden"
       aria-label="Hero — Group24 Reality"
     >
       <AnimatedHeroBackground />
@@ -19,11 +19,21 @@ export default function HeroSection() {
 
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16">
         <div className="max-w-2xl xl:max-w-3xl">
+          {/* Eyebrow */}
+          <motion.p
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-gold text-xs font-inter font-semibold tracking-widest uppercase mb-4"
+          >
+            Group24 Reality
+          </motion.p>
+
           {/* Trust Badge */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.5, delay: 0.05 }}
             className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6"
           >
             <Shield className="w-4 h-4 text-gold" />
