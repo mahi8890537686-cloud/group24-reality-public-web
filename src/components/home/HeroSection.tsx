@@ -16,14 +16,14 @@ export default function HeroSection() {
       {/* Decorative gold line */}
       <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-transparent via-gold to-transparent z-10" />
 
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
         <div className="max-w-2xl xl:max-w-3xl">
           {/* Eyebrow */}
           <motion.p
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-gold text-xs font-inter font-semibold tracking-widest uppercase mb-4"
+            className="text-gold text-xs font-inter font-semibold tracking-widest uppercase mb-3"
           >
             Group24 Reality
           </motion.p>
@@ -33,7 +33,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.05 }}
-            className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6"
+            className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-5"
           >
             <Shield className="w-4 h-4 text-gold" />
             <span className="text-white text-xs sm:text-sm font-inter font-medium">
@@ -46,7 +46,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-            className="font-serif text-white leading-tight text-4xl sm:text-5xl lg:text-6xl xl:text-7xl mb-6"
+            className="font-serif text-white leading-tight text-4xl sm:text-5xl lg:text-6xl xl:text-7xl mb-5"
           >
             Find Your Perfect{' '}
             <span className="text-gold">Plot, Villa</span>
@@ -60,7 +60,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.25 }}
-            className="text-white/80 text-base sm:text-lg lg:text-xl font-inter leading-relaxed mb-8 max-w-xl"
+            className="text-white/80 text-base sm:text-lg lg:text-xl font-inter leading-relaxed mb-6 max-w-xl"
           >
             Trusted real estate dealer in Rajasthan. We connect you with verified properties
             at fair prices — from affordable plots to premium villas on the Delhi–Jaipur corridor.
@@ -71,7 +71,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.35 }}
-            className="flex flex-wrap gap-2 mb-8"
+            className="flex flex-wrap gap-2 mb-6"
           >
             {['Behror', 'Neemrana', 'Kotputli'].map((loc) => (
               <span
@@ -111,7 +111,7 @@ export default function HeroSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.7 }}
-            className="mt-12 pt-8 border-t border-white/10 grid grid-cols-3 gap-6"
+            className="mt-8 pt-6 border-t border-white/10 grid grid-cols-3 gap-6"
           >
             {[
               { label: 'Properties Listed', value: '150+' },
