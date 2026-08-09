@@ -36,12 +36,12 @@ export default function PropertyCard({ property, className }: PropertyCardProps)
       whileHover={{ y: -4, boxShadow: '0 20px 60px rgba(11,22,41,0.12)' }}
       transition={{ duration: 0.25 }}
       className={cn(
-        'bg-white rounded-2xl overflow-hidden border border-sand-100 shadow-md group',
+        'bg-white rounded-2xl overflow-hidden border border-border-subtle shadow-md group',
         className
       )}
     >
       {/* Image */}
-      <div className="relative aspect-[4/3] overflow-hidden bg-sand-100">
+      <div className="relative aspect-[4/3] overflow-hidden bg-bg-secondary">
         <Image
           src={property.images?.[0] || FALLBACK_IMAGE}
           alt={`${property.title} — ${property.locationName || property.locationSlug}, Rajasthan`}
@@ -57,8 +57,8 @@ export default function PropertyCard({ property, className }: PropertyCardProps)
           <Badge variant={status.variant}>{status.label}</Badge>
         </div>
         {/* Price tag */}
-        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-950/80 to-transparent p-4">
-          <span className="text-white font-playfair font-bold text-2xl">
+        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-ink/80 to-transparent p-4">
+          <span className="text-white font-serif font-bold text-2xl">
             {property.priceLabel}
           </span>
           {property.pricePerUnit && (
@@ -69,31 +69,31 @@ export default function PropertyCard({ property, className }: PropertyCardProps)
 
       {/* Content */}
       <div className="p-5">
-        <h3 className="font-playfair font-semibold text-navy-950 text-lg leading-snug mb-2 line-clamp-2">
+        <h3 className="font-serif font-semibold text-ink text-lg leading-snug mb-2 line-clamp-2">
           {property.title}
         </h3>
 
         {/* Location */}
         <div className="flex items-center gap-1.5 text-slate-500 text-sm font-inter mb-4">
-          <MapPin className="w-3.5 h-3.5 text-gold-500 shrink-0" />
+          <MapPin className="w-3.5 h-3.5 text-gold-dark shrink-0" />
           <span className="truncate">{property.address}</span>
         </div>
 
         {/* Specs row */}
-        <div className="flex flex-wrap items-center gap-4 text-sm font-inter text-slate-600 mb-4 pb-4 border-b border-sand-100">
+        <div className="flex flex-wrap items-center gap-4 text-sm font-inter text-slate-600 mb-4 pb-4 border-b border-border-subtle">
           <span className="flex items-center gap-1.5">
-            <Maximize2 className="w-3.5 h-3.5 text-gold-500" />
+            <Maximize2 className="w-3.5 h-3.5 text-gold-dark" />
             {formatArea(property.area, property.areaUnit)}
           </span>
           {property.bedrooms && (
             <span className="flex items-center gap-1.5">
-              <Bed className="w-3.5 h-3.5 text-gold-500" />
+              <Bed className="w-3.5 h-3.5 text-gold-dark" />
               {property.bedrooms} BHK
             </span>
           )}
           {property.facing && (
             <span className="flex items-center gap-1.5">
-              <Layers className="w-3.5 h-3.5 text-gold-500" />
+              <Layers className="w-3.5 h-3.5 text-gold-dark" />
               {property.facing} Facing
             </span>
           )}
@@ -104,7 +104,7 @@ export default function PropertyCard({ property, className }: PropertyCardProps)
           {(property.highlights ?? []).slice(0, 3).map((h) => (
             <span
               key={h}
-              className="text-xs font-inter bg-sand-50 text-navy-800 border border-sand-200 px-2.5 py-1 rounded-full"
+              className="text-xs font-inter bg-bg text-text-secondary border border-border-subtle px-2.5 py-1 rounded-full"
             >
               {h}
             </span>
@@ -114,7 +114,7 @@ export default function PropertyCard({ property, className }: PropertyCardProps)
         {/* CTA */}
         <Link
           href={`/properties/${property.slug}`}
-          className="group/btn flex items-center justify-between w-full bg-navy-950 hover:bg-gold-400 text-white hover:text-navy-950 rounded-xl px-5 py-3 font-inter font-semibold text-sm transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400"
+          className="group/btn flex items-center justify-between w-full bg-ink hover:bg-gold text-white hover:text-ink rounded-xl px-5 py-3 font-inter font-semibold text-sm transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
         >
           <span>View Details</span>
           <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-200" />

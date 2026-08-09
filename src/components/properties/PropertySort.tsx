@@ -29,12 +29,12 @@ export default function PropertySort({ total }: PropertySortProps) {
   return (
     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
       <p className="text-slate-600 font-inter text-sm">
-        <span className="font-semibold text-navy-950">{total}</span>{' '}
+        <span className="font-semibold text-ink">{total}</span>{' '}
         {total === 1 ? 'property' : 'properties'} found
       </p>
 
       <div className="flex items-center gap-2">
-        <ArrowUpDown className="w-4 h-4 text-gold-500 shrink-0" aria-hidden="true" />
+        <ArrowUpDown className="w-4 h-4 text-gold-dark shrink-0" aria-hidden="true" />
         <label htmlFor="sort-select" className="text-sm font-inter text-slate-500 shrink-0">
           Sort by:
         </label>
@@ -42,7 +42,7 @@ export default function PropertySort({ total }: PropertySortProps) {
           id="sort-select"
           value={currentSort}
           onChange={(e) => handleChange(e.target.value)}
-          className="bg-white border border-sand-200 rounded-lg px-3 py-2 text-navy-950 font-inter text-sm focus:outline-none focus:ring-2 focus:ring-gold-400 cursor-pointer"
+          className="bg-white border border-border-subtle rounded-lg px-3 py-2 text-ink font-inter text-sm focus:outline-none focus:ring-2 focus:ring-gold cursor-pointer"
           aria-label="Sort properties"
         >
           {SORT_OPTIONS.map((o) => (

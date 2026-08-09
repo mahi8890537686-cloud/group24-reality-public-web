@@ -59,7 +59,7 @@ function FilterSelect({ label, value, onChange, options, id }: SelectProps) {
         id={id}
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="bg-white border border-sand-200 rounded-xl px-3 py-2.5 text-navy-950 font-inter text-sm focus:outline-none focus:ring-2 focus:ring-gold-400 cursor-pointer"
+        className="bg-white border border-border-subtle rounded-xl px-3 py-2.5 text-ink font-inter text-sm focus:outline-none focus:ring-2 focus:ring-gold cursor-pointer"
       >
         {options.map((o) => (
           <option key={o.value} value={o.value}>{o.label}</option>
@@ -128,17 +128,17 @@ export default function PropertyFilters() {
   );
 
   return (
-    <div className="bg-sand-50 border border-sand-200 rounded-2xl p-5">
+    <div className="bg-bg border border-border-subtle rounded-2xl p-5">
       {/* Mobile toggle */}
       <div className="flex items-center justify-between mb-4 lg:hidden">
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="flex items-center gap-2 text-navy-950 font-inter font-semibold text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400 rounded-md"
+          className="flex items-center gap-2 text-ink font-inter font-semibold text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded-md"
         >
-          <SlidersHorizontal className="w-4 h-4 text-gold-500" />
+          <SlidersHorizontal className="w-4 h-4 text-gold-dark" />
           {mobileOpen ? 'Hide Filters' : 'Show Filters'}
           {hasFilters && (
-            <span className="bg-gold-400 text-navy-950 rounded-full w-5 h-5 text-xs flex items-center justify-center font-bold">
+            <span className="bg-gold text-ink rounded-full w-5 h-5 text-xs flex items-center justify-center font-bold">
               •
             </span>
           )}
