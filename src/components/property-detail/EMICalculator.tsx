@@ -100,22 +100,22 @@ export default function EMICalculator({ propertyPrice }: EMICalculatorProps) {
           </div>
         </div>
 
-        {/* Results — light gold wash, not dark panel */}
-        <div className="bg-gold/10 border border-gold/25 rounded-xl p-5 mt-2 space-y-3">
+        {/* Results — soft gold panel; EMI amount in gold, not ink/black */}
+        <div className="bg-bg-secondary border border-border-subtle rounded-xl p-5 mt-2 space-y-3">
           <div className="flex justify-between items-center">
             <span className="text-text-secondary font-inter text-sm">Monthly EMI</span>
-            <span className="text-ink font-serif text-2xl">
+            <span className="text-gold-dark font-serif text-2xl">
               {formatPrice(emi)}
             </span>
           </div>
-          <div className="border-t border-gold/20 pt-3 grid grid-cols-2 gap-3">
+          <div className="border-t border-border-subtle pt-3 grid grid-cols-2 gap-3">
             <div>
               <div className="text-text-muted font-inter text-xs mb-1">Principal</div>
-              <div className="text-ink font-inter font-semibold text-sm">{formatPrice(loanAmount)}</div>
+              <div className="text-text font-inter font-semibold text-sm">{formatPrice(loanAmount)}</div>
             </div>
             <div>
               <div className="text-text-muted font-inter text-xs mb-1">Total Interest</div>
-              <div className="text-ink font-inter font-semibold text-sm">{formatPrice(totalInterest)}</div>
+              <div className="text-text font-inter font-semibold text-sm">{formatPrice(totalInterest)}</div>
             </div>
           </div>
         </div>
