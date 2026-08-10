@@ -63,7 +63,7 @@ export default function AboutPage() {
       />
 
       {/* Hero */}
-      <div className="bg-gold pt-28 pb-20">
+      <div className="bg-bg pt-28 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
           <FadeInUp>
             <p className="text-ink/70 font-inter font-semibold text-xs tracking-widest uppercase mb-4">
@@ -80,7 +80,7 @@ export default function AboutPage() {
       </div>
 
       {/* Story */}
-      <section className="py-16 sm:py-24 bg-gold" aria-labelledby="story-heading">
+      <section className="py-16 sm:py-24 bg-bg" aria-labelledby="story-heading">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <FadeInUp>
@@ -132,7 +132,7 @@ export default function AboutPage() {
                 ].map((stat) => (
                   <div
                     key={stat.label}
-                    className="bg-bg border border-border-subtle rounded-2xl p-6 text-center"
+                    className="bg-gold-soft border border-gold/30 rounded-2xl p-6 text-center"
                   >
                     <div className="font-serif text-ink text-4xl mb-1">
                       {stat.value}
@@ -140,7 +140,7 @@ export default function AboutPage() {
                     <div className="text-slate-500 font-inter text-sm">{stat.label}</div>
                   </div>
                 ))}
-                <div className="col-span-2 bg-gold/10 border border-gold/30 rounded-2xl p-6">
+                <div className="col-span-2 bg-gold-soft border border-gold/30 rounded-2xl p-6">
                   <p className="text-text-secondary font-inter text-sm leading-relaxed italic">
                     &ldquo;Our goal is not to sell you a property — it is to help you make the 
                     right property decision for your family and your future.&rdquo;
@@ -156,7 +156,7 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="py-16 sm:py-24 bg-gold" aria-labelledby="values-heading">
+      <section className="py-16 sm:py-24 bg-bg" aria-labelledby="values-heading">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <FadeInUp className="mb-12">
             <SectionHeader
@@ -169,7 +169,7 @@ export default function AboutPage() {
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {values.map(({ icon: Icon, title, description }) => (
               <StaggerItem key={title}>
-                <div className="bg-bg hover:bg-surface border border-border-subtle hover:border-ink/20 rounded-2xl p-6 transition-all duration-300 shadow-sm">
+                <div className="bg-gold-soft hover:bg-gold/30 border border-gold/30 rounded-2xl p-6 transition-all duration-300 shadow-sm">
                   <div className="w-10 h-10 rounded-xl bg-gold/20 flex items-center justify-center mb-4">
                     <Icon className="w-5 h-5 text-gold-dark" aria-hidden="true" />
                   </div>
@@ -183,10 +183,10 @@ export default function AboutPage() {
       </section>
 
       {/* Contact CTA */}
-      <section className="py-16 bg-gold text-center">
+      <section className="py-16 bg-bg text-center">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-2xl">
           <FadeInUp>
-            <div className="bg-bg rounded-2xl p-8 sm:p-10 border border-border-subtle shadow-sm">
+            <div className="bg-gold-soft rounded-2xl p-8 sm:p-10 border border-gold/30 shadow-sm">
             <h2 className="font-serif text-ink text-3xl sm:text-4xl mb-4">
               Ready to Work With Us?
             </h2>
@@ -202,7 +202,7 @@ export default function AboutPage() {
               </a>
               <a
                 href="/contact"
-                className="border-2 border-ink text-ink hover:bg-ink hover:text-bg font-inter font-semibold px-8 py-4 rounded-xl transition-all"
+                className="border-2 border-ink text-ink hover:bg-ink hover:text-gold font-inter font-semibold px-8 py-4 rounded-xl transition-all"
               >
                 Send Enquiry
               </a>

@@ -191,7 +191,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
       <JsonLd data={faqPageSchema(faqs)} />
 
       {/* Hero header */}
-      <div className="bg-gold pt-28 pb-16">
+      <div className="bg-bg pt-28 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <nav aria-label="Breadcrumb" className="mb-8">
             <ol className="flex items-center gap-2 text-sm font-inter text-ink/60">
@@ -214,12 +214,12 @@ export default async function LocationDetailPage({ params }: PageProps) {
       </div>
 
       {/* Location detail + inline property preview */}
-      <div className="bg-gold">
+      <div className="bg-bg">
         <LocationSection location={location} properties={previewProperties} />
       </div>
 
       {/* FAQ */}
-      <div className="bg-gold border-t border-ink/10 py-16 sm:py-24" aria-labelledby="location-faq-heading">
+      <div className="bg-bg border-t border-border-subtle py-16 sm:py-24" aria-labelledby="location-faq-heading">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <FadeInUp className="mb-12">
             <SectionHeader
@@ -234,7 +234,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
             {faqs.map((faq) => (
               <details
                 key={faq.question}
-                className="group border border-border-subtle rounded-xl overflow-hidden bg-bg [&_summary::-webkit-details-marker]:hidden"
+                className="group border border-border-subtle rounded-xl overflow-hidden bg-gold-soft [&_summary::-webkit-details-marker]:hidden"
               >
                 <summary className="list-none w-full flex items-start justify-between gap-4 px-6 py-5 text-left cursor-pointer hover:bg-surface transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-gold">
                   <span className="font-serif text-ink text-base leading-snug">
@@ -258,7 +258,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
 
       {/* Single bottom CTA */}
       {totalAvailable > 0 && (
-        <div className="bg-gold border-t border-ink/10 py-12">
+        <div className="bg-bg border-t border-border-subtle py-12">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="font-inter text-ink/70 text-sm">
               <span className="font-semibold text-ink">{totalAvailable}</span> verified{' '}
@@ -267,7 +267,7 @@ export default async function LocationDetailPage({ params }: PageProps) {
             </p>
             <Link
               href={`/properties?location=${location.slug}`}
-              className="group inline-flex items-center gap-2 bg-bg hover:bg-surface text-ink border border-border-subtle font-inter font-bold px-8 py-4 rounded-xl transition-all duration-200 shadow-sm active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ink whitespace-nowrap"
+              className="group inline-flex items-center gap-2 bg-gold-soft hover:bg-gold/30 text-ink border border-gold/30 font-inter font-bold px-8 py-4 rounded-xl transition-all duration-200 shadow-sm active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ink whitespace-nowrap"
             >
               View All Properties in {location.name}
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

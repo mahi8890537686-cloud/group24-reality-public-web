@@ -50,9 +50,9 @@ export default function BlogsListClient({ initialBlogs }: BlogsListClientProps) 
   const list = featured ? filteredBlogs.slice(1) : [];
 
   return (
-    <div className="min-h-screen bg-gold pb-16 font-inter">
+    <div className="min-h-screen bg-bg pb-16 font-inter">
       {/* Hero Section */}
-      <section className="relative bg-gold text-ink pt-28 pb-14 lg:pt-32 lg:pb-16 overflow-hidden">
+      <section className="relative bg-bg text-ink pt-28 pb-14 lg:pt-32 lg:pb-16 overflow-hidden">
         {/* Dot-grid pattern */}
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#c9a84c_1px,transparent_1px)] [background-size:20px_20px]" />
         {/* Gradient glow */}
@@ -88,7 +88,7 @@ export default function BlogsListClient({ initialBlogs }: BlogsListClientProps) 
 
       {/* Filters Section */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 -mt-6 relative z-20">
-        <div className="bg-bg rounded-2xl shadow-md border border-border-subtle p-4 sm:p-5 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="bg-gold-soft rounded-2xl shadow-md border border-gold/30 p-4 sm:p-5 flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Category Tabs */}
           <div className="flex flex-wrap items-center gap-2 w-full md:w-auto">
             {CATEGORIES.map((cat) => (
@@ -128,7 +128,7 @@ export default function BlogsListClient({ initialBlogs }: BlogsListClientProps) 
       {/* Content Section */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-10">
         {filteredBlogs.length === 0 ? (
-          <div className="bg-white rounded-3xl p-12 text-center border border-gray-100 max-w-lg mx-auto my-12">
+          <div className="bg-gold-soft rounded-3xl p-12 text-center border border-gray-100 max-w-lg mx-auto my-12">
             <div className="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
               <BookOpen className="w-8 h-8 text-gold-dark" />
             </div>
@@ -147,7 +147,7 @@ export default function BlogsListClient({ initialBlogs }: BlogsListClientProps) 
           <div className="space-y-12">
             {/* Featured Hero Article */}
             {featured && (
-              <div className="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 grid grid-cols-1 lg:grid-cols-12 group">
+              <div className="bg-gold-soft rounded-3xl overflow-hidden shadow-lg border border-gray-100 grid grid-cols-1 lg:grid-cols-12 group">
                 <div className="lg:col-span-7 relative min-h-[300px] lg:min-h-[420px]">
                   <Image
                     src={featured.coverImage || '/images/fallback/default-property.jpg'}
@@ -216,7 +216,7 @@ export default function BlogsListClient({ initialBlogs }: BlogsListClientProps) 
                   {list.map((blog) => (
                     <article
                       key={blog.id}
-                      className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col group"
+                      className="bg-gold-soft rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col group"
                     >
                       <div className="relative h-48 w-full overflow-hidden">
                         <Image

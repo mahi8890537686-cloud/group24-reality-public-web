@@ -22,7 +22,7 @@ const statusLabel: Record<string, string> = {
 
 export default function PropertyDetailHeader({ property }: PropertyDetailHeaderProps) {
   return (
-    <div className="bg-gold pt-28 pb-8">
+    <div className="bg-bg pt-28 pb-8">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <nav aria-label="Breadcrumb" className="mb-6">
           <ol className="flex items-center gap-2 text-sm font-inter text-ink/60">

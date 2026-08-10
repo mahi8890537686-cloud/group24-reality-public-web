@@ -23,7 +23,7 @@ export default function PropertyOverview({ property }: PropertyOverviewProps) {
         {specs.map(({ icon: Icon, label, value }) => (
           <div
             key={label}
-            className="bg-bg border border-border-subtle rounded-xl px-4 py-3 flex items-center gap-3"
+            className="bg-gold-soft border border-gold/30 rounded-xl px-4 py-3 flex items-center gap-3"
           >
             <div className="w-8 h-8 rounded-lg bg-gold/10 flex items-center justify-center shrink-0">
               <Icon className="w-4 h-4 text-gold-dark" />

@@ -68,7 +68,7 @@ export default function LeadForm({ propertyTitle, propertySlug }: LeadFormProps)
   }
 
   return (
-    <div className="bg-bg border border-border-subtle rounded-2xl p-6 shadow-sm text-ink">
+    <div className="bg-gold-soft border border-gold/30 rounded-2xl p-6 shadow-sm text-ink">
       <h3 className="font-serif text-ink text-xl mb-1">Enquire About This Property</h3>
       <p className="text-ink/70 font-inter text-sm mb-5">
         Get a callback from our property expert within 2 hours.

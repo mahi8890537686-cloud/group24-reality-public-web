@@ -21,7 +21,7 @@ export default function FeaturedProperties() {
   }, []);
 
   return (
-    <section className="py-16 sm:py-24 bg-gold" aria-labelledby="featured-heading">
+    <section className="py-16 sm:py-24 bg-bg" aria-labelledby="featured-heading">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <FadeInUp>
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12">

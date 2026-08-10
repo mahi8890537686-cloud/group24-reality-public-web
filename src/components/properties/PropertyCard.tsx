@@ -36,7 +36,7 @@ export default function PropertyCard({ property, className }: PropertyCardProps)
       whileHover={{ y: -4, boxShadow: '0 20px 60px rgba(11,22,41,0.12)' }}
       transition={{ duration: 0.25 }}
       className={cn(
-        'bg-bg rounded-2xl overflow-hidden border border-border-subtle shadow-md group',
+        'bg-gold-soft rounded-2xl overflow-hidden border border-gold/30 shadow-md group',
         className
       )}
     >
@@ -114,7 +114,7 @@ export default function PropertyCard({ property, className }: PropertyCardProps)
         {/* CTA */}
         <Link
           href={`/properties/${property.slug}`}
-          className="group/btn flex items-center justify-between w-full bg-ink hover:bg-gold text-white hover:text-ink rounded-xl px-5 py-3 font-inter font-semibold text-sm transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+          className="group/btn flex items-center justify-between w-full bg-ink hover:bg-bg text-white hover:text-ink rounded-xl px-5 py-3 font-inter font-semibold text-sm transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
         >
           <span>View Details</span>
           <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-200" />

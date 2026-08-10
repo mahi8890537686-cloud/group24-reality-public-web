@@ -37,7 +37,7 @@ export default function LocationMap({ location, address }: LocationMapProps) {
         Location Map
       </h2>
 
-      <div className="bg-bg border border-border-subtle rounded-2xl overflow-hidden">
+      <div className="bg-gold-soft border border-gold/30 rounded-2xl overflow-hidden">
         {/* Address pill */}
         <div className="px-5 py-3 border-b border-border-subtle flex items-center gap-2">
           <MapPin className="w-4 h-4 text-gold-dark shrink-0" />

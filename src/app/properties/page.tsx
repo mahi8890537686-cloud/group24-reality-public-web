@@ -98,7 +98,7 @@ async function PropertyResults({ searchParams }: PageProps) {
       {properties.length > 0 && <JsonLd data={itemListSchema(properties)} />}
 
       {/* Hero Banner — gold page band, ink text */}
-      <div className="bg-gold pt-28 pb-12">
+      <div className="bg-bg pt-28 pb-12">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
             headingAs="h1"
@@ -111,7 +111,7 @@ async function PropertyResults({ searchParams }: PageProps) {
       </div>
 
       {/* Listing Section */}
-      <div className="bg-gold py-10">
+      <div className="bg-bg py-10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
           <Suspense fallback={<div className="h-[74px]" />}>
             <PropertyFilters />

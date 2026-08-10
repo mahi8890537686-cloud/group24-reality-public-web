@@ -58,7 +58,7 @@ function FAQItem({ question, answer }: FAQItem) {
   return (
     <div className="border border-border-subtle rounded-xl overflow-hidden">
       <button
-        className="w-full flex items-start justify-between gap-4 px-6 py-5 text-left bg-white hover:bg-bg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-gold"
+        className="w-full flex items-start justify-between gap-4 px-6 py-5 text-left bg-gold-soft hover:bg-gold/25 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-gold"
         onClick={() => setIsOpen(!isOpen)}
         aria-expanded={isOpen}
       >
@@ -82,7 +82,7 @@ function FAQItem({ question, answer }: FAQItem) {
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
             className="overflow-hidden"
           >
-            <div className="px-6 pb-5 bg-white">
+            <div className="px-6 pb-5 bg-gold-soft">
               <p className="text-slate-600 text-sm font-inter leading-relaxed border-t border-border-subtle pt-4">
                 {answer}
               </p>
@@ -96,7 +96,7 @@ function FAQItem({ question, answer }: FAQItem) {
 
 export default function FAQSection() {
   return (
-    <section className="py-16 sm:py-24 bg-gold" aria-labelledby="faq-heading">
+    <section className="py-16 sm:py-24 bg-bg" aria-labelledby="faq-heading">
       <JsonLd data={faqPageSchema(faqs)} />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <FadeInUp className="mb-12">

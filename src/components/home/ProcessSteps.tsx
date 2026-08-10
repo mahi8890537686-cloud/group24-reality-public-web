@@ -35,7 +35,7 @@ const steps = [
 
 export default function ProcessSteps() {
   return (
-    <section className="py-16 sm:py-24 bg-gold" aria-labelledby="process-heading">
+    <section className="py-16 sm:py-24 bg-bg" aria-labelledby="process-heading">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <FadeInUp className="mb-12">
           <SectionHeader
@@ -57,11 +57,11 @@ export default function ProcessSteps() {
               <StaggerItem key={step}>
                 <div className="relative flex flex-col items-center text-center">
                   {/* Step circle */}
-                  <div className="relative w-20 h-20 rounded-full bg-bg border-2 border-ink/15 flex items-center justify-center mb-6 z-10">
+                  <div className="relative w-20 h-20 rounded-full bg-gold-soft border-2 border-ink/15 flex items-center justify-center mb-6 z-10">
                     <div className="w-12 h-12 rounded-full bg-gold/30 flex items-center justify-center">
                       <Icon className="w-6 h-6 text-ink" />
                     </div>
-                    <span className="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-ink text-bg font-serif text-xs flex items-center justify-center">
+                    <span className="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-ink text-gold font-serif text-xs flex items-center justify-center">
                       {step}
                     </span>
                   </div>

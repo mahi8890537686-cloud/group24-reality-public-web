@@ -43,7 +43,7 @@ const reasons = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-16 sm:py-24 bg-gold" aria-labelledby="why-heading">
+    <section className="py-16 sm:py-24 bg-bg" aria-labelledby="why-heading">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <FadeInUp className="mb-12">
           <SectionHeader
@@ -56,7 +56,7 @@ export default function WhyChooseUs() {
         <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {reasons.map(({ icon: Icon, title, description }) => (
             <StaggerItem key={title}>
-              <div className="group bg-bg hover:bg-surface border border-border-subtle hover:border-ink/20 rounded-2xl p-6 shadow-sm transition-all duration-300">
+              <div className="group bg-gold-soft hover:bg-gold/30 border border-gold/30 rounded-2xl p-6 shadow-sm transition-all duration-300">
                 <div className="w-10 h-10 rounded-xl bg-gold/20 group-hover:bg-gold/30 flex items-center justify-center mb-4 transition-colors">
                   <Icon className="w-5 h-5 text-gold-dark" />
                 </div>

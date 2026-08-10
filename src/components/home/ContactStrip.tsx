@@ -22,11 +22,11 @@ export default function ContactStrip() {
 
   return (
     <section
-      className="py-16 sm:py-20 bg-gold relative overflow-hidden"
+      className="py-16 sm:py-20 bg-bg relative overflow-hidden"
       aria-labelledby="contact-strip-heading"
     >
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center bg-bg rounded-2xl p-8 sm:p-12 shadow-sm border border-border-subtle">
+        <div className="max-w-4xl mx-auto text-center bg-gold-soft rounded-2xl p-8 sm:p-12 shadow-sm border border-gold/30">
           <h2
             id="contact-strip-heading"
             className="font-serif text-ink text-3xl sm:text-4xl lg:text-5xl mb-4"

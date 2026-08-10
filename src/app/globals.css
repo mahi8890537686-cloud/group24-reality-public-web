@@ -21,6 +21,7 @@
 
   --color-gold: #A88A5A;
   --color-gold-dark: #80683F;
+  --color-gold-soft: #EDE6D8; /* lighter gold for cards on off-white pages */
 
   /* Fluid type scale */
   --text-hero: clamp(3rem, 7vw, 6rem);
@@ -59,7 +60,7 @@
   body {
     font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
     color: var(--color-text);
-    background: var(--color-gold);
+    background: var(--color-bg);
     -webkit-font-smoothing: antialiased;
   }
 

@@ -133,7 +133,7 @@ function ContactForm() {
 
 function AddressBlock({ label, address }: { label: string; address: string }) {
   return (
-    <div className="flex items-start gap-4 bg-bg border border-border-subtle rounded-2xl p-5">
+    <div className="flex items-start gap-4 bg-gold-soft border border-gold/30 rounded-2xl p-5">
       <div className="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center shrink-0">
         <MapPin className="w-5 h-5 text-gold-dark" />
       </div>
@@ -162,7 +162,7 @@ export default function ContactPageContent() {
   return (
     <>
       {/* Hero */}
-      <div className="bg-gold pt-28 pb-16">
+      <div className="bg-bg pt-28 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeInUp>
             <p className="text-ink/70 font-inter font-semibold text-xs tracking-widest uppercase mb-4">Get in Touch</p>
@@ -177,7 +177,7 @@ export default function ContactPageContent() {
         </div>
       </div>
 
-      <div className="bg-gold py-16 sm:py-24">
+      <div className="bg-bg py-16 sm:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
 
@@ -191,7 +191,7 @@ export default function ContactPageContent() {
                 {/* Primary Phone */}
                 <StaggerItem>
                   <a href={config.phoneHref}
-                    className="flex items-start gap-4 bg-bg border border-border-subtle rounded-2xl p-5 hover:border-gold/40 hover:bg-gold/5 transition-all group">
+                    className="flex items-start gap-4 bg-gold-soft border border-gold/30 rounded-2xl p-5 hover:border-gold/40 hover:bg-bg/5 transition-all group">
                     <div className="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center shrink-0 group-hover:bg-gold/20 transition-colors">
                       <Phone className="w-5 h-5 text-gold-dark" />
                     </div>
@@ -207,7 +207,7 @@ export default function ContactPageContent() {
                 {config.phone2 && config.phone2Href && (
                   <StaggerItem>
                     <a href={config.phone2Href}
-                      className="flex items-start gap-4 bg-bg border border-border-subtle rounded-2xl p-5 hover:border-gold/40 hover:bg-gold/5 transition-all group">
+                      className="flex items-start gap-4 bg-gold-soft border border-gold/30 rounded-2xl p-5 hover:border-gold/40 hover:bg-bg/5 transition-all group">
                       <div className="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center shrink-0 group-hover:bg-gold/20 transition-colors">
                         <Phone className="w-5 h-5 text-gold-dark" />
                       </div>
@@ -237,7 +237,7 @@ export default function ContactPageContent() {
                 {/* Email */}
                 <StaggerItem>
                   <a href={`mailto:${config.email}`}
-                    className="flex items-start gap-4 bg-bg border border-border-subtle rounded-2xl p-5 hover:border-gold/40 transition-all group">
+                    className="flex items-start gap-4 bg-gold-soft border border-gold/30 rounded-2xl p-5 hover:border-gold/40 transition-all group">
                     <div className="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center shrink-0">
                       <Mail className="w-5 h-5 text-gold-dark" />
                     </div>
@@ -260,7 +260,7 @@ export default function ContactPageContent() {
 
                 {/* Hours */}
                 <StaggerItem>
-                  <div className="flex items-start gap-4 bg-bg border border-border-subtle rounded-2xl p-5">
+                  <div className="flex items-start gap-4 bg-gold-soft border border-gold/30 rounded-2xl p-5">
                     <div className="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center shrink-0">
                       <Clock className="w-5 h-5 text-gold-dark" />
                     </div>

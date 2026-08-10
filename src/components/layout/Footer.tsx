@@ -42,7 +42,7 @@ export default function Footer() {
 
   return (
     <footer
-      className="bg-gold text-ink pb-[calc(3.5rem+env(safe-area-inset-bottom))] lg:pb-0"
+      className="bg-bg text-ink pb-[calc(3.5rem+env(safe-area-inset-bottom))] lg:pb-0"
       aria-labelledby="footer-heading"
     >
       <h2 id="footer-heading" className="sr-only">Footer</h2>

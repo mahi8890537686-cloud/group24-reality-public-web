@@ -19,7 +19,7 @@ export default function EMICalculator({ propertyPrice }: EMICalculatorProps) {
   const totalInterest = totalPayment - loanAmount;
 
   return (
-    <div className="bg-bg border border-border-subtle rounded-2xl p-6 shadow-sm text-ink">
+    <div className="bg-gold-soft border border-gold/30 rounded-2xl p-6 shadow-sm text-ink">
       <h3 className="font-serif text-ink text-lg mb-5 flex items-center gap-2">
         <Calculator className="w-5 h-5 text-gold-dark" />
         EMI Calculator

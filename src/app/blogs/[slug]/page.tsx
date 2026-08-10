@@ -63,7 +63,7 @@ export default async function SingleBlogPage({ params }: PageProps) {
     .catch(() => []);
 
   return (
-    <div className="min-h-screen bg-gold pt-24 pb-20 font-inter">
+    <div className="min-h-screen bg-bg pt-24 pb-20 font-inter">
       <JsonLd data={blogPostingSchema(blog)} />
       <JsonLd
         data={breadcrumbSchema([
@@ -145,7 +145,7 @@ export default async function SingleBlogPage({ params }: PageProps) {
         </div>
 
         {/* Article Content */}
-        <div className="bg-white rounded-3xl p-6 sm:p-10 lg:p-12 border border-gray-100 shadow-sm mb-12">
+        <div className="bg-gold-soft rounded-3xl p-6 sm:p-10 lg:p-12 border border-gray-100 shadow-sm mb-12">
           <div
             className="prose prose-lg max-w-none text-gray-700 font-inter leading-relaxed space-y-6 [&_h2]:text-2xl [&_h2]:font-serif [&_h2]:text-gray-900 [&_h2]:mt-8 [&_h2]:mb-4 [&_h3]:text-xl [&_h3]:font-serif [&_h3]:text-gray-900 [&_h3]:mt-6 [&_h3]:mb-3 [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-2 [&_li]:text-gray-700 [&_blockquote]:border-l-4 [&_blockquote]:border-gold [&_blockquote]:pl-4 [&_blockquote]:italic [&_blockquote]:text-gray-800"
             dangerouslySetInnerHTML={{ __html: blog.content }}
@@ -207,7 +207,7 @@ export default async function SingleBlogPage({ params }: PageProps) {
                 <Link
                   key={rel.id}
                   href={`/blogs/${rel.slug}`}
-                  className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-md transition-all group flex flex-col justify-between"
+                  className="bg-gold-soft rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-md transition-all group flex flex-col justify-between"
                 >
                   <div className="space-y-3">
                     <span className="text-[10px] font-bold text-gold-dark font-inter uppercase tracking-wider">

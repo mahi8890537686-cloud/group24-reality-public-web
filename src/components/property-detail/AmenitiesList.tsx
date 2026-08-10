@@ -46,7 +46,7 @@ export default function AmenitiesList({
             {amenities.map((amenity) => (
               <li
                 key={amenity}
-                className="flex items-center gap-2.5 text-sm font-inter text-slate-700 bg-bg border border-border-subtle rounded-xl px-4 py-3"
+                className="flex items-center gap-2.5 text-sm font-inter text-slate-700 bg-gold-soft border border-gold/30 rounded-xl px-4 py-3"
               >
                 <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" aria-hidden="true" />
                 {amenity}
