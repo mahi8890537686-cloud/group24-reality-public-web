@@ -3,7 +3,7 @@
 import { useState, useCallback } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { SlidersHorizontal, X } from 'lucide-react';
-import type { LocationKey, PropertyType, PropertyStatus } from '@/types';
+import { Select } from '@/components/ui/Select';
 
 const LOCATIONS = [
   { value: 'all', label: 'All Locations' },
@@ -40,34 +40,6 @@ const BEDROOMS = [
   { value: '3', label: '3 BHK' },
   { value: '4', label: '4+ BHK' },
 ];
-
-interface SelectProps {
-  label: string;
-  value: string;
-  onChange: (v: string) => void;
-  options: { value: string; label: string }[];
-  id: string;
-}
-
-function FilterSelect({ label, value, onChange, options, id }: SelectProps) {
-  return (
-    <div className="flex flex-col gap-1">
-      <label htmlFor={id} className="text-xs font-inter font-semibold text-slate-500 uppercase tracking-wide">
-        {label}
-      </label>
-      <select
-        id={id}
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-        className="bg-white border border-border-subtle rounded-xl px-3 py-2.5 text-ink font-inter text-sm focus:outline-none focus:ring-2 focus:ring-gold cursor-pointer"
-      >
-        {options.map((o) => (
-          <option key={o.value} value={o.value}>{o.label}</option>
-        ))}
-      </select>
-    </div>
-  );
-}
 
 export default function PropertyFilters() {
   const router = useRouter();
@@ -119,11 +91,11 @@ export default function PropertyFilters() {
 
   const filtersUI = (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-      <FilterSelect id="filter-location" label="Location" value={location} onChange={(v) => { setLocation(v); apply({ location: v }); }} options={LOCATIONS} />
-      <FilterSelect id="filter-type" label="Property Type" value={type} onChange={(v) => { setType(v); apply({ type: v }); }} options={TYPES} />
-      <FilterSelect id="filter-price" label="Budget" value={priceRange} onChange={(v) => { setPriceRange(v); apply({ priceRange: v }); }} options={PRICE_RANGES} />
-      <FilterSelect id="filter-bedrooms" label="Bedrooms" value={bedrooms} onChange={(v) => { setBedrooms(v); apply({ bedrooms: v }); }} options={BEDROOMS} />
-      <FilterSelect id="filter-status" label="Status" value={status} onChange={(v) => { setStatus(v); apply({ status: v }); }} options={STATUSES} />
+      <Select id="filter-location" label="Location" value={location} onChange={(e) => { setLocation(e.target.value); apply({ location: e.target.value }); }} options={LOCATIONS} />
+      <Select id="filter-type" label="Property Type" value={type} onChange={(e) => { setType(e.target.value); apply({ type: e.target.value }); }} options={TYPES} />
+      <Select id="filter-price" label="Budget" value={priceRange} onChange={(e) => { setPriceRange(e.target.value); apply({ priceRange: e.target.value }); }} options={PRICE_RANGES} />
+      <Select id="filter-bedrooms" label="Bedrooms" value={bedrooms} onChange={(e) => { setBedrooms(e.target.value); apply({ bedrooms: e.target.value }); }} options={BEDROOMS} />
+      <Select id="filter-status" label="Status" value={status} onChange={(e) => { setStatus(e.target.value); apply({ status: e.target.value }); }} options={STATUSES} />
     </div>
   );
 
