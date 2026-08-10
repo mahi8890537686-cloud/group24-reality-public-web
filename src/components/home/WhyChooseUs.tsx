@@ -1,4 +1,4 @@
-import { MapPin, FileCheck, HandshakeIcon, Search, Users, IndianRupee, Eye, Scale } from 'lucide-react';
+import { MapPin, FileCheck, HandshakeIcon, IndianRupee, Eye, Scale } from 'lucide-react';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { StaggerContainer, StaggerItem, FadeInUp } from '@/components/ui/MotionWrapper';
 
@@ -43,26 +43,25 @@ const reasons = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-16 sm:py-24 bg-ink" aria-labelledby="why-heading">
+    <section className="py-16 sm:py-24 bg-bg" aria-labelledby="why-heading">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <FadeInUp className="mb-12">
           <SectionHeader
             eyebrow="Why Group24 Reality"
             heading="The Difference Local Expertise Makes"
             subheading="We are not a property portal. We are your local property partner in Rajasthan — with on-the-ground knowledge, honest advice, and genuine after-care."
-            light
           />
         </FadeInUp>
 
         <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {reasons.map(({ icon: Icon, title, description }) => (
             <StaggerItem key={title}>
-              <div className="group bg-white/5 hover:bg-white/8 border border-white/10 hover:border-gold/30 rounded-2xl p-6 transition-all duration-300">
+              <div className="group bg-surface hover:bg-bg-secondary border border-border-subtle hover:border-gold/40 rounded-2xl p-6 shadow-sm transition-all duration-300">
                 <div className="w-10 h-10 rounded-xl bg-gold/10 group-hover:bg-gold/20 flex items-center justify-center mb-4 transition-colors">
-                  <Icon className="w-5 h-5 text-gold" />
+                  <Icon className="w-5 h-5 text-gold-dark" />
                 </div>
-                <h3 className="font-serif text-white text-lg mb-2">{title}</h3>
-                <p className="text-white/60 text-sm font-inter leading-relaxed">{description}</p>
+                <h3 className="font-serif text-ink text-lg mb-2">{title}</h3>
+                <p className="text-ink/60 text-sm font-inter leading-relaxed">{description}</p>
               </div>
             </StaggerItem>
           ))}
