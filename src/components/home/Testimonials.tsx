@@ -46,7 +46,7 @@ export default function Testimonials({ testimonials }: TestimonialsProps) {
       : null;
 
   return (
-    <section className="py-16 sm:py-24 bg-bg" aria-labelledby="testimonials-heading">
+    <section className="py-16 sm:py-24 bg-gold" aria-labelledby="testimonials-heading">
       {schema && <JsonLd data={schema} />}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <FadeInUp className="mb-12">
@@ -61,7 +61,7 @@ export default function Testimonials({ testimonials }: TestimonialsProps) {
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
             {testimonials.map((t) => (
               <StaggerItem key={t.id}>
-                <figure className="bg-white border border-border-subtle rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 h-full flex flex-col">
+                <figure className="bg-bg border border-border-subtle rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 h-full flex flex-col">
                   {/* Quote Icon */}
                   <Quote className="w-8 h-8 text-gold/30 mb-4" aria-hidden="true" />
 

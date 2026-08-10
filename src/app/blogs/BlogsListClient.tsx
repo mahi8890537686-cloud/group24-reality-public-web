@@ -50,36 +50,36 @@ export default function BlogsListClient({ initialBlogs }: BlogsListClientProps) 
   const list = featured ? filteredBlogs.slice(1) : [];
 
   return (
-    <div className="min-h-screen bg-bg pb-16 font-inter">
+    <div className="min-h-screen bg-gold pb-16 font-inter">
       {/* Hero Section */}
-      <section className="relative bg-ink text-white pt-28 pb-14 lg:pt-32 lg:pb-16 overflow-hidden">
+      <section className="relative bg-gold text-ink pt-28 pb-14 lg:pt-32 lg:pb-16 overflow-hidden">
         {/* Dot-grid pattern */}
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#c9a84c_1px,transparent_1px)] [background-size:20px_20px]" />
         {/* Gradient glow */}
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[200px] bg-gold/10 blur-[80px] rounded-full" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-5">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold/10 border border-gold/30 text-gold text-xs font-semibold uppercase tracking-widest">
-              <Sparkles className="w-3.5 h-3.5" />
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-bg border border-border-subtle text-ink text-xs font-semibold uppercase tracking-widest">
+              <Sparkles className="w-3.5 h-3.5 text-gold-dark" />
               Real Estate Insights &amp; Guides
             </div>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-serif tracking-tight leading-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-serif tracking-tight leading-tight text-ink">
               Group 24 Reality{' '}
-              <span className="text-gold">Blog</span>
+              <span className="text-ink">Blog</span>
             </h1>
-            <p className="text-white/65 text-base sm:text-lg max-w-2xl mx-auto font-inter leading-relaxed">
+            <p className="text-ink/65 text-base sm:text-lg max-w-2xl mx-auto font-inter leading-relaxed">
               Expert advice, market trends, area highlights, and smart property investment strategies along the NH-48 corridor in Rajasthan.
             </p>
 
             {/* Search Input */}
             <div className="relative max-w-xl mx-auto mt-6">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-text-secondary/50" />
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-ink/40" />
               <input
                 type="text"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="Search by title, topic or location…"
-                className="w-full pl-12 pr-4 py-4 bg-white/95 text-ink rounded-2xl shadow-2xl shadow-black/30 text-sm font-inter focus:outline-none focus:ring-2 focus:ring-gold placeholder-slate-400 border border-white/20"
+                className="w-full pl-12 pr-4 py-4 bg-bg text-ink rounded-2xl shadow-md text-sm font-inter focus:outline-none focus:ring-2 focus:ring-ink placeholder-slate-400 border border-border-subtle"
               />
             </div>
           </div>
@@ -88,7 +88,7 @@ export default function BlogsListClient({ initialBlogs }: BlogsListClientProps) 
 
       {/* Filters Section */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 -mt-6 relative z-20">
-        <div className="bg-white rounded-2xl shadow-md border border-gray-100 p-4 sm:p-5 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="bg-bg rounded-2xl shadow-md border border-border-subtle p-4 sm:p-5 flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Category Tabs */}
           <div className="flex flex-wrap items-center gap-2 w-full md:w-auto">
             {CATEGORIES.map((cat) => (

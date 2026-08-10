@@ -63,7 +63,7 @@ export default async function SingleBlogPage({ params }: PageProps) {
     .catch(() => []);
 
   return (
-    <div className="min-h-screen bg-bg pt-24 pb-20 font-inter">
+    <div className="min-h-screen bg-gold pt-24 pb-20 font-inter">
       <JsonLd data={blogPostingSchema(blog)} />
       <JsonLd
         data={breadcrumbSchema([

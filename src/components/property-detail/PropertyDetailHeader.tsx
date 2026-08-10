@@ -22,15 +22,15 @@ const statusLabel: Record<string, string> = {
 
 export default function PropertyDetailHeader({ property }: PropertyDetailHeaderProps) {
   return (
-    <div className="bg-bg pt-28 pb-8 border-b border-border-subtle">
+    <div className="bg-gold pt-28 pb-8">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <nav aria-label="Breadcrumb" className="mb-6">
-          <ol className="flex items-center gap-2 text-sm font-inter text-text-muted">
-            <li><Link href="/" className="hover:text-gold-dark transition-colors">Home</Link></li>
+          <ol className="flex items-center gap-2 text-sm font-inter text-ink/60">
+            <li><Link href="/" className="hover:text-ink transition-colors">Home</Link></li>
             <li aria-hidden="true">/</li>
-            <li><Link href="/properties" className="hover:text-gold-dark transition-colors">Properties</Link></li>
+            <li><Link href="/properties" className="hover:text-ink transition-colors">Properties</Link></li>
             <li aria-hidden="true">/</li>
-            <li className="text-text font-medium truncate max-w-xs">{property.title}</li>
+            <li className="text-ink font-medium truncate max-w-xs">{property.title}</li>
           </ol>
         </nav>
 

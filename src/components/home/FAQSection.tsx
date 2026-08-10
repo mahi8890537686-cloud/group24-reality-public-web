@@ -96,7 +96,7 @@ function FAQItem({ question, answer }: FAQItem) {
 
 export default function FAQSection() {
   return (
-    <section className="py-16 sm:py-24 bg-bg" aria-labelledby="faq-heading">
+    <section className="py-16 sm:py-24 bg-gold" aria-labelledby="faq-heading">
       <JsonLd data={faqPageSchema(faqs)} />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <FadeInUp className="mb-12">

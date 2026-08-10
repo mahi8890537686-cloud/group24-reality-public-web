@@ -36,7 +36,7 @@ export default function PropertyCard({ property, className }: PropertyCardProps)
       whileHover={{ y: -4, boxShadow: '0 20px 60px rgba(11,22,41,0.12)' }}
       transition={{ duration: 0.25 }}
       className={cn(
-        'bg-white rounded-2xl overflow-hidden border border-border-subtle shadow-md group',
+        'bg-bg rounded-2xl overflow-hidden border border-border-subtle shadow-md group',
         className
       )}
     >

@@ -63,16 +63,16 @@ export default function AboutPage() {
       />
 
       {/* Hero */}
-      <div className="bg-ink pt-28 pb-20">
+      <div className="bg-gold pt-28 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
           <FadeInUp>
-            <p className="text-gold font-inter font-semibold text-xs tracking-widest uppercase mb-4">
+            <p className="text-ink/70 font-inter font-semibold text-xs tracking-widest uppercase mb-4">
               About Us
             </p>
-            <h1 className="font-serif text-white text-4xl sm:text-5xl lg:text-6xl leading-tight mb-6">
+            <h1 className="font-serif text-ink text-4xl sm:text-5xl lg:text-6xl leading-tight mb-6">
               Group 24 Reality
             </h1>
-            <p className="text-white/70 font-inter text-base sm:text-lg leading-relaxed">
+            <p className="text-ink/70 font-inter text-base sm:text-lg leading-relaxed">
               The Real Estate Consultant — serving Behror, Neemrana, and Kotputli, Rajasthan.
             </p>
           </FadeInUp>
@@ -80,7 +80,7 @@ export default function AboutPage() {
       </div>
 
       {/* Story */}
-      <section className="py-16 sm:py-24 bg-white" aria-labelledby="story-heading">
+      <section className="py-16 sm:py-24 bg-gold" aria-labelledby="story-heading">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <FadeInUp>
@@ -156,26 +156,25 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="py-16 sm:py-24 bg-ink" aria-labelledby="values-heading">
+      <section className="py-16 sm:py-24 bg-gold" aria-labelledby="values-heading">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <FadeInUp className="mb-12">
             <SectionHeader
               eyebrow="What We Stand For"
               heading="Our Values"
               subheading="Six principles that guide every interaction, every listing, and every property deal we facilitate."
-              light
             />
           </FadeInUp>
 
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {values.map(({ icon: Icon, title, description }) => (
               <StaggerItem key={title}>
-                <div className="bg-white/5 hover:bg-white/8 border border-white/10 hover:border-gold/30 rounded-2xl p-6 transition-all duration-300">
-                  <div className="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center mb-4">
-                    <Icon className="w-5 h-5 text-gold" aria-hidden="true" />
+                <div className="bg-bg hover:bg-surface border border-border-subtle hover:border-ink/20 rounded-2xl p-6 transition-all duration-300 shadow-sm">
+                  <div className="w-10 h-10 rounded-xl bg-gold/20 flex items-center justify-center mb-4">
+                    <Icon className="w-5 h-5 text-gold-dark" aria-hidden="true" />
                   </div>
-                  <h3 className="font-serif text-white text-lg mb-2">{title}</h3>
-                  <p className="text-white/60 text-sm font-inter leading-relaxed">{description}</p>
+                  <h3 className="font-serif text-ink text-lg mb-2">{title}</h3>
+                  <p className="text-ink/65 text-sm font-inter leading-relaxed">{description}</p>
                 </div>
               </StaggerItem>
             ))}
@@ -184,13 +183,14 @@ export default function AboutPage() {
       </section>
 
       {/* Contact CTA */}
-      <section className="py-16 bg-bg text-center">
+      <section className="py-16 bg-gold text-center">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-2xl">
           <FadeInUp>
+            <div className="bg-bg rounded-2xl p-8 sm:p-10 border border-border-subtle shadow-sm">
             <h2 className="font-serif text-ink text-3xl sm:text-4xl mb-4">
               Ready to Work With Us?
             </h2>
-            <p className="text-slate-600 font-inter mb-8">
+            <p className="text-ink/65 font-inter mb-8">
               Get in touch with Sunil Sangwan today. Free consultation, no obligation.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -202,10 +202,11 @@ export default function AboutPage() {
               </a>
               <a
                 href="/contact"
-                className="border-2 border-ink text-ink hover:bg-ink hover:text-white font-inter font-semibold px-8 py-4 rounded-xl transition-all"
+                className="border-2 border-ink text-ink hover:bg-ink hover:text-bg font-inter font-semibold px-8 py-4 rounded-xl transition-all"
               >
                 Send Enquiry
               </a>
+            </div>
             </div>
           </FadeInUp>
         </div>

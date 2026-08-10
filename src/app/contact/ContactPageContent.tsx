@@ -162,14 +162,14 @@ export default function ContactPageContent() {
   return (
     <>
       {/* Hero */}
-      <div className="bg-ink pt-28 pb-16">
+      <div className="bg-gold pt-28 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeInUp>
-            <p className="text-gold font-inter font-semibold text-xs tracking-widest uppercase mb-4">Get in Touch</p>
-            <h1 className="font-serif text-white text-4xl sm:text-5xl lg:text-6xl mb-5">
+            <p className="text-ink/70 font-inter font-semibold text-xs tracking-widest uppercase mb-4">Get in Touch</p>
+            <h1 className="font-serif text-ink text-4xl sm:text-5xl lg:text-6xl mb-5">
               Contact {config.businessName}
             </h1>
-            <p className="text-white/70 font-inter text-base sm:text-lg max-w-2xl mx-auto">
+            <p className="text-ink/70 font-inter text-base sm:text-lg max-w-2xl mx-auto">
               Talk to {config.contactPerson} directly. We respond within 2 business hours.
               Free consultation, no obligation.
             </p>
@@ -177,7 +177,7 @@ export default function ContactPageContent() {
         </div>
       </div>
 
-      <div className="bg-white py-16 sm:py-24">
+      <div className="bg-gold py-16 sm:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
 

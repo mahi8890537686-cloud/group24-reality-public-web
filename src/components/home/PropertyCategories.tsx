@@ -47,7 +47,7 @@ const categories = [
 
 export default function PropertyCategories() {
   return (
-    <section className="py-16 sm:py-24 bg-bg" aria-labelledby="categories-heading">
+    <section className="py-16 sm:py-24 bg-gold" aria-labelledby="categories-heading">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <FadeInUp className="mb-12">
           <SectionHeader
@@ -60,7 +60,7 @@ export default function PropertyCategories() {
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {categories.map(({ icon: Icon, label, tagline, description, highlights, href, color, iconBg, iconColor }) => (
             <StaggerItem key={label}>
-              <div className={`group bg-gradient-to-br ${color} bg-white border border-border-subtle rounded-2xl p-7 hover:shadow-xl transition-all duration-300 h-full flex flex-col`}>
+              <div className={`group bg-gradient-to-br ${color} bg-bg border border-border-subtle rounded-2xl p-7 hover:shadow-xl transition-all duration-300 h-full flex flex-col`}>
                 <div className={`w-12 h-12 ${iconBg} rounded-xl flex items-center justify-center mb-5`}>
                   <Icon className={`w-6 h-6 ${iconColor}`} />
                 </div>

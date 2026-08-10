@@ -42,7 +42,7 @@ export default function Footer() {
 
   return (
     <footer
-      className="bg-ink text-white pb-[calc(3.5rem+env(safe-area-inset-bottom))] lg:pb-0"
+      className="bg-gold text-ink pb-[calc(3.5rem+env(safe-area-inset-bottom))] lg:pb-0"
       aria-labelledby="footer-heading"
     >
       <h2 id="footer-heading" className="sr-only">Footer</h2>
@@ -54,17 +54,17 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <Link href="/" className="inline-flex items-center gap-2 mb-4 group">
-              <div className="w-10 h-10 rounded-lg bg-gold flex items-center justify-center">
+              <div className="w-10 h-10 rounded-lg bg-bg border border-border-subtle flex items-center justify-center">
                 <span className="text-ink font-serif text-sm">G24R</span>
               </div>
               <div>
-                <span className="text-white font-serif text-xl">{config.businessName}</span>
+                <span className="text-ink font-serif text-xl">{config.businessName}</span>
                 <span className="block text-gold text-xs tracking-widest uppercase font-inter">
                   Reality
                 </span>
               </div>
             </Link>
-            <p className="text-white/60 text-sm font-inter leading-relaxed mb-6">
+            <p className="text-ink/60 text-sm font-inter leading-relaxed mb-6">
               Trusted real estate consultant in Behror, Neemrana, and Kotputli, Rajasthan.
               Verified plots, villas, and flats with transparent pricing and honest guidance.
               Contact: {config.contactPerson}.
@@ -81,7 +81,7 @@ export default function Footer() {
                   aria-label={label}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-lg bg-white/5 hover:bg-gold/20 hover:text-gold flex items-center justify-center transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold text-white text-xs font-bold font-inter"
+                  className="w-9 h-9 rounded-lg bg-ink/5 hover:bg-gold/20 hover:text-ink flex items-center justify-center transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold text-ink text-xs font-bold font-inter"
                 >
                   {emoji}
                 </a>
@@ -91,18 +91,18 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-serif text-white mb-5 text-base">Quick Links</h3>
+            <h3 className="font-serif text-ink mb-5 text-base">Quick Links</h3>
             <ul className="space-y-3">
               {footerLinks.quickLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-white/60 hover:text-gold text-sm font-inter transition-colors duration-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gold rounded">
+                  <Link href={link.href} className="text-ink/60 hover:text-ink text-sm font-inter transition-colors duration-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gold rounded">
                     {link.label}
                   </Link>
                 </li>
               ))}
               {footerLinks.propertyTypes.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-white/60 hover:text-gold text-sm font-inter transition-colors duration-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gold rounded">
+                  <Link href={link.href} className="text-ink/60 hover:text-ink text-sm font-inter transition-colors duration-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gold rounded">
                     {link.label}
                   </Link>
                 </li>
@@ -112,11 +112,11 @@ export default function Footer() {
 
           {/* Locations */}
           <div>
-            <h3 className="font-serif text-white mb-5 text-base">Locations</h3>
+            <h3 className="font-serif text-ink mb-5 text-base">Locations</h3>
             <ul className="space-y-3">
               {footerLinks.locations.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-white/60 hover:text-gold text-sm font-inter transition-colors duration-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gold rounded">
+                  <Link href={link.href} className="text-ink/60 hover:text-ink text-sm font-inter transition-colors duration-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gold rounded">
                     {link.label}
                   </Link>
                 </li>
@@ -126,12 +126,12 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="font-serif text-white mb-5 text-base">Contact Us</h3>
+            <h3 className="font-serif text-ink mb-5 text-base">Contact Us</h3>
             <ul className="space-y-4">
 
               {/* Phone 1 */}
               <li>
-                <a href={config.phoneHref} className="flex items-center gap-3 text-sm text-white/60 hover:text-gold font-inter transition-colors">
+                <a href={config.phoneHref} className="flex items-center gap-3 text-sm text-ink/60 hover:text-ink font-inter transition-colors">
                   <Phone className="w-4 h-4 text-gold shrink-0" />
                   <span>{config.phone}</span>
                 </a>
@@ -140,7 +140,7 @@ export default function Footer() {
               {/* Phone 2 (if present) */}
               {config.phone2 && config.phone2Href && (
                 <li>
-                  <a href={config.phone2Href} className="flex items-center gap-3 text-sm text-white/60 hover:text-gold font-inter transition-colors">
+                  <a href={config.phone2Href} className="flex items-center gap-3 text-sm text-ink/60 hover:text-ink font-inter transition-colors">
                     <Phone className="w-4 h-4 text-gold shrink-0" />
                     <span>{config.phone2}</span>
                   </a>
@@ -149,14 +149,14 @@ export default function Footer() {
 
               {/* Email */}
               <li>
-                <a href={`mailto:${config.email}`} className="flex items-center gap-3 text-sm text-white/60 hover:text-gold font-inter transition-colors">
+                <a href={`mailto:${config.email}`} className="flex items-center gap-3 text-sm text-ink/60 hover:text-ink font-inter transition-colors">
                   <Mail className="w-4 h-4 text-gold shrink-0" />
                   <span>{config.email}</span>
                 </a>
               </li>
 
               {/* Main Office */}
-              <li className="flex items-start gap-3 text-sm text-white/60 font-inter">
+              <li className="flex items-start gap-3 text-sm text-ink/60 font-inter">
                 <MapPin className="w-4 h-4 text-gold mt-0.5 shrink-0" />
                 <span>
                   <span className="text-gold/80 text-xs font-semibold uppercase tracking-wide block mb-0.5">
@@ -169,7 +169,7 @@ export default function Footer() {
               </li>
 
               {/* Head Office */}
-              <li className="flex items-start gap-3 text-sm text-white/60 font-inter">
+              <li className="flex items-start gap-3 text-sm text-ink/60 font-inter">
                 <MapPin className="w-4 h-4 text-gold mt-0.5 shrink-0" />
                 <span>
                   <span className="text-gold/80 text-xs font-semibold uppercase tracking-wide block mb-0.5">
@@ -182,7 +182,7 @@ export default function Footer() {
               </li>
 
               {/* Hours */}
-              <li className="flex items-start gap-3 text-sm text-white/60 font-inter">
+              <li className="flex items-start gap-3 text-sm text-ink/60 font-inter">
                 <Clock className="w-4 h-4 text-gold mt-0.5 shrink-0" />
                 <span>{config.businessHoursWeekday}<br />{config.businessHoursWeekend}</span>
               </li>
@@ -193,8 +193,8 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-white/10">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-white/40 font-inter">
+      <div className="border-t border-ink/15">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-ink/40 font-inter">
           <p>© {currentYear} {config.businessName}. All rights reserved.</p>
           <p>Real Estate Consultant — Behror, Neemrana &amp; Kotputli, Rajasthan</p>
         </div>
