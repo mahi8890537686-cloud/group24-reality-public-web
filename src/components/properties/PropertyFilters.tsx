@@ -3,6 +3,7 @@
 import { useState, useCallback } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { SlidersHorizontal, X } from 'lucide-react';
+import { AnimatePresence, motion } from 'framer-motion';
 import { Select } from '@/components/ui/Select';
 
 const LOCATIONS = [
@@ -138,8 +139,52 @@ export default function PropertyFilters() {
         )}
       </div>
 
-      {/* Mobile: toggleable */}
-      {mobileOpen && <div className="lg:hidden mt-2">{filtersUI}</div>}
+      {/* Mobile: bottom-sheet drawer */}
+      <AnimatePresence>
+        {mobileOpen && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="fixed inset-0 z-[59] bg-ink/40 lg:hidden"
+              onClick={() => setMobileOpen(false)}
+              aria-hidden="true"
+            />
+            <motion.div
+              initial={{ y: '100%' }}
+              animate={{ y: 0 }}
+              exit={{ y: '100%' }}
+              transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+              className="fixed inset-x-0 bottom-0 z-[60] bg-surface rounded-t-2xl p-5 max-h-[85vh] overflow-y-auto lg:hidden"
+              role="dialog"
+              aria-modal="true"
+              aria-label="Filter properties"
+            >
+              <div className="flex items-center justify-between mb-4">
+                <h2 className="font-serif text-ink text-lg">Filters</h2>
+                <button
+                  onClick={() => setMobileOpen(false)}
+                  className="p-2 rounded-md hover:bg-bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+                  aria-label="Close filters"
+                >
+                  <X className="w-5 h-5 text-ink" />
+                </button>
+              </div>
+              {filtersUI}
+              {hasFilters && (
+                <button
+                  onClick={reset}
+                  className="mt-4 text-xs text-slate-400 hover:text-red-500 transition-colors flex items-center gap-1"
+                >
+                  <X className="w-3 h-3" /> Clear all filters
+                </button>
+              )}
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
