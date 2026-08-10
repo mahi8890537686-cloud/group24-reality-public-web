@@ -56,12 +56,12 @@ export default function WhyChooseUs() {
         <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {reasons.map(({ icon: Icon, title, description }) => (
             <StaggerItem key={title}>
-              <div className="group bg-surface hover:bg-bg-secondary border border-border-subtle hover:border-gold/40 rounded-2xl p-6 shadow-sm transition-all duration-300">
-                <div className="w-10 h-10 rounded-xl bg-gold/10 group-hover:bg-gold/20 flex items-center justify-center mb-4 transition-colors">
-                  <Icon className="w-5 h-5 text-gold-dark" />
+              <div className="group bg-gold hover:bg-gold-dark rounded-2xl p-6 shadow-sm transition-all duration-300">
+                <div className="w-10 h-10 rounded-xl bg-ink/10 group-hover:bg-ink/15 flex items-center justify-center mb-4 transition-colors">
+                  <Icon className="w-5 h-5 text-ink" />
                 </div>
                 <h3 className="font-serif text-ink text-lg mb-2">{title}</h3>
-                <p className="text-ink/60 text-sm font-inter leading-relaxed">{description}</p>
+                <p className="text-ink/75 text-sm font-inter leading-relaxed">{description}</p>
               </div>
             </StaggerItem>
           ))}

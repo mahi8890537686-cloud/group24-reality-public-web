@@ -19,9 +19,9 @@ export default function EMICalculator({ propertyPrice }: EMICalculatorProps) {
   const totalInterest = totalPayment - loanAmount;
 
   return (
-    <div className="bg-surface border border-border-subtle rounded-2xl p-6 shadow-sm text-ink">
+    <div className="bg-gold rounded-2xl p-6 shadow-sm text-ink">
       <h3 className="font-serif text-ink text-lg mb-5 flex items-center gap-2">
-        <Calculator className="w-5 h-5 text-gold-dark" />
+        <Calculator className="w-5 h-5 text-ink" />
         EMI Calculator
       </h3>
 
@@ -100,15 +100,15 @@ export default function EMICalculator({ propertyPrice }: EMICalculatorProps) {
           </div>
         </div>
 
-        {/* Results — light panel, ink/gold text only (never white) */}
-        <div className="bg-bg-secondary border border-border rounded-xl p-5 mt-2 space-y-3 text-ink">
+        {/* Results — lighter wash on gold card */}
+        <div className="bg-surface/50 border border-ink/15 rounded-xl p-5 mt-2 space-y-3 text-ink">
           <div className="flex justify-between items-center gap-3">
             <span className="font-inter text-sm font-medium text-ink">Monthly EMI</span>
-            <span className="font-serif text-2xl text-gold-dark">
+            <span className="font-serif text-2xl text-ink">
               {formatPrice(emi)}
             </span>
           </div>
-          <div className="border-t border-border pt-3 grid grid-cols-2 gap-3">
+          <div className="border-t border-ink/15 pt-3 grid grid-cols-2 gap-3">
             <div>
               <div className="font-inter text-xs mb-1 text-ink/60">Principal</div>
               <div className="font-inter font-semibold text-sm text-ink">{formatPrice(loanAmount)}</div>
@@ -120,7 +120,7 @@ export default function EMICalculator({ propertyPrice }: EMICalculatorProps) {
           </div>
         </div>
 
-        <p className="text-xs font-inter leading-relaxed text-ink/60">
+        <p className="text-xs font-inter leading-relaxed text-ink/70">
           * This is an indicative calculation only. Actual EMI may vary based on bank policies.
           We can connect you with our bank partners for exact loan eligibility.
         </p>
