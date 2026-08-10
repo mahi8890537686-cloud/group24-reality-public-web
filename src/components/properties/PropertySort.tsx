@@ -2,6 +2,7 @@
 
 import { useRouter, useSearchParams } from 'next/navigation';
 import { ArrowUpDown } from 'lucide-react';
+import { Select } from '@/components/ui/Select';
 
 const SORT_OPTIONS = [
   { value: 'newest', label: 'Newest First' },
@@ -34,21 +35,16 @@ export default function PropertySort({ total }: PropertySortProps) {
       </p>
 
       <div className="flex items-center gap-2">
-        <ArrowUpDown className="w-4 h-4 text-gold-dark shrink-0" aria-hidden="true" />
-        <label htmlFor="sort-select" className="text-sm font-inter text-slate-500 shrink-0">
-          Sort by:
-        </label>
-        <select
-          id="sort-select"
-          value={currentSort}
-          onChange={(e) => handleChange(e.target.value)}
-          className="bg-white border border-border-subtle rounded-lg px-3 py-2 text-ink font-inter text-sm focus:outline-none focus:ring-2 focus:ring-gold cursor-pointer"
-          aria-label="Sort properties"
-        >
-          {SORT_OPTIONS.map((o) => (
-            <option key={o.value} value={o.value}>{o.label}</option>
-          ))}
-        </select>
+        <ArrowUpDown className="w-4 h-4 text-gold-dark shrink-0 mb-1.5" aria-hidden="true" />
+        <div className="w-48">
+          <Select
+            id="sort-select"
+            label="Sort by"
+            value={currentSort}
+            onChange={(e) => handleChange(e.target.value)}
+            options={SORT_OPTIONS}
+          />
+        </div>
       </div>
     </div>
   );
