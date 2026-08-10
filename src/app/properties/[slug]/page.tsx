@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import {
   getPropertyBySlug,
@@ -7,6 +6,7 @@ import {
   getRelatedByLocation,
 } from '@/lib/firestore/properties';
 import ImageGallery from '@/components/property-detail/ImageGallery';
+import PropertyDetailHeader from '@/components/property-detail/PropertyDetailHeader';
 import PropertyOverview from '@/components/property-detail/PropertyOverview';
 import AmenitiesList from '@/components/property-detail/AmenitiesList';
 import LocationMap from '@/components/property-detail/LocationMap';
@@ -83,22 +83,10 @@ export default async function PropertyDetailPage({ params }: PageProps) {
         ])}
       />
 
-      {/* Page spacing for sticky nav */}
-      <div className="pt-20" />
+      <PropertyDetailHeader property={property} />
 
-      <div className="bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10">
-          {/* Breadcrumb */}
-          <nav aria-label="Breadcrumb" className="mb-6">
-            <ol className="flex items-center gap-2 text-sm font-inter text-slate-400">
-              <li><Link href="/" className="hover:text-gold-dark transition-colors">Home</Link></li>
-              <li aria-hidden="true">/</li>
-              <li><Link href="/properties" className="hover:text-gold-dark transition-colors">Properties</Link></li>
-              <li aria-hidden="true">/</li>
-              <li className="text-ink font-medium truncate max-w-xs">{property.title}</li>
-            </ol>
-          </nav>
-
+      <div className="bg-white py-10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
             {/* Main Content */}
             <div className="lg:col-span-2 space-y-10">
