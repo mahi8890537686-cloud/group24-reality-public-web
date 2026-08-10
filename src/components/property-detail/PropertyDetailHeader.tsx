@@ -22,15 +22,15 @@ const statusLabel: Record<string, string> = {
 
 export default function PropertyDetailHeader({ property }: PropertyDetailHeaderProps) {
   return (
-    <div className="bg-ink pt-28 pb-8">
+    <div className="bg-bg pt-28 pb-8 border-b border-border-subtle">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <nav aria-label="Breadcrumb" className="mb-6">
-          <ol className="flex items-center gap-2 text-sm font-inter text-white/50">
-            <li><Link href="/" className="hover:text-gold transition-colors">Home</Link></li>
+          <ol className="flex items-center gap-2 text-sm font-inter text-text-muted">
+            <li><Link href="/" className="hover:text-gold-dark transition-colors">Home</Link></li>
             <li aria-hidden="true">/</li>
-            <li><Link href="/properties" className="hover:text-gold transition-colors">Properties</Link></li>
+            <li><Link href="/properties" className="hover:text-gold-dark transition-colors">Properties</Link></li>
             <li aria-hidden="true">/</li>
-            <li className="text-text-on-dark font-medium truncate max-w-xs">{property.title}</li>
+            <li className="text-text font-medium truncate max-w-xs">{property.title}</li>
           </ol>
         </nav>
 
@@ -49,20 +49,20 @@ export default function PropertyDetailHeader({ property }: PropertyDetailHeaderP
 
         <div className="flex flex-wrap items-start justify-between gap-4">
           <div className="min-w-0">
-            <h1 className="font-serif text-text-on-dark text-2xl sm:text-3xl lg:text-4xl leading-tight">
+            <h1 className="font-serif text-ink text-2xl sm:text-3xl lg:text-4xl leading-tight">
               {property.title}
             </h1>
-            <p className="text-text-on-dark/70 font-inter text-sm mt-2 flex items-center gap-1.5">
-              <MapPin className="w-3.5 h-3.5 text-gold shrink-0" />
+            <p className="text-text-secondary font-inter text-sm mt-2 flex items-center gap-1.5">
+              <MapPin className="w-3.5 h-3.5 text-gold-dark shrink-0" />
               {property.address}
             </p>
           </div>
           <div className="text-left sm:text-right shrink-0">
-            <div className="font-serif text-text-on-dark text-3xl sm:text-4xl">
+            <div className="font-serif text-ink text-3xl sm:text-4xl">
               {property.priceLabel}
             </div>
             {property.pricePerUnit && (
-              <div className="text-text-on-dark/60 font-inter text-sm">{property.pricePerUnit}</div>
+              <div className="text-text-muted font-inter text-sm">{property.pricePerUnit}</div>
             )}
           </div>
         </div>

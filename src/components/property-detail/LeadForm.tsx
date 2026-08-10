@@ -6,6 +6,8 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Send, Phone, MessageCircle, CheckCircle, AlertCircle } from 'lucide-react';
 import { whatsappLink } from '@/lib/utils';
+import { Input } from '@/components/ui/Input';
+import { Textarea } from '@/components/ui/Textarea';
 
 const schema = z.object({
   name: z.string().min(2, 'Please enter your name'),
@@ -58,7 +60,7 @@ export default function LeadForm({ propertyTitle, propertySlug }: LeadFormProps)
       <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-8 text-center">
         <CheckCircle className="w-12 h-12 text-emerald-500 mx-auto mb-4" />
         <h3 className="font-serif text-ink text-xl mb-2">Enquiry Sent!</h3>
-        <p className="text-slate-600 font-inter text-sm">
+        <p className="text-text-secondary font-inter text-sm">
           Thank you for your interest. Sunil Sangwan will contact you within 2 hours.
         </p>
       </div>
@@ -66,54 +68,46 @@ export default function LeadForm({ propertyTitle, propertySlug }: LeadFormProps)
   }
 
   return (
-    <div className="bg-ink rounded-2xl p-6 text-white">
-      <h3 className="font-serif text-xl mb-1">Enquire About This Property</h3>
-      <p className="text-white/60 font-inter text-sm mb-5">
+    <div className="bg-surface border border-border-subtle rounded-2xl p-6 shadow-sm">
+      <h3 className="font-serif text-ink text-xl mb-1">Enquire About This Property</h3>
+      <p className="text-text-secondary font-inter text-sm mb-5">
         Get a callback from our property expert within 2 hours.
       </p>
 
       <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-4">
         {submitError && (
-          <div className="flex items-center gap-2 bg-red-500/10 border border-red-500/20 rounded-xl px-4 py-3">
-            <AlertCircle className="w-4 h-4 text-red-400 shrink-0" />
-            <p className="text-red-300 text-xs font-inter">{submitError}</p>
+          <div className="flex items-center gap-2 bg-red-50 border border-red-200 rounded-xl px-4 py-3">
+            <AlertCircle className="w-4 h-4 text-red-600 shrink-0" />
+            <p className="text-red-700 text-xs font-inter">{submitError}</p>
           </div>
         )}
-        <div>
-          <label htmlFor="lead-name" className="sr-only">Your Name</label>
-          <input
-            id="lead-name"
-            type="text"
-            placeholder="Your Name *"
-            {...register('name')}
-            className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/40 font-inter text-sm focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent"
-          />
-          {errors.name && <p className="mt-1 text-red-400 text-xs font-inter">{errors.name.message}</p>}
-        </div>
 
-        <div>
-          <label htmlFor="lead-phone" className="sr-only">Mobile Number</label>
-          <input
-            id="lead-phone"
-            type="tel"
-            placeholder="Mobile Number (10 digits) *"
-            {...register('phone')}
-            className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/40 font-inter text-sm focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent"
-            maxLength={10}
-          />
-          {errors.phone && <p className="mt-1 text-red-400 text-xs font-inter">{errors.phone.message}</p>}
-        </div>
+        <Input
+          id="lead-name"
+          label="Your Name"
+          type="text"
+          placeholder="Full name"
+          error={errors.name?.message}
+          {...register('name')}
+        />
 
-        <div>
-          <label htmlFor="lead-message" className="sr-only">Message</label>
-          <textarea
-            id="lead-message"
-            placeholder="Any specific requirements? (optional)"
-            {...register('message')}
-            rows={3}
-            className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/40 font-inter text-sm focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent resize-none"
-          />
-        </div>
+        <Input
+          id="lead-phone"
+          label="Mobile Number"
+          type="tel"
+          placeholder="10-digit mobile number"
+          maxLength={10}
+          error={errors.phone?.message}
+          {...register('phone')}
+        />
+
+        <Textarea
+          id="lead-message"
+          label="Message (optional)"
+          placeholder="Any specific requirements?"
+          rows={3}
+          {...register('message')}
+        />
 
         <button
           type="submit"
@@ -128,24 +122,24 @@ export default function LeadForm({ propertyTitle, propertySlug }: LeadFormProps)
       </form>
 
       <div className="flex items-center gap-3 my-5">
-        <div className="flex-1 h-px bg-white/10" />
-        <span className="text-white/30 text-xs font-inter">or contact directly</span>
-        <div className="flex-1 h-px bg-white/10" />
+        <div className="flex-1 h-px bg-border-subtle" />
+        <span className="text-text-muted text-xs font-inter">or contact directly</span>
+        <div className="flex-1 h-px bg-border-subtle" />
       </div>
 
       <div className="grid grid-cols-2 gap-3">
         <a
           href="tel:+919266982400"
-          className="flex items-center justify-center gap-2 border border-white/20 hover:border-white/40 text-white hover:bg-white/5 font-inter font-semibold text-sm py-3 px-4 rounded-xl transition-all"
+          className="flex items-center justify-center gap-2 border border-border text-text hover:bg-bg-secondary font-inter font-semibold text-sm py-3 px-4 rounded-xl transition-all"
         >
-          <Phone className="w-4 h-4" />
+          <Phone className="w-4 h-4 text-gold-dark" />
           Call Now
         </a>
         <a
           href={whatsappLink(waMessage)}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center gap-2 bg-[#25D366]/20 border border-[#25D366]/30 hover:bg-[#25D366]/30 text-white font-inter font-semibold text-sm py-3 px-4 rounded-xl transition-all"
+          className="flex items-center justify-center gap-2 bg-[#25D366]/10 border border-[#25D366]/30 hover:bg-[#25D366]/20 text-text font-inter font-semibold text-sm py-3 px-4 rounded-xl transition-all"
         >
           <MessageCircle className="w-4 h-4 text-[#25D366]" />
           WhatsApp

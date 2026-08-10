@@ -97,15 +97,14 @@ async function PropertyResults({ searchParams }: PageProps) {
       />
       {properties.length > 0 && <JsonLd data={itemListSchema(properties)} />}
 
-      {/* Hero Banner */}
-      <div className="bg-ink pt-28 pb-12">
+      {/* Hero Banner — light off-white editorial band */}
+      <div className="bg-bg pt-28 pb-12 border-b border-border-subtle">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
             headingAs="h1"
             eyebrow="Group 24 Reality"
             heading={locationData ? `Properties in ${locationData.name}` : 'All Properties'}
             subheading="Verified plots, villas, and flats across Behror, Neemrana, and Kotputli. All listings physically checked by our team."
-            light
             align="left"
           />
         </div>

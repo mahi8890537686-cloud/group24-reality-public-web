@@ -19,9 +19,9 @@ export default function EMICalculator({ propertyPrice }: EMICalculatorProps) {
   const totalInterest = totalPayment - loanAmount;
 
   return (
-    <div className="bg-bg border border-border-subtle rounded-2xl p-6">
+    <div className="bg-surface border border-border-subtle rounded-2xl p-6 shadow-sm">
       <h3 className="font-serif text-ink text-lg mb-5 flex items-center gap-2">
-        <Calculator className="w-5 h-5 text-gold" />
+        <Calculator className="w-5 h-5 text-gold-dark" />
         EMI Calculator
       </h3>
 
@@ -29,7 +29,7 @@ export default function EMICalculator({ propertyPrice }: EMICalculatorProps) {
         {/* Loan Amount */}
         <div>
           <div className="flex justify-between mb-1">
-            <label className="text-xs font-inter font-semibold text-slate-500 uppercase tracking-wide">
+            <label className="text-xs font-inter font-semibold text-text-muted uppercase tracking-wide">
               Loan Amount
             </label>
             <span className="text-xs font-inter font-semibold text-ink">
@@ -46,7 +46,7 @@ export default function EMICalculator({ propertyPrice }: EMICalculatorProps) {
             className="w-full accent-gold cursor-pointer"
             aria-label="Loan amount slider"
           />
-          <div className="flex justify-between text-xs text-slate-400 font-inter mt-1">
+          <div className="flex justify-between text-xs text-text-muted font-inter mt-1">
             <span>₹5 Lakh</span>
             <span>{formatPrice(propertyPrice)}</span>
           </div>
@@ -55,7 +55,7 @@ export default function EMICalculator({ propertyPrice }: EMICalculatorProps) {
         {/* Interest Rate */}
         <div>
           <div className="flex justify-between mb-1">
-            <label className="text-xs font-inter font-semibold text-slate-500 uppercase tracking-wide">
+            <label className="text-xs font-inter font-semibold text-text-muted uppercase tracking-wide">
               Interest Rate
             </label>
             <span className="text-xs font-inter font-semibold text-ink">{rate}% p.a.</span>
@@ -70,7 +70,7 @@ export default function EMICalculator({ propertyPrice }: EMICalculatorProps) {
             className="w-full accent-gold cursor-pointer"
             aria-label="Interest rate slider"
           />
-          <div className="flex justify-between text-xs text-slate-400 font-inter mt-1">
+          <div className="flex justify-between text-xs text-text-muted font-inter mt-1">
             <span>6%</span>
             <span>15%</span>
           </div>
@@ -79,7 +79,7 @@ export default function EMICalculator({ propertyPrice }: EMICalculatorProps) {
         {/* Tenure */}
         <div>
           <div className="flex justify-between mb-1">
-            <label className="text-xs font-inter font-semibold text-slate-500 uppercase tracking-wide">
+            <label className="text-xs font-inter font-semibold text-text-muted uppercase tracking-wide">
               Loan Tenure
             </label>
             <span className="text-xs font-inter font-semibold text-ink">{tenure} Years</span>
@@ -94,33 +94,33 @@ export default function EMICalculator({ propertyPrice }: EMICalculatorProps) {
             className="w-full accent-gold cursor-pointer"
             aria-label="Loan tenure slider"
           />
-          <div className="flex justify-between text-xs text-slate-400 font-inter mt-1">
+          <div className="flex justify-between text-xs text-text-muted font-inter mt-1">
             <span>5 yrs</span>
             <span>30 yrs</span>
           </div>
         </div>
 
-        {/* Results */}
-        <div className="bg-ink rounded-xl p-5 mt-2 space-y-3">
+        {/* Results — light gold wash, not dark panel */}
+        <div className="bg-gold/10 border border-gold/25 rounded-xl p-5 mt-2 space-y-3">
           <div className="flex justify-between items-center">
-            <span className="text-white/60 font-inter text-sm">Monthly EMI</span>
-            <span className="text-gold font-serif text-2xl">
+            <span className="text-text-secondary font-inter text-sm">Monthly EMI</span>
+            <span className="text-ink font-serif text-2xl">
               {formatPrice(emi)}
             </span>
           </div>
-          <div className="border-t border-white/10 pt-3 grid grid-cols-2 gap-3">
+          <div className="border-t border-gold/20 pt-3 grid grid-cols-2 gap-3">
             <div>
-              <div className="text-white/40 font-inter text-xs mb-1">Principal</div>
-              <div className="text-white font-inter font-semibold text-sm">{formatPrice(loanAmount)}</div>
+              <div className="text-text-muted font-inter text-xs mb-1">Principal</div>
+              <div className="text-ink font-inter font-semibold text-sm">{formatPrice(loanAmount)}</div>
             </div>
             <div>
-              <div className="text-white/40 font-inter text-xs mb-1">Total Interest</div>
-              <div className="text-white font-inter font-semibold text-sm">{formatPrice(totalInterest)}</div>
+              <div className="text-text-muted font-inter text-xs mb-1">Total Interest</div>
+              <div className="text-ink font-inter font-semibold text-sm">{formatPrice(totalInterest)}</div>
             </div>
           </div>
         </div>
 
-        <p className="text-xs text-slate-400 font-inter leading-relaxed">
+        <p className="text-xs text-text-muted font-inter leading-relaxed">
           * This is an indicative calculation only. Actual EMI may vary based on bank policies.
           We can connect you with our bank partners for exact loan eligibility.
         </p>
