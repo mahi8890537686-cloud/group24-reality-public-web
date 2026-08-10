@@ -123,6 +123,7 @@ export default function ImageGallery({ images, alt, tour360Url, propertyType = '
       <AnimatePresence>
         {lightboxOpen && (
           <motion.div
+            key="gallery-lightbox"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
