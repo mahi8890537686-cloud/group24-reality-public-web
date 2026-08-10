@@ -144,6 +144,7 @@ export default function PropertyFilters() {
         {mobileOpen && (
           <>
             <motion.div
+              key="filters-backdrop"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -153,6 +154,7 @@ export default function PropertyFilters() {
               aria-hidden="true"
             />
             <motion.div
+              key="filters-sheet"
               initial={{ y: '100%' }}
               animate={{ y: 0 }}
               exit={{ y: '100%' }}
