@@ -26,20 +26,20 @@ export function MobileBottomBar({
   return (
     <>
       <div className="h-[calc(4rem+3.5rem+env(safe-area-inset-bottom))] lg:hidden" aria-hidden="true" />
-      <div className="fixed bottom-[calc(4rem+env(safe-area-inset-bottom))] left-0 right-0 z-40 lg:hidden bg-ink/95 backdrop-blur-2xl border-t border-white/10 p-3 flex gap-3">
+      <div className="fixed bottom-[calc(4rem+env(safe-area-inset-bottom))] left-0 right-0 z-40 lg:hidden bg-surface/95 backdrop-blur-2xl border-t border-border-subtle p-3 flex gap-3 shadow-md">
         <a
           href={waHref}
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Chat with Group24 Reality on WhatsApp"
-          className="flex-1 flex items-center justify-center gap-2 bg-[#25D366] text-white font-inter font-bold py-3 min-h-[48px] rounded-xl text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-white"
+          className="flex-1 flex items-center justify-center gap-2 bg-[#25D366]/15 border border-[#25D366]/40 text-text hover:bg-[#25D366]/25 font-inter font-bold py-3 min-h-[48px] rounded-xl text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-gold"
         >
-          <MessageCircle className="w-4 h-4" />
+          <MessageCircle className="w-4 h-4 text-[#25D366]" />
           WhatsApp
         </a>
         <a
           href={scheduleHref}
-          className="flex-1 flex items-center justify-center gap-2 bg-gold text-ink font-inter font-bold py-3 min-h-[48px] rounded-xl text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-ink"
+          className="flex-1 flex items-center justify-center gap-2 bg-gold hover:bg-gold-dark text-ink font-inter font-bold py-3 min-h-[48px] rounded-xl text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-gold"
         >
           <CalendarCheck className="w-4 h-4" />
           {scheduleLabel}
