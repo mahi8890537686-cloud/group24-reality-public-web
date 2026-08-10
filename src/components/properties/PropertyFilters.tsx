@@ -101,7 +101,7 @@ export default function PropertyFilters() {
   );
 
   return (
-    <div className="bg-bg border border-border-subtle rounded-2xl p-5">
+    <div className="bg-gold-soft border border-gold/30 rounded-2xl p-5">
       {/* Mobile toggle */}
       <div className="flex items-center justify-between mb-4 lg:hidden">
         <button
