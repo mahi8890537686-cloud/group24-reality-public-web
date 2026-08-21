@@ -37,6 +37,10 @@ yarn-error.log*
 # vercel
 .vercel
 
+# git worktrees created by Claude Code subagents (nested repo checkouts —
+# must never be committed as regular tracked content)
+.claude/worktrees/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
