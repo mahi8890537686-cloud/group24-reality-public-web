@@ -99,7 +99,7 @@ export default function LocationHighlights() {
                         <ArrowRight className="w-3.5 h-3.5" />
                       </Link>
                       <Link
-                        href={`/locations#${loc.slug}`}
+                        href={`/locations/${loc.slug}`}
                         className="flex items-center gap-1.5 border border-white/30 text-white hover:border-white hover:bg-white/10 font-inter text-xs px-4 py-2 rounded-lg transition-all duration-200"
                       >
                         Learn More

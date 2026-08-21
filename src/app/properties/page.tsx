@@ -119,6 +119,11 @@ async function PropertyResults({ searchParams }: PageProps) {
           <Suspense fallback={<div className="h-6" />}>
             <PropertySort total={properties.length} />
           </Suspense>
+          {/* Visually hidden — PropertyCard titles are h3; without this the
+              page skips straight from the h1 hero to h3 card titles. */}
+          <h2 className="sr-only">
+            {locationData ? `Properties in ${locationData.name}` : 'All Properties'}
+          </h2>
           <PropertyGrid properties={properties} />
         </div>
       </div>
