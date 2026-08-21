@@ -50,9 +50,9 @@ export default function LocationSection({ location, properties = [] }: LocationS
 
             {/* Property Options SEO block — sits directly below image in same col */}
             <div className="bg-sand-50 rounded-2xl p-5 border border-sand-200">
-              <h3 className="font-playfair font-semibold text-navy-950 text-lg mb-3">
+              <h2 className="font-playfair font-semibold text-navy-950 text-lg mb-3">
                 Property Options in {location.name}
-              </h3>
+              </h2>
               <div className="space-y-2 text-sm font-inter text-slate-600">
                 <p>
                   <strong className="text-navy-900">Plots for sale in {location.name}</strong>:{' '}
