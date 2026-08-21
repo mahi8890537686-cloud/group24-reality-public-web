@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  --font-playfair: "Playfair Display", serif;
+  --font-inter: "Inter", sans-serif;
+
+  /* Navy palette */
+  --color-navy-950: #0B1629;
+  --color-navy-900: #0e1e38;
+  --color-navy-800: #152644;
+  --color-navy-700: #1e3560;
+  --color-navy-200: #b8ceee;
+  --color-navy-100: #dde8f7;
+  --color-navy-50:  #f0f6ff;
+
+  /* Gold palette */
+  --color-gold-400: #D4A853;
+  --color-gold-500: #B8903A;
+  --color-gold-600: #9A7520;
+
+  /* Sand / Beige palette */
+  --color-sand-50:  #FAF7F2;
+  --color-sand-100: #F0EBE0;
+  --color-sand-200: #E2D8C8;
+
+  /* Radius */
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+    color: #1e293b;
+    background: #ffffff;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-playfair), Georgia, serif;
+  }
+
+  ::selection {
+    background: #D4A853;
+    color: #0B1629;
+  }
+}
+
+@layer utilities {
+  .font-playfair { font-family: var(--font-playfair), Georgia, serif; }
+  .font-inter    { font-family: var(--font-inter), ui-sans-serif, sans-serif; }
+
+  .animate-kenburns {
+    animation: kenburns 7s ease-out forwards;
+  }
+
+  .animate-light-sweep {
+    animation: light-sweep 8s ease-in-out infinite;
+  }
+}
+
+@keyframes kenburns {
+  0%   { transform: scale(1) translate(0, 0); }
+  100% { transform: scale(1.08) translate(-1%, -1%); }
+}
+
+@keyframes light-sweep {
+  0%   { transform: translateX(-100%); }
+  50%  { transform: translateX(100%); }
+  100% { transform: translateX(100%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-kenburns,
+  .animate-light-sweep {
+    animation: none;
+  }
+}

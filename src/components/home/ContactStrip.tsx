@@ -50,28 +50,15 @@ export default function ContactStrip() {
               </div>
             </a>
 
-            {config.phone2 && config.phone2Href && (
-              <a
-                href={config.phone2Href}
-                className="flex items-center gap-3 border border-ink/25 hover:border-ink text-ink hover:bg-ink/5 font-inter font-bold px-8 py-4 rounded-xl transition-all duration-200 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold text-base min-w-56"
-              >
-                <Phone className="w-5 h-5 text-gold-dark" />
-                <div className="text-left">
-                  <div className="text-xs font-medium opacity-60 leading-none mb-0.5">Alternate</div>
-                  <div className="leading-none">{config.phone2}</div>
-                </div>
-              </a>
-            )}
-
             <a
               href={waLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3 bg-[#25D366] hover:bg-[#22c55e] text-white font-inter font-bold px-8 py-4 rounded-xl transition-all duration-200 hover:shadow-xl hover:shadow-[#25D366]/30 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] text-base min-w-56"
+              className="flex items-center gap-3 bg-gold hover:bg-gold-dark text-ink font-inter font-bold px-8 py-4 rounded-xl transition-all duration-200 hover:shadow-xl hover:shadow-gold/30 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold text-base min-w-56"
             >
               <MessageCircle className="w-5 h-5" />
               <div className="text-left">
-                <div className="text-xs font-medium opacity-80 leading-none mb-0.5">WhatsApp</div>
+                <div className="text-xs font-medium opacity-70 leading-none mb-0.5">WhatsApp</div>
                 <div className="leading-none">Chat with Us</div>
               </div>
             </a>

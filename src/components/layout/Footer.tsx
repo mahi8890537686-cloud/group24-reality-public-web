@@ -137,16 +137,6 @@ export default function Footer() {
                 </a>
               </li>
 
-              {/* Phone 2 (if present) */}
-              {config.phone2 && config.phone2Href && (
-                <li>
-                  <a href={config.phone2Href} className="flex items-center gap-3 text-sm text-ink/60 hover:text-ink font-inter transition-colors">
-                    <Phone className="w-4 h-4 text-gold shrink-0" />
-                    <span>{config.phone2}</span>
-                  </a>
-                </li>
-              )}
-
               {/* Email */}
               <li>
                 <a href={`mailto:${config.email}`} className="flex items-center gap-3 text-sm text-ink/60 hover:text-ink font-inter transition-colors">

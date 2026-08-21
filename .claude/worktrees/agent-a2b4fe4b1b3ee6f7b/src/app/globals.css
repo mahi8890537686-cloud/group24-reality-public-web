@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Instrument Serif", "DM Serif Display", "Cormorant Garamond", serif;
+  --font-inter: "Inter", sans-serif;
+
+  /* Color system */
+  --color-bg: #F7F5F0;
+  --color-bg-secondary: #EFECE5;
+  --color-surface: #FFFFFF;
+  --color-ink: #171714;
+  --color-charcoal: #20201D;
+
+  --color-text: #171714;
+  --color-text-secondary: #66645E;
+  --color-text-muted: #8A8780;
+  --color-text-on-dark: #F7F5F0;
+
+  --color-border: #DDD9D0;
+  --color-border-subtle: #E8E5DE;
+
+  --color-gold: #A88A5A;
+  --color-gold-dark: #80683F;
+  --color-gold-soft: #EDE6D8; /* lighter gold for cards on off-white pages */
+
+  /* Fluid type scale */
+  --text-hero: clamp(3rem, 7vw, 6rem);
+  --text-hero-secondary: clamp(3rem, 5vw, 4rem);
+  --text-section: clamp(2.25rem, 5vw, 3.75rem);
+  --text-property: clamp(2.5rem, 4vw, 3.5rem);
+  --text-subheading: clamp(1.25rem, 1.6vw, 1.5rem);
+  --text-body: clamp(0.9375rem, 1.2vw, 1.125rem);
+  --text-small: 0.9375rem;
+  --text-eyebrow: 0.75rem;
+
+  /* Radius */
+  --radius-button: 7px;
+  --radius-input: 8px;
+  --radius-card: 12px;
+  --radius-image-lg: 14px;
+  --radius-none: 0px;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+
+  /* Shadow */
+  --shadow-sm: 0 4px 16px rgba(23,23,20,0.05);
+  --shadow-md: 0 12px 40px rgba(23,23,20,0.08);
+  --shadow-lg: 0 24px 80px rgba(23,23,20,0.10);
+  --shadow-xl: 0 32px 100px rgba(23,23,20,0.12);
+  --shadow-2xl: 0 40px 120px rgba(23,23,20,0.14);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+    color: var(--color-text);
+    background: var(--color-bg);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif), Georgia, serif;
+  }
+
+  ::selection {
+    background: var(--color-gold);
+    color: var(--color-text-on-dark);
+  }
+}
+
+@layer utilities {
+  .font-serif { font-family: var(--font-serif), Georgia, serif; }
+  .font-inter { font-family: var(--font-inter), ui-sans-serif, sans-serif; }
+
+  .animate-kenburns {
+    animation: kenburns 7s ease-out forwards;
+  }
+
+  .animate-light-sweep {
+    animation: light-sweep 8s ease-in-out infinite;
+  }
+}
+
+@keyframes kenburns {
+  0%   { transform: scale(1) translate(0, 0); }
+  100% { transform: scale(1.08) translate(-1%, -1%); }
+}
+
+@keyframes light-sweep {
+  0%   { transform: translateX(-100%); }
+  50%  { transform: translateX(100%); }
+  100% { transform: translateX(100%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-kenburns,
+  .animate-light-sweep {
+    animation: none;
+  }
+}

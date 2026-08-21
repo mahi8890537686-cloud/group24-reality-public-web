@@ -139,9 +139,9 @@ export default function LeadForm({ propertyTitle, propertySlug }: LeadFormProps)
           href={whatsappLink(waMessage)}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center gap-2 bg-[#25D366]/10 border border-[#25D366]/30 hover:bg-[#25D366]/20 text-ink font-inter font-semibold text-sm py-3 px-4 rounded-xl transition-all"
+          className="flex items-center justify-center gap-2 bg-gold/10 border border-gold/30 hover:bg-gold/20 text-ink font-inter font-semibold text-sm py-3 px-4 rounded-xl transition-all"
         >
-          <MessageCircle className="w-4 h-4 text-[#25D366]" />
+          <MessageCircle className="w-4 h-4 text-gold-dark" />
           WhatsApp
         </a>
       </div>

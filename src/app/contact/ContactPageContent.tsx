@@ -203,28 +203,12 @@ export default function ContactPageContent() {
                   </a>
                 </StaggerItem>
 
-                {/* Secondary Phone */}
-                {config.phone2 && config.phone2Href && (
-                  <StaggerItem>
-                    <a href={config.phone2Href}
-                      className="flex items-start gap-4 bg-gold-soft border border-gold/30 rounded-2xl p-5 hover:border-gold/40 hover:bg-bg/5 transition-all group">
-                      <div className="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center shrink-0 group-hover:bg-gold/20 transition-colors">
-                        <Phone className="w-5 h-5 text-gold-dark" />
-                      </div>
-                      <div>
-                        <div className="text-xs font-inter font-semibold text-slate-400 uppercase tracking-wide mb-1">Alternate Number</div>
-                        <div className="font-inter font-semibold text-ink">{config.phone2}</div>
-                      </div>
-                    </a>
-                  </StaggerItem>
-                )}
-
                 {/* WhatsApp */}
                 <StaggerItem>
                   <a href={waEnquiryLink} target="_blank" rel="noopener noreferrer"
-                    className="flex items-start gap-4 bg-[#25D366]/5 border border-[#25D366]/20 rounded-2xl p-5 hover:border-[#25D366]/40 hover:bg-[#25D366]/10 transition-all group">
-                    <div className="w-10 h-10 rounded-xl bg-[#25D366]/10 flex items-center justify-center shrink-0">
-                      <MessageCircle className="w-5 h-5 text-[#25D366]" />
+                    className="flex items-start gap-4 bg-gold-soft border border-gold/30 rounded-2xl p-5 hover:border-gold/40 hover:bg-bg/5 transition-all group">
+                    <div className="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center shrink-0 group-hover:bg-gold/20 transition-colors">
+                      <MessageCircle className="w-5 h-5 text-gold-dark" />
                     </div>
                     <div>
                       <div className="text-xs font-inter font-semibold text-slate-400 uppercase tracking-wide mb-1">WhatsApp</div>
@@ -322,7 +306,7 @@ export default function ContactPageContent() {
           Call Now
         </a>
         <a href={waLink} target="_blank" rel="noopener noreferrer"
-          className="flex-1 flex items-center justify-center gap-2 bg-[#25D366] text-white font-inter font-bold py-3 rounded-xl text-sm">
+          className="flex-1 flex items-center justify-center gap-2 bg-gold text-ink font-inter font-bold py-3 rounded-xl text-sm">
           <MessageCircle className="w-4 h-4" />
           WhatsApp
         </a>

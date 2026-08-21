@@ -32,9 +32,9 @@ export function MobileBottomBar({
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Chat with Group24 Reality on WhatsApp"
-          className="flex-1 flex items-center justify-center gap-2 bg-[#25D366]/15 border border-[#25D366]/40 text-text hover:bg-[#25D366]/25 font-inter font-bold py-3 min-h-[48px] rounded-xl text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-gold"
+          className="flex-1 flex items-center justify-center gap-2 bg-gold/15 border border-gold/40 text-text hover:bg-gold/25 font-inter font-bold py-3 min-h-[48px] rounded-xl text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-gold"
         >
-          <MessageCircle className="w-4 h-4 text-[#25D366]" />
+          <MessageCircle className="w-4 h-4 text-gold-dark" />
           WhatsApp
         </a>
         <a
