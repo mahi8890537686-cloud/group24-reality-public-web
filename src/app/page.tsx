@@ -12,9 +12,9 @@ import { buildMetadata } from '@/lib/seo';
 import { getVisibleTestimonials } from '@/lib/firestore/testimonials';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Group 24 Reality — Plots, Villas & Flats in Behror, Neemrana & Kotputli',
+  title: 'Group 24 Reality — Real Estate in Behror, Neemrana & Kotputli',
   description:
-    'Find verified residential plots, villas, and flats in Behror, Neemrana, and Kotputli, Rajasthan. Group 24 Reality offers transparent pricing, site visits, and local expertise. Call Sunil Sangwan: +91-9266982400.',
+    'Verified plots, villas & flats in Behror, Neemrana, and Kotputli, Rajasthan. Transparent pricing, free site visits. Call +91-9266982400.',
   openGraph: {
     title: 'Group 24 Reality — Real Estate Consultant in Rajasthan',
     description:

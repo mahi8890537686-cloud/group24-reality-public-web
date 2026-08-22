@@ -41,6 +41,27 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'monthly' as const,
       priority: 0.85,
     })),
+    // Exact-match local landing pages — dedicated URLs for high-intent
+    // location+type searches (see docs/seo/local-offpage-strategy.md context).
+    // /properties?location=X&type=Y canonicalizes to these for the same combos.
+    {
+      url: `${SITE_URL}/plots-in-neemrana`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${SITE_URL}/plots-in-behror`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${SITE_URL}/flats-in-behror`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
     {
       url: `${SITE_URL}/about`,
       lastModified: new Date(),

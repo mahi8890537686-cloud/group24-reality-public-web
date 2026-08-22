@@ -27,6 +27,9 @@ const footerLinks = {
     { label: 'Behror Location Guide', href: '/locations/behror' },
     { label: 'Neemrana Location Guide', href: '/locations/neemrana' },
     { label: 'Kotputli Location Guide', href: '/locations/kotputli' },
+    { label: 'Plots in Neemrana', href: '/plots-in-neemrana' },
+    { label: 'Plots in Behror', href: '/plots-in-behror' },
+    { label: 'Flats in Behror', href: '/flats-in-behror' },
   ],
 };
 

@@ -6,7 +6,7 @@ import {
   Calendar, Clock, MapPin, ArrowLeft, Tag,
 } from 'lucide-react';
 import { getBlogBySlug, getPublishedBlogs, getAllBlogSlugs } from '@/lib/firestore/blogs';
-import { buildMetadata } from '@/lib/seo';
+import { buildMetadata, trimForSeo } from '@/lib/seo';
 import { blogPostingSchema, breadcrumbSchema, JsonLd } from '@/lib/schema';
 import ViewsAndShare from './ViewsAndShare';
 import LeadCaptureForm from './LeadCaptureForm';
@@ -33,8 +33,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!blog) return {};
 
   return buildMetadata({
-    title: blog.title,
-    description: blog.excerpt,
+    title: trimForSeo(blog.title, 40),
+    description: trimForSeo(blog.excerpt, 155, true),
     openGraph: {
       title: blog.title,
       description: blog.excerpt,

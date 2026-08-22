@@ -5,7 +5,7 @@ import { buildMetadata } from '@/lib/seo';
 import { breadcrumbSchema, JsonLd } from '@/lib/schema';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Real Estate Blog — Investment Guides & Market Insights',
+  title: 'Real Estate Blog & Market Insights',
   description:
     'Expert advice, market trends, area highlights, and property investment guides for Behror, Neemrana, and Kotputli on the Delhi–Jaipur NH-48 corridor.',
   alternates: { canonical: 'https://www.group24reality.com/blogs' },

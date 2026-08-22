@@ -6,9 +6,9 @@ import { buildMetadata } from '@/lib/seo';
 import { breadcrumbSchema, JsonLd } from '@/lib/schema';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'About Us — Trusted Real Estate Consultant in Rajasthan',
+  title: 'About Group 24 Reality',
   description:
-    'Learn about Group 24 Reality — a trusted real estate consulting firm serving Behror, Neemrana, and Kotputli. Founded by Sunil Sangwan with a mission of transparency, local expertise, and honest property dealing.',
+    'Trusted real estate consultant serving Behror, Neemrana & Kotputli. Founded by Sunil Sangwan on transparency and honest property dealing.',
   alternates: { canonical: 'https://www.group24reality.com/about' },
   openGraph: { url: 'https://www.group24reality.com/about' },
 });

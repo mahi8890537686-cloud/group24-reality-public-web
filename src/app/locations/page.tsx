@@ -8,9 +8,9 @@ import { buildMetadata } from '@/lib/seo';
 import { breadcrumbSchema, JsonLd } from '@/lib/schema';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Real Estate in Behror, Neemrana & Kotputli',
+  title: 'Locations — Behror, Neemrana & Kotputli',
   description:
-    'Explore real estate markets in Behror, Neemrana, and Kotputli on the Delhi–Jaipur NH-48 corridor — investment potential, local infrastructure, and verified plots, villas & flats in each location.',
+    'Explore real estate markets in Behror, Neemrana & Kotputli on the Delhi–Jaipur NH-48 corridor — investment potential, infrastructure, verified listings.',
   alternates: { canonical: 'https://www.group24reality.com/locations' },
   openGraph: { url: 'https://www.group24reality.com/locations' },
 });

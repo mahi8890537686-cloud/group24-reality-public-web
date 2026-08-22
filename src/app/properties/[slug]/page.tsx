@@ -12,7 +12,7 @@ import AmenitiesList from '@/components/property-detail/AmenitiesList';
 import LocationMap from '@/components/property-detail/LocationMap';
 import EMICalculator from '@/components/property-detail/EMICalculator';
 import LeadForm from '@/components/property-detail/LeadForm';
-import { buildMetadata } from '@/lib/seo';
+import { buildMetadata, trimForSeo } from '@/lib/seo';
 import { propertySchema, breadcrumbSchema, JsonLd } from '@/lib/schema';
 import type { Property } from '@/types';
 import PropertyCard from '@/components/properties/PropertyCard';
@@ -41,9 +41,20 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const property = await getPropertyBySlug(slug);
   if (!property) return {};
 
+  const typeLabel = property.type.charAt(0).toUpperCase() + property.type.slice(1);
+  // Some listings have a short/thin `description` field — pad with real
+  // type+location context so the meta description never falls under Google's
+  // ~70-char effective floor, then trim so it never runs over the ~160 ceiling
+  // either (fixed-length slicing here previously ignored priceLabel's
+  // variable length and consistently overshot 160 by ~10 chars).
+  const priceAndDesc = `${property.priceLabel} — ${property.description}`.trim();
+  const rawDescription = priceAndDesc.length >= 70
+    ? priceAndDesc
+    : `${typeLabel} for sale in ${property.locationName}, Rajasthan. ${priceAndDesc}`;
+
   return buildMetadata({
-    title: property.title,
-    description: `${property.priceLabel} — ${property.description.slice(0, 155)}...`,
+    title: trimForSeo(property.title, 40),
+    description: trimForSeo(rawDescription, 155, true),
     openGraph: {
       title: property.title,
       description: `${property.type.charAt(0).toUpperCase() + property.type.slice(1)} for sale in ${property.locationName}, Rajasthan. ${property.priceLabel}. Contact Group 24 Reality.`,

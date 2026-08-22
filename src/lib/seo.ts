@@ -6,11 +6,11 @@ const SITE_URL = 'https://www.group24reality.com';
 export const defaultMetadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Group 24 Reality — Plots, Villas & Flats in Behror, Neemrana & Kotputli',
+    default: 'Group 24 Reality — Real Estate in Behror, Neemrana & Kotputli',
     template: `%s | ${SITE_NAME}`,
   },
   description:
-    'Group 24 Reality is a trusted real estate consultant in Behror, Neemrana, and Kotputli, Rajasthan. Find verified residential plots, villas, and flats with transparent pricing and expert local guidance.',
+    'Trusted real estate consultant in Behror, Neemrana, and Kotputli, Rajasthan. Verified plots, villas, and flats with transparent pricing.',
   keywords: [
     'real estate in Behror',
     'plots for sale in Neemrana',
@@ -47,6 +47,22 @@ export const defaultMetadata: Metadata = {
     canonical: SITE_URL,
   },
 };
+
+/**
+ * Trims free-form text (property/blog titles, generated descriptions) to a
+ * search-engine-friendly length, cutting at the nearest word boundary
+ * instead of mid-word. The root layout's title template appends
+ * " | Group 24 Reality" (~19 chars) to every non-homepage page title, so
+ * dynamic titles should target ~40 chars to land the rendered title near
+ * Google's ~60-char display cutoff.
+ */
+export function trimForSeo(text: string, maxLen: number, ellipsis = false): string {
+  if (text.length <= maxLen) return text;
+  const cut = text.slice(0, maxLen);
+  const lastSpace = cut.lastIndexOf(' ');
+  const trimmed = (lastSpace > maxLen * 0.5 ? cut.slice(0, lastSpace) : cut).trim();
+  return ellipsis ? `${trimmed}...` : trimmed;
+}
 
 export function buildMetadata(overrides: Partial<Metadata>): Metadata {
   return {

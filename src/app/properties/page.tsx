@@ -21,6 +21,16 @@ const TYPE_LABELS: Record<string, string> = {
   flat: 'Flats',
 };
 
+// This location+type combo has its own dedicated exact-match landing page
+// (see src/components/money-pages/) with deeper content than this filtered
+// listing view — canonicalize to it instead of self so ranking signals
+// consolidate on one URL rather than splitting across near-duplicates.
+const DEDICATED_LANDING_PAGE: Record<string, string> = {
+  'neemrana:plot': '/plots-in-neemrana',
+  'behror:plot': '/plots-in-behror',
+  'behror:flat': '/flats-in-behror',
+};
+
 function firstParam(v: string | string[] | undefined): string | undefined {
   return Array.isArray(v) ? v[0] : v;
 }
@@ -41,21 +51,25 @@ export async function generateMetadata({ searchParams }: PageProps): Promise<Met
     title = `${typeLabel} for Sale in ${location.name}`;
     description = `${typeLabel} for sale in ${location.name}, Rajasthan. ${location.description.slice(0, 120)}...`;
   } else if (location) {
-    title = `Properties in ${location.name} — Plots, Villas & Flats`;
-    description = `Verified plots, villas, and flats for sale in ${location.name}, Rajasthan. ${location.description.slice(0, 120)}...`;
+    title = `Properties in ${location.name}, Rajasthan`;
+    description = `Verified plots, villas & flats for sale in ${location.name}, Rajasthan. ${location.description.slice(0, 75)}...`;
   } else if (typeLabel) {
-    title = `${typeLabel} for Sale in Behror, Neemrana & Kotputli`;
+    title = `${typeLabel} in Behror, Neemrana & Kotputli`;
     description = `Verified ${typeLabel.toLowerCase()} for sale across Behror, Neemrana, and Kotputli, Rajasthan. Transparent pricing, physically verified listings.`;
   }
 
   // Only the location + type facets are meaningfully distinct for search intent;
   // price/bedrooms/status/sort are refinements that should collapse back to the
   // parent filtered URL rather than being indexed as separate pages.
+  const dedicatedPage = locationSlug && type ? DEDICATED_LANDING_PAGE[`${locationSlug}:${type}`] : undefined;
+
   const canonicalParams = new URLSearchParams();
   if (locationSlug) canonicalParams.set('location', locationSlug);
   if (type) canonicalParams.set('type', type);
   const canonicalQuery = canonicalParams.toString();
-  const canonical = `${SITE_URL}/properties${canonicalQuery ? `?${canonicalQuery}` : ''}`;
+  const canonical = dedicatedPage
+    ? `${SITE_URL}${dedicatedPage}`
+    : `${SITE_URL}/properties${canonicalQuery ? `?${canonicalQuery}` : ''}`;
 
   return buildMetadata({
     title,
