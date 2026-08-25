@@ -1,0 +1,622 @@
+[
+  {
+    "severity": "info",
+    "issueType": "meta-description-too-long",
+    "issue": "Meta description too long",
+    "url": "https://www.group24reality.com/",
+    "details": {
+      "length": 211
+    },
+    "howToFix": "Trim the description to roughly 70–160 characters while keeping the core message and call to action."
+  },
+  {
+    "severity": "info",
+    "issueType": "meta-description-too-long",
+    "issue": "Meta description too long",
+    "url": "https://www.group24reality.com/about",
+    "details": {
+      "length": 211
+    },
+    "howToFix": "Trim the description to roughly 70–160 characters while keeping the core message and call to action."
+  },
+  {
+    "severity": "info",
+    "issueType": "meta-description-too-long",
+    "issue": "Meta description too long",
+    "url": "https://www.group24reality.com/locations",
+    "details": {
+      "length": 195
+    },
+    "howToFix": "Trim the description to roughly 70–160 characters while keeping the core message and call to action."
+  },
+  {
+    "severity": "info",
+    "issueType": "meta-description-too-long",
+    "issue": "Meta description too long",
+    "url": "https://www.group24reality.com/contact",
+    "details": {
+      "length": 170
+    },
+    "howToFix": "Trim the description to roughly 70–160 characters while keeping the core message and call to action."
+  },
+  {
+    "severity": "info",
+    "issueType": "meta-description-too-long",
+    "issue": "Meta description too long",
+    "url": "https://www.group24reality.com/properties/plot-neemrana-dmic-zone",
+    "details": {
+      "length": 169
+    },
+    "howToFix": "Trim the description to roughly 70–160 characters while keeping the core message and call to action."
+  },
+  {
+    "severity": "info",
+    "issueType": "meta-description-too-long",
+    "issue": "Meta description too long",
+    "url": "https://www.group24reality.com/properties/flat-kotputli-metro-heights",
+    "details": {
+      "length": 169
+    },
+    "howToFix": "Trim the description to roughly 70–160 characters while keeping the core message and call to action."
+  },
+  {
+    "severity": "info",
+    "issueType": "meta-description-too-long",
+    "issue": "Meta description too long",
+    "url": "https://www.group24reality.com/properties/flat-neemrana-sky-residency",
+    "details": {
+      "length": 169
+    },
+    "howToFix": "Trim the description to roughly 70–160 characters while keeping the core message and call to action."
+  },
+  {
+    "severity": "info",
+    "issueType": "meta-description-too-long",
+    "issue": "Meta description too long",
+    "url": "https://www.group24reality.com/properties/plot-kotputli-industrial-fringe",
+    "details": {
+      "length": 169
+    },
+    "howToFix": "Trim the description to roughly 70–160 characters while keeping the core message and call to action."
+  },
+  {
+    "severity": "info",
+    "issueType": "meta-description-too-long",
+    "issue": "Meta description too long",
+    "url": "https://www.group24reality.com/properties/plot-behror-highway-touch",
+    "details": {
+      "length": 169
+    },
+    "howToFix": "Trim the description to roughly 70–160 characters while keeping the core message and call to action."
+  },
+  {
+    "severity": "info",
+    "issueType": "meta-description-too-long",
+    "issue": "Meta description too long",
+    "url": "https://www.group24reality.com/properties/flat-behror-sunrise-apartments",
+    "details": {
+      "length": 169
+    },
+    "howToFix": "Trim the description to roughly 70–160 characters while keeping the core message and call to action."
+  },
+  {
+    "severity": "info",
+    "issueType": "meta-description-too-long",
+    "issue": "Meta description too long",
+    "url": "https://www.group24reality.com/properties/villa-kotputli-sunrise-villas",
+    "details": {
+      "length": 169
+    },
+    "howToFix": "Trim the description to roughly 70–160 characters while keeping the core message and call to action."
+  },
+  {
+    "severity": "info",
+    "issueType": "meta-description-too-long",
+    "issue": "Meta description too long",
+    "url": "https://www.group24reality.com/properties/villa-behror-green-valley",
+    "details": {
+      "length": 169
+    },
+    "howToFix": "Trim the description to roughly 70–160 characters while keeping the core message and call to action."
+  },
+  {
+    "severity": "info",
+    "issueType": "meta-description-too-long",
+    "issue": "Meta description too long",
+    "url": "https://www.group24reality.com/properties/residential-plot-behror-sector-12",
+    "details": {
+      "length": 169
+    },
+    "howToFix": "Trim the description to roughly 70–160 characters while keeping the core message and call to action."
+  },
+  {
+    "severity": "info",
+    "issueType": "meta-description-too-long",
+    "issue": "Meta description too long",
+    "url": "https://www.group24reality.com/properties/plot-kotputli-green-meadows",
+    "details": {
+      "length": 169
+    },
+    "howToFix": "Trim the description to roughly 70–160 characters while keeping the core message and call to action."
+  },
+  {
+    "severity": "info",
+    "issueType": "meta-description-too-long",
+    "issue": "Meta description too long",
+    "url": "https://www.group24reality.com/properties/residential-plot-neemrana-riico",
+    "details": {
+      "length": 169
+    },
+    "howToFix": "Trim the description to roughly 70–160 characters while keeping the core message and call to action."
+  },
+  {
+    "severity": "info",
+    "issueType": "meta-description-too-long",
+    "issue": "Meta description too long",
+    "url": "https://www.group24reality.com/properties/villa-neemrana-heritage-heights",
+    "details": {
+      "length": 169
+    },
+    "howToFix": "Trim the description to roughly 70–160 characters while keeping the core message and call to action."
+  },
+  {
+    "severity": "info",
+    "issueType": "meta-description-too-long",
+    "issue": "Meta description too long",
+    "url": "https://www.group24reality.com/blogs/why-behror-emerging-top-real-estate-investment-corridor-nh48",
+    "details": {
+      "length": 168
+    },
+    "howToFix": "Trim the description to roughly 70–160 characters while keeping the core message and call to action."
+  },
+  {
+    "severity": "info",
+    "issueType": "meta-description-too-long",
+    "issue": "Meta description too long",
+    "url": "https://www.group24reality.com/properties?location=neemrana",
+    "details": {
+      "length": 190
+    },
+    "howToFix": "Trim the description to roughly 70–160 characters while keeping the core message and call to action."
+  },
+  {
+    "severity": "info",
+    "issueType": "meta-description-too-long",
+    "issue": "Meta description too long",
+    "url": "https://www.group24reality.com/properties?location=behror",
+    "details": {
+      "length": 188
+    },
+    "howToFix": "Trim the description to roughly 70–160 characters while keeping the core message and call to action."
+  },
+  {
+    "severity": "info",
+    "issueType": "meta-description-too-long",
+    "issue": "Meta description too long",
+    "url": "https://www.group24reality.com/properties?location=kotputli",
+    "details": {
+      "length": 190
+    },
+    "howToFix": "Trim the description to roughly 70–160 characters while keeping the core message and call to action."
+  },
+  {
+    "severity": "info",
+    "issueType": "meta-description-too-short",
+    "issue": "Meta description too short",
+    "url": "https://www.group24reality.com/properties/200sq-yard",
+    "details": {
+      "length": 21
+    },
+    "howToFix": "Expand the description to roughly 70–160 characters that summarize the page and give a reason to click."
+  },
+  {
+    "severity": "info",
+    "issueType": "slow-response",
+    "issue": "Slow server response",
+    "url": "https://www.group24reality.com/properties?type=flat",
+    "details": {
+      "responseTimeMs": 1736
+    },
+    "howToFix": "Investigate server/database time and caching for this route; serving cached or statically generated HTML usually fixes it."
+  },
+  {
+    "severity": "info",
+    "issueType": "slow-response",
+    "issue": "Slow server response",
+    "url": "https://www.group24reality.com/properties?location=behror",
+    "details": {
+      "responseTimeMs": 1757
+    },
+    "howToFix": "Investigate server/database time and caching for this route; serving cached or statically generated HTML usually fixes it."
+  },
+  {
+    "severity": "info",
+    "issueType": "slow-response",
+    "issue": "Slow server response",
+    "url": "https://www.group24reality.com/properties?type=villa",
+    "details": {
+      "responseTimeMs": 1600
+    },
+    "howToFix": "Investigate server/database time and caching for this route; serving cached or statically generated HTML usually fixes it."
+  },
+  {
+    "severity": "info",
+    "issueType": "slow-response",
+    "issue": "Slow server response",
+    "url": "https://www.group24reality.com/properties?location=kotputli",
+    "details": {
+      "responseTimeMs": 1862
+    },
+    "howToFix": "Investigate server/database time and caching for this route; serving cached or statically generated HTML usually fixes it."
+  },
+  {
+    "severity": "info",
+    "issueType": "slow-response",
+    "issue": "Slow server response",
+    "url": "https://www.group24reality.com/properties?type=plot",
+    "details": {
+      "responseTimeMs": 1797
+    },
+    "howToFix": "Investigate server/database time and caching for this route; serving cached or statically generated HTML usually fixes it."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.group24reality.com/",
+    "details": {
+      "length": 71
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.group24reality.com/locations/kotputli",
+    "details": {
+      "length": 77
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.group24reality.com/locations/neemrana",
+    "details": {
+      "length": 77
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.group24reality.com/locations/behror",
+    "details": {
+      "length": 75
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.group24reality.com/about",
+    "details": {
+      "length": 73
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.group24reality.com/locations",
+    "details": {
+      "length": 61
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.group24reality.com/blogs",
+    "details": {
+      "length": 73
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.group24reality.com/properties/flat-kotputli-metro-heights",
+    "details": {
+      "length": 62
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.group24reality.com/properties/plot-kotputli-industrial-fringe",
+    "details": {
+      "length": 71
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.group24reality.com/properties/plot-behror-highway-touch",
+    "details": {
+      "length": 72
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.group24reality.com/properties/villa-kotputli-sunrise-villas",
+    "details": {
+      "length": 65
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.group24reality.com/properties/residential-plot-behror-sector-12",
+    "details": {
+      "length": 63
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.group24reality.com/properties/plot-kotputli-green-meadows",
+    "details": {
+      "length": 72
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.group24reality.com/properties/residential-plot-neemrana-riico",
+    "details": {
+      "length": 71
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.group24reality.com/properties/kotputli-smart-township-2bhk-flat",
+    "details": {
+      "length": 71
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.group24reality.com/properties/villa-neemrana-heritage-heights",
+    "details": {
+      "length": 65
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.group24reality.com/properties/kotputli-residency-200sqyd-corner",
+    "details": {
+      "length": 61
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.group24reality.com/properties/kotputli-smart-township-3bhk-villa",
+    "details": {
+      "length": 74
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.group24reality.com/properties/kotputli-residency-150sqyd-plot",
+    "details": {
+      "length": 66
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.group24reality.com/properties/neemrana-green-valley-3bhk-villa",
+    "details": {
+      "length": 66
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.group24reality.com/properties/neemrana-industrial-1000sqyd-warehouse",
+    "details": {
+      "length": 70
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.group24reality.com/properties/neemrana-industrial-500sqyd-commercial",
+    "details": {
+      "length": 70
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.group24reality.com/properties/neemrana-green-valley-250sqyd-plot",
+    "details": {
+      "length": 69
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.group24reality.com/properties/behror-heights-100sqyd-plot",
+    "details": {
+      "length": 62
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.group24reality.com/properties/somnath-city-200sqyd-corner-plot",
+    "details": {
+      "length": 63
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.group24reality.com/properties/somnath-city-300sqyd-villa-plot",
+    "details": {
+      "length": 62
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.group24reality.com/blogs/kotputli-real-estate-spotlight-commercial-frontage-nh48-corridor",
+    "details": {
+      "length": 91
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.group24reality.com/blogs/neemrana-real-estate-boom-industrial-expansion-housing-demand",
+    "details": {
+      "length": 93
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.group24reality.com/blogs/plots-vs-villas-vs-flats-which-real-estate-asset-class-fits-your-goals",
+    "details": {
+      "length": 91
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.group24reality.com/blogs/why-behror-emerging-top-real-estate-investment-corridor-nh48",
+    "details": {
+      "length": 93
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.group24reality.com/properties?location=neemrana",
+    "details": {
+      "length": 65
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.group24reality.com/properties?type=flat",
+    "details": {
+      "length": 64
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.group24reality.com/properties?location=behror",
+    "details": {
+      "length": 63
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.group24reality.com/properties?type=villa",
+    "details": {
+      "length": 65
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.group24reality.com/properties?location=kotputli",
+    "details": {
+      "length": 65
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.group24reality.com/properties?type=plot",
+    "details": {
+      "length": 64
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  }
+]

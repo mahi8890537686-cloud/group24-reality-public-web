@@ -1,24 +1,17 @@
-'use client';
-
-import { useEffect, useState } from 'react';
+// Server Component — data fetched at request time so Googlebot sees
+// actual property cards in the initial HTML (not a client-side spinner).
 import Link from 'next/link';
-import { ArrowRight, Loader2 } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { getFeaturedProperties } from '@/lib/firestore/properties';
-import type { Property } from '@/types';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { StaggerContainer, StaggerItem, FadeInUp } from '@/components/ui/MotionWrapper';
 import PropertyCard from '@/components/properties/PropertyCard';
 
-export default function FeaturedProperties() {
-  const [properties, setProperties] = useState<Property[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    getFeaturedProperties(6)
-      .then(setProperties)
-      .catch((err) => console.error('Failed to load featured properties:', err))
-      .finally(() => setLoading(false));
-  }, []);
+export default async function FeaturedProperties() {
+  // Fetch server-side so the property cards are present in the SSR HTML.
+  // Errors are caught gracefully — the section renders empty rather than
+  // crashing the whole homepage.
+  const properties = await getFeaturedProperties(6).catch(() => []);
 
   return (
     <section className="py-16 sm:py-24 bg-bg" aria-labelledby="featured-heading">
@@ -41,11 +34,7 @@ export default function FeaturedProperties() {
           </div>
         </FadeInUp>
 
-        {loading ? (
-          <div className="flex justify-center py-16">
-            <Loader2 className="w-10 h-10 text-gold-dark animate-spin" />
-          </div>
-        ) : properties.length === 0 ? (
+        {properties.length === 0 ? (
           <p className="text-center text-slate-500 font-inter py-12">
             No featured properties at the moment. Check back soon!
           </p>
@@ -62,3 +51,4 @@ export default function FeaturedProperties() {
     </section>
   );
 }
+

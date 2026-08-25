@@ -16,7 +16,17 @@ const PRIMARY_PHONE = '+91-9266982400';
 const ALT_PHONE = '+91-9560199247';
 const BUSINESS_EMAIL = 'info@group24reality.com';
 
-const SAME_AS = ['https://www.facebook.com/group24reality', 'https://www.instagram.com/group24reality'];
+// Social & business profiles — keep this list in sync with the GBP sameAs
+// field. Adding a platform here with no actual live profile will hurt, not
+// help — only add URLs that are verified and active.
+const SAME_AS = [
+  'https://www.facebook.com/group24reality',
+  'https://www.instagram.com/group24reality',
+  // Add these once the profiles are created and verified:
+  // 'https://www.youtube.com/@group24reality',
+  // 'https://www.linkedin.com/company/group24reality',
+  // 'https://twitter.com/Group24Reality',
+];
 
 const OPENING_HOURS = [
   {

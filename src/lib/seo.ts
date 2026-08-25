@@ -12,16 +12,24 @@ export const defaultMetadata: Metadata = {
   description:
     'Trusted real estate consultant in Behror, Neemrana, and Kotputli, Rajasthan. Verified plots, villas, and flats with transparent pricing.',
   keywords: [
-    'real estate in Behror',
+    // Location × type combinations (match the exact-match landing pages)
+    'plots for sale in Behror',
     'plots for sale in Neemrana',
-    'villas in Behror',
+    'plots for sale in Kotputli',
+    'villas for sale in Behror',
+    'villas for sale in Neemrana',
+    'villas for sale in Kotputli',
+    'flats for sale in Behror',
+    'flats for sale in Neemrana',
     'flats for sale in Kotputli',
+    // Broader intent keywords
+    'real estate in Behror',
     'residential plots near Neemrana',
     'property dealer in Behror',
-    'investment property in Kotputli',
+    'investment property Rajasthan NH-48',
+    'buy plot Behror Neemrana Kotputli',
     'Group 24 Reality',
     'property in Rajasthan',
-    'buy plot Behror Neemrana',
   ],
   authors: [{ name: 'Group 24 Reality' }],
   creator: 'Group 24 Reality',

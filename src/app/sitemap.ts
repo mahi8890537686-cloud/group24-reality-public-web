@@ -42,14 +42,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.85,
     })),
     // Exact-match local landing pages — dedicated URLs for high-intent
-    // location+type searches (see docs/seo/local-offpage-strategy.md context).
-    // /properties?location=X&type=Y canonicalizes to these for the same combos.
-    {
-      url: `${SITE_URL}/plots-in-neemrana`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.85,
-    },
+    // location+type searches. Each URL targets one (location × property-type)
+    // keyword cluster for organic ranking.
+    // Plots
     {
       url: `${SITE_URL}/plots-in-behror`,
       lastModified: new Date(),
@@ -57,7 +52,51 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.85,
     },
     {
+      url: `${SITE_URL}/plots-in-neemrana`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${SITE_URL}/plots-in-kotputli`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    // Villas
+    {
+      url: `${SITE_URL}/villas-in-behror`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${SITE_URL}/villas-in-neemrana`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${SITE_URL}/villas-in-kotputli`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    // Flats
+    {
       url: `${SITE_URL}/flats-in-behror`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${SITE_URL}/flats-in-neemrana`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${SITE_URL}/flats-in-kotputli`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.85,
