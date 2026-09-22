@@ -196,6 +196,25 @@ export interface Enquiry {
   firstContactedAt?: string;   // stamped on new→contacted transition, feeds the response-time report
 }
 
+// ─── RWA Registration (public /rwa-registration-form) ────────────────────────
+
+export type RwaDocType = 'registry_copy' | 'pan_card' | 'aadhaar' | 'photo';
+
+export interface RwaRegistration {
+  id?: string;
+  willingToRegister: boolean;
+  fullName: string;
+  relationName: string;        // "S/o Ramesh Kumar" / "W/o Ramesh Kumar"
+  blockName: string;
+  plotNo: string;
+  plotSizeSqYd: number;
+  phone: string;
+  phoneNormalized?: string;
+  kycDocs: KycDoc[];           // one entry per RwaDocType, url points to Firebase Storage
+  status: 'new' | 'contacted' | 'closed';
+  createdAt: string;
+}
+
 // ─── Filter / Sort ────────────────────────────────────────────────────────────
 
 export interface PropertyFilters {

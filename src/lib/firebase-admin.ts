@@ -2,6 +2,7 @@
 // Used by API routes / server actions that must bypass firestore.rules.
 import { getApps, initializeApp, cert, App } from 'firebase-admin/app';
 import { getFirestore, Firestore } from 'firebase-admin/firestore';
+import { getStorage, Storage } from 'firebase-admin/storage';
 
 function loadCredential() {
   const projectId = process.env.FIREBASE_ADMIN_PROJECT_ID;
@@ -34,11 +35,15 @@ function loadCredential() {
 let app: App;
 
 if (getApps().length === 0) {
-  app = initializeApp({ credential: cert(loadCredential()) });
+  app = initializeApp({
+    credential: cert(loadCredential()),
+    storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  });
 } else {
   app = getApps()[0];
 }
 
 const adminDb: Firestore = getFirestore(app, 'group24reality');
+const adminStorage: Storage = getStorage(app);
 
-export { app as adminApp, adminDb };
+export { app as adminApp, adminDb, adminStorage };

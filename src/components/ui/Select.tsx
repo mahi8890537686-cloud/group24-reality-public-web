@@ -1,3 +1,5 @@
+'use client';
+
 import { cn } from '@/lib/utils';
 import { SelectHTMLAttributes, forwardRef, useId } from 'react';
 import { ChevronDown } from 'lucide-react';
@@ -11,17 +13,18 @@ interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
   label: string;
   error?: string;
   options: SelectOption[];
+  containerClassName?: string;
 }
 
 export const Select = forwardRef<HTMLSelectElement, SelectProps>(function Select(
-  { label, error, options, id, className, ...props },
+  { label, error, options, id, className, containerClassName, ...props },
   ref
 ) {
   const generatedId = useId();
   const selectId = id ?? generatedId;
 
   return (
-    <div className="flex flex-col gap-1.5">
+    <div className={cn('flex flex-col gap-1.5', containerClassName)}>
       <label htmlFor={selectId} className="text-sm font-inter font-medium text-text">
         {label}
       </label>

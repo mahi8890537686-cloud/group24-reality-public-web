@@ -1,18 +1,21 @@
+'use client';
+
 import { cn } from '@/lib/utils';
 import { TextareaHTMLAttributes, forwardRef, useId } from 'react';
 
 interface TextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
   label: string;
   error?: string;
+  containerClassName?: string;
 }
 
 export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
-  function Textarea({ label, error, id, className, rows = 4, ...props }, ref) {
+  function Textarea({ label, error, id, className, containerClassName, rows = 4, ...props }, ref) {
     const generatedId = useId();
     const textareaId = id ?? generatedId;
 
     return (
-      <div className="flex flex-col gap-1.5">
+      <div className={cn('flex flex-col gap-1.5', containerClassName)}>
         <label htmlFor={textareaId} className="text-sm font-inter font-medium text-text">
           {label}
         </label>

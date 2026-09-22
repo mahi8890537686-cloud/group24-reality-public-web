@@ -51,6 +51,15 @@ service cloud.firestore {
       allow read, update, delete: if request.auth != null;
     }
 
+    // RWA Registrations: written only by /api/public/submit-rwa-registration via
+    // firebase-admin (which bypasses these rules), never by the client SDK — the
+    // route handles validation and KYC file upload as one step, so there's no
+    // "anyone can create" case to allow here. Contains PAN/Aadhaar references,
+    // so reads are admin-only too.
+    match /rwa_registrations/{docId} {
+      allow read, write: if request.auth != null;
+    }
+
     // CRM Contacts: admin only
     match /crm_contacts/{docId} {
       allow read, write: if request.auth != null;
